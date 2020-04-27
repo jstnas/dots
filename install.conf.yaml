@@ -1,3 +1,12 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+        create: true
+        relink: true
+- clean: ['~', '~/.config']
+- link:
+    ~/.vimrc:
+    ~/.xinitrc:
+    ~/.config/dwm/config.h: dwm_config.h
+    ~/.config/st/config.h: st_config.h
+- shell:
+    - git submodule sync --recursive
