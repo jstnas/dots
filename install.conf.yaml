@@ -8,5 +8,6 @@
     ~/.xinitrc:
     ~/.config/dwm/config.h: dwm_config.h
     ~/.config/st/config.h: st_config.h
+    ~/.config/slstatus/config.h: slstatus_config.h
 - shell:
     - git submodule sync --recursive
