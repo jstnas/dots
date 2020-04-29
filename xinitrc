@@ -2,7 +2,7 @@
 setxkbmap gb
 # Autostart programs.
 compton &
-slstatus &
+/usr/local/bin/slstatus &
 ~/.fehbg &
 # Start the window manager.
 exec dwm
