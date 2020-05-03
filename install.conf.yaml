@@ -8,6 +8,7 @@
     ~/.xinitrc:
     ~/.zshrc:
     ~/Documents/Repos/dwm/config.h: dwm/config.h
+    ~/Documents/Repos/dmenu/config.h: dmenu/config.h
     ~/Documents/Repos/st/config.h: st/config.h
     ~/Documents/Repos/slstatus/config.h: slstatus/config.h
     ~/Documents/Repos/surf/config.h: surf/config.h

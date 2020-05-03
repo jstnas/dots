@@ -63,8 +63,10 @@ static const char unknown_str[] = "?";
  */
 static const struct arg args[] = {
     /* function format          argument */
-    { ipv4, "%s ", "enp0s3" },
-    { battery_perc, "%s", "BAT0" },
+    { vol_perc, " V:%s ", "/dev/mixer" },
+    { ipv4, "E:%s ", "enp0s25" },
+    { ipv4, "W:%s ", "wlp3s0" },
+    { battery_perc, "B:%s", "BAT0" },
     { battery_state, "%s ", "BAT0" },
     { datetime, "%s", "%T %d/%m/%Y" },
 };

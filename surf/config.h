@@ -7,6 +7,7 @@ static char *certdir        = "~/.surf/certificates/";
 static char *cachedir       = "~/.surf/cache/";
 static char *cookiefile     = "~/.surf/cookies.txt";
 static char *searchurl      = "duckduckgo.com/?q=%s";
+static char *historyfile    = "~/.surf/history";
 
 /* Webkit default features */
 /* Highest priority value will be used.
@@ -89,13 +90,11 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
 
 /* DOWNLOAD(URI, referer) */
 #define DOWNLOAD(u, r) { \
-    .v = (char *[]){ "/bin/sh", "-c", \
-        "cd ~/Downloads;" \
-        "st -e /bin/sh -c \"aria2c -U '$1'" \
-        " --referer '$2' --load-cookies $3 --save-cookies $3 '$0';" \
-        " sleep 3;\"", \
-        u, useragent, r, cookiefile, NULL \
-    } \
+        .v = (const char *[]){ "st", "-e", "/bin/sh", "-c",\
+             "curl -g -L -J -O -A \"$1\" -b \"$2\" -c \"$2\"" \
+             " -e \"$3\" \"$4\"; read", \
+             "surf-download", useragent, cookiefile, r, u, NULL \
+        } \
 }
 
 /* PLUMB(URI) */
@@ -126,6 +125,22 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
         } \
 }
 
+/* BM_ADD(readprop) */
+#define BM_ADD(r) {\
+        .v = (const char *[]){ "/bin/sh", "-c", \
+             "(echo $(xprop -id $0 $1) | cut -d '\"' -f2 " \
+             "| sed 's/.*https*:\\/\\/\\(www\\.\\)\\?//' && cat ~/.surf/bookmarks) " \
+             "| awk '!seen[$0]++' > ~/.surf/bookmarks.tmp && " \
+             "mv ~/.surf/bookmarks.tmp ~/.surf/bookmarks", \
+             winid, r, NULL \
+        } \
+}
+
+#define SETURI(p)       { .v = (char *[]){ "/bin/sh", "-c", \
+"prop=\"`~/.surf/surf_history_dmenu.sh`\" &&" \
+"xprop -id $1 -f $0 8s -set $0 \"$prop\"", \
+p, winid, NULL } }
+
 /* styles */
 /*
  * The iteration will stop at the first match, beginning at the beginning of
@@ -154,11 +169,9 @@ static SiteSpecific certs[] = {
  */
 static Key keys[] = {
 	/* modifier              keyval          function    arg */
-	{ 0,                GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO", PROMPT_GO) },
-	{ 0,                GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
-	{ 0,                GDK_KEY_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
-	{ 0,                GDK_KEY_s,      spawn,      SEARCH() },
-	{ 0,                GDK_KEY_m,      spawn,      BM_ADD("_SURF_URI") },
+	{ 0,                     GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO", PROMPT_GO) },
+	{ 0,                     GDK_KEY_m,      spawn,      BM_ADD("_SURF_URI") },
+	{ 0,                     GDK_KEY_s,      spawn,      SEARCH() },
 
 	{ 0,                     GDK_KEY_i,      insert,     { .i = 1 } },
 	{ 0,                     GDK_KEY_Escape, insert,     { .i = 0 } },
@@ -209,6 +222,7 @@ static Key keys[] = {
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_b,      toggle,     { .i = ScrollBars } },
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_t,      toggle,     { .i = StrictTLS } },
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_m,      toggle,     { .i = Style } },
+        { 0                    , GDK_KEY_Return, spawn,      SETURI("_SURF_GO") },
 };
 
 /* button definitions */
