@@ -1,6 +1,5 @@
-if &compatible
-    set nocompatible            " Not vi compatible.
-endif
+" Variables.
+set nocompatible                " Not vi compatible.
 syntax on                       " Enables syntax highlighting.
 set showmatch                   " Shows matching braces.
 set listchars=tab:>-,trail:~    " Configure whitespace characters.
@@ -21,3 +20,11 @@ let g:netrw_liststyle=3         " Tree view.
 let g:netrw_list_hide=netrw_gitignore#Hide()
 " Templates.
 nnoremap ,mono :-1read $HOME/.vim/skeleton.unity_monobehaviour.cs<CR>
+" Colourscheme.
+colorscheme dim
+" Lightline.
+let g:lightline = {'colorscheme': 'dim'}
+set laststatus=2
+set noshowmode
+
+set shell=/usr/bin/zsh

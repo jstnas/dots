@@ -4,9 +4,11 @@
         relink: true
 - clean: ['~', '~/.config']
 - link:
+    ~/.config/dunst/dunstrc:
     ~/.vimrc:
     ~/.xinitrc:
     ~/.zshrc:
+    ~/.vim: vim
     ~/Documents/Repos/dwm/config.h: dwm/config.h
     ~/Documents/Repos/dmenu/config.h: dmenu/config.h
     ~/Documents/Repos/st/config.h: st/config.h

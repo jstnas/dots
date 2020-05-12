@@ -1,3 +1,9 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "vim/pack/plugins/start/vim-dim"]
+	path = vim/pack/plugins/start/vim-dim
+	url = https://github.com/jeffkreeftmeijer/vim-dim
+[submodule "vim/pack/plugins/start/lightline"]
+	path = vim/pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim
