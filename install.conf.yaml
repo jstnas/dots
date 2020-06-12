@@ -10,8 +10,6 @@
     ~/.zshrc:
     ~/.zshrc.local:
     ~/.zshrc.pre:
-    ~/Repos/dwm/config.h: dwm/config.h
-    ~/Repos/dwm/palette.c: dwm/palettes/pico8x2.c
     ~/Repos/st/config.h: st/config.h
     ~/Repos/st/palette.c : st/palettes/pico8x2.c
     ~/Repos/dmenu/config.h: dmenu/config.h
@@ -21,6 +19,6 @@
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl/config: youtube_dl
 - shell:
-    - git submodule sync --recursive
-    - sudo make clean install --directory=../st
-    - sudo make clean install --directory=../dwm
+    - [git submodule sync --recursive, Installing submodules]
+    - [sudo make clean install --directory=../st, Compiling st]
+    - [sudo make clean install --directory=../dwm, Compiling dwm]
