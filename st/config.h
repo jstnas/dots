@@ -5,13 +5,13 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "GohuFont:pixelsize=11:antialias=true:autohint=true";
+static char *font = "Gohu Gohufont:pixelsize=11:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-    "UniFont:pixelsize=11:antialias=true:autohint=true",
+	"UniFont:pixelsize=11:antialias=false:autohint=false",
 };
 
-static int borderpx = 2;
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -21,7 +21,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/usr/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -93,30 +93,7 @@ unsigned int tabspaces = 4;
 float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-  [1] = "#cc241d", /* red     */
-  [2] = "#98971a", /* green   */
-  [3] = "#d79921", /* yellow  */
-  [4] = "#458588", /* blue    */
-  [5] = "#b16286", /* magenta */
-  [6] = "#689d6a", /* cyan    */
-  [7] = "#a89984", /* white   */
-
-  /* 8 bright colors */
-  [8]  = "#928374", /* black   */
-  [9]  = "#fb4934", /* red     */
-  [10] = "#b8bb26", /* green   */
-  [11] = "#fabd2f", /* yellow  */
-  [12] = "#83a598", /* blue    */
-  [13] = "#d3869b", /* magenta */
-  [14] = "#8ec07c", /* cyan    */
-  [15] = "#ebdbb2", /* white   */
-  [256] = "#928374",
-  [257] = "#a89984",
-  [258] = "#282828",
-};
+#include "palette.c"
 
 /*
  * Default colors (colorname index)

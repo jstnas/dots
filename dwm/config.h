@@ -3,16 +3,13 @@
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "GohuFont:size=8" };
-static const char dmenufont[]       = "GohuFont:size=8";
-static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#928374";
-static const char col_gray3[]       = "#a89984";
-static const char col_gray4[]       = "#ebdbb2";
-static const char col_cyan[]        = "#689d6a";
-static const unsigned int baralpha = 0xd0;
+static const char *fonts[]          = { "Gohu GohuFont:size=8" };
+static const char dmenufont[]       = "Gohu GohuFont:size=8";
+#include "palette.c"
+static const unsigned int baralpha = 255 * 0.9;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -26,18 +23,20 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "02", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class          instance    title       tags mask     isfloating   monitor */
-	{ "firefox",      NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "discord",      NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Thunderbird",  NULL,       NULL,       1 << 3,       0,           -1 },
-	{ "Unity",        NULL,       NULL,       1 << 4,       0,           -1 },
+	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "firefox",     NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 },
+	{ "discord",     NULL,     NULL,           1 << 2,    0,          0,          -1,        -1 },
+	{ "Thunderbird", NULL,     NULL,           1 << 3,    0,          0,          -1,        -1 },
+	{ "Unity",       NULL,     NULL,           1 << 4,    0,          0,          -1,        -1 },
+	{ "st",          NULL,     NULL,           0,         0,          1,          -1,        -1 },
+	{ NULL,          NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -74,6 +73,8 @@ static const char *mutecmd[] = {"pactl", "set-sink-mute", "0", "toggle", NULL};
 static const char *volumeupcmd[] = {"pactl", "set-sink-volume", "0", "+10%", NULL};
 static const char *volumedowncmd[] = {"pactl", "set-sink-volume", "0", "-10%", NULL};
 static const char *printscreencmd[] = {"flameshot", "full", "-c", NULL};
+static const char *brightnessupcmd[] = {"xbacklight", "-inc", "10", NULL};
+static const char *brightnessdowncmd[] = {"xbacklight", "-dec", "10", NULL};
 
 #include <X11/XF86keysym.h>
 static Key keys[] = {
@@ -90,11 +91,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY|ShiftMask,             XK_r,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
@@ -113,10 +114,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-        { 0,                            XF86XK_AudioMute, spawn,   {.v = mutecmd } },
-        { 0,                            XF86XK_AudioRaiseVolume, spawn,   {.v = volumeupcmd } },
-        { 0,                            XF86XK_AudioLowerVolume, spawn,   {.v = volumedowncmd } },
-        { 0,                            XK_Print, spawn,   {.v = printscreencmd } },
+	{ 0,                            XF86XK_AudioMute, spawn,   {.v = mutecmd } },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn,   {.v = volumeupcmd } },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn,   {.v = volumedowncmd } },
+	{ 0,                            XF86XK_MonBrightnessUp, spawn,   {.v = brightnessupcmd } },
+	{ 0,                            XF86XK_MonBrightnessDown, spawn,   {.v = brightnessdowncmd } },
+	{ 0,                            XK_Print, spawn,   {.v = printscreencmd } },
 };
 
 /* button definitions */

@@ -1,0 +1,7 @@
+setopt vi
+
+prompt off
+PS1='%B%F{magenta}%~%b%f %(?.%F{green}%#%f.%F{red}%? %#%f) '
+
+export PF_INFO="ascii title os host kernel shell editor wm de uptime pkgs memory palette"
+pfetch

@@ -4,16 +4,23 @@
         relink: true
 - clean: ['~', '~/.config']
 - link:
-    ~/.config/dunst/dunstrc:
+    ~/.vim: vim
     ~/.vimrc:
     ~/.xinitrc:
     ~/.zshrc:
-    ~/.vim: vim
-    ~/Documents/Repos/dwm/config.h: dwm/config.h
-    ~/Documents/Repos/dmenu/config.h: dmenu/config.h
-    ~/Documents/Repos/st/config.h: st/config.h
-    ~/Documents/Repos/slstatus/config.h: slstatus/config.h
-    ~/Documents/Repos/surf/config.h: surf/config.h
+    ~/.zshrc.local:
+    ~/.zshrc.pre:
+    ~/Repos/dwm/config.h: dwm/config.h
+    ~/Repos/dwm/palette.c: dwm/palettes/pico8x2.c
+    ~/Repos/st/config.h: st/config.h
+    ~/Repos/st/palette.c : st/palettes/pico8x2.c
+    ~/Repos/dmenu/config.h: dmenu/config.h
+    ~/Repos/slstatus/config.h: slstatus/config.h
+    ~/Repos/surf/config.h: surf/config.h
     ~/.surf/styles/default.css: surf/default.css
+    ~/.config/dunst/dunstrc:
+    ~/.config/youtube-dl/config: youtube_dl
 - shell:
     - git submodule sync --recursive
+    - sudo make clean install --directory=../st
+    - sudo make clean install --directory=../dwm
