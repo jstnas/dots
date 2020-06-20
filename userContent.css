@@ -1,0 +1,20 @@
+pre,textarea,body,input,td,tr,p {
+	background-color: black !important;
+	background-image: none !important;
+	color: #e0e0e0 !important;
+}
+
+div {
+	background-color: #black !important;
+	background-image: none !important;
+	color: #C2C3C7 !important;
+}
+
+h1,h2,h3,h4 {
+	background-color: black !important;
+	color: #ff77a8 !important;
+}
+
+a {
+	color: #29adff !important;
+}

@@ -2,23 +2,21 @@
     link:
         create: true
         relink: true
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/bin']
 - link:
-    ~/.vim: vim
+    ~/.vim:
     ~/.vimrc:
     ~/.xinitrc:
     ~/.zshrc:
     ~/.zshrc.local:
     ~/.zshrc.pre:
-    ~/Repos/st/config.h: st/config.h
-    ~/Repos/st/palette.c : st/palettes/pico8x2.c
+
+    ~/bin/wallpaper.sh: bin/wallpaper.sh
+
     ~/Repos/dmenu/config.h: dmenu/config.h
-    ~/Repos/slstatus/config.h: slstatus/config.h
     ~/Repos/surf/config.h: surf/config.h
     ~/.surf/styles/default.css: surf/default.css
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl/config: youtube_dl
 - shell:
     - [git submodule sync --recursive, Installing submodules]
-    - [sudo make clean install --directory=../st, Compiling st]
-    - [sudo make clean install --directory=../dwm, Compiling dwm]

@@ -2,14 +2,14 @@
 --extract-audio
 
 # Output type.
---audio-format mp3
+#--audio-format mp3
 #--audio-format aac
-#--audio-format best
+--audio-format best
 #--audio-format wav
 
 --yes-playlist
---embed-thumbnail
-#--add-metadata
+#--embed-thumbnail
+--add-metadata
 
 # Save location.
---output ~/Music/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s
+--output "~/Music/%(playlist_title)s/%(playlist_index)s %(title)s.%(ext)s"

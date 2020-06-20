@@ -6,13 +6,16 @@ compton &
 firefox &
 flameshot &
 dunst &
-/usr/local/bin/slstatus &
-~/.fehbg &
-wallpaper.sh &
 redshift &
-
 syncthing -no-browser &
 discord &
 thunderbird &
+dwmblocks &
+
+st ncmpcpp -c ncmpcpp &
+
+# Run the scripts.
+~/bin/wallpaper.sh &
+
 # Start the window manager.
 exec dwm

@@ -1,7 +1,7 @@
-From 0267491ab776557427831a6640c554a7fe2cb28c Mon Sep 17 00:00:00 2001
+From 684701ccf2a805cbe22cc5d8bd1d8b4609c2e0fd Mon Sep 17 00:00:00 2001
 From: Justinas Grigas <jstn_as@protonmail.com>
 Date: Fri, 12 Jun 2020 14:14:24 +0100
-Subject: [PATCH 1/6] Applied the alpha patch.
+Subject: [PATCH 1/8] Applied the alpha patch.
 
 ---
  config.def.h |  6 +++++-
@@ -42,7 +42,7 @@ index 6f05dce..b4fff92 100644
  static unsigned int defaultrcs = 257;
  
 diff --git a/config.mk b/config.mk
-index beafc35..ddc65ae 100644
+index c070a4a..aaa54ff 100644
 --- a/config.mk
 +++ b/config.mk
 @@ -16,7 +16,7 @@ PKG_CONFIG = pkg-config
@@ -177,10 +177,10 @@ index 210f184..73545d8 100644
 2.27.0
 
 
-From 9f0ea988728d3b0ac02aa513d7ce3ca4e87eadc6 Mon Sep 17 00:00:00 2001
+From cbff582fa0c0ec36bff3c3511f305458373876d4 Mon Sep 17 00:00:00 2001
 From: Justinas Grigas <jstn_as@protonmail.com>
 Date: Fri, 12 Jun 2020 14:18:58 +0100
-Subject: [PATCH 2/6] Applied personal customization.
+Subject: [PATCH 2/8] Applied personal customization.
 
 ---
  config.def.h | 8 ++++----
@@ -223,10 +223,10 @@ index b4fff92..a9a8117 100644
 2.27.0
 
 
-From 7715fb6c68acc3b156b213b68590039e61984815 Mon Sep 17 00:00:00 2001
+From ea69c14244b915003b3370f991374edac329fad8 Mon Sep 17 00:00:00 2001
 From: Justinas Grigas <jstn_as@protonmail.com>
 Date: Fri, 12 Jun 2020 14:22:59 +0100
-Subject: [PATCH 3/6] Applied the bold is not bright patch.
+Subject: [PATCH 3/8] Applied the bold is not bright patch.
 
 ---
  x.c | 4 ----
@@ -251,10 +251,10 @@ index 73545d8..1bf78ab 100644
 2.27.0
 
 
-From 451659fcb2366335d61cad347a030394164586d7 Mon Sep 17 00:00:00 2001
+From 7e34489b92276f273c7dd11222c4f01c66a615d3 Mon Sep 17 00:00:00 2001
 From: Justinas Grigas <jstn_as@protonmail.com>
 Date: Fri, 12 Jun 2020 14:41:44 +0100
-Subject: [PATCH 4/6] Applied the scrollback patch.
+Subject: [PATCH 4/8] Applied the scrollback patch.
 
 ---
  config.def.h |   2 +
@@ -276,7 +276,7 @@ index a9a8117..363e3dc 100644
  
  /*
 diff --git a/st.c b/st.c
-index ef8abd5..18d3488 100644
+index 76b7e0d..edec064 100644
 --- a/st.c
 +++ b/st.c
 @@ -35,6 +35,7 @@
@@ -297,7 +297,7 @@ index ef8abd5..18d3488 100644
  
  enum term_mode {
  	MODE_WRAP        = 1 << 0,
-@@ -117,6 +121,9 @@ typedef struct {
+@@ -115,6 +119,9 @@ typedef struct {
  	int col;      /* nb col */
  	Line *line;   /* screen */
  	Line *alt;    /* alternate screen */
@@ -307,7 +307,7 @@ index ef8abd5..18d3488 100644
  	int *dirty;   /* dirtyness of lines */
  	TCursor c;    /* cursor */
  	int ocx;      /* old cursor col */
-@@ -186,8 +193,8 @@ static void tnewline(int);
+@@ -184,8 +191,8 @@ static void tnewline(int);
  static void tputtab(int);
  static void tputc(Rune);
  static void treset(void);
@@ -318,7 +318,7 @@ index ef8abd5..18d3488 100644
  static void tsetattr(int *, int);
  static void tsetchar(Rune, Glyph *, int, int);
  static void tsetdirt(int, int);
-@@ -416,10 +423,10 @@ tlinelen(int y)
+@@ -414,10 +421,10 @@ tlinelen(int y)
  {
  	int i = term.col;
  
@@ -331,7 +331,7 @@ index ef8abd5..18d3488 100644
  		--i;
  
  	return i;
-@@ -528,7 +535,7 @@ selsnap(int *x, int *y, int direction)
+@@ -526,7 +533,7 @@ selsnap(int *x, int *y, int direction)
  		 * Snap around if the word wraps around at the end or
  		 * beginning of a line.
  		 */
@@ -340,7 +340,7 @@ index ef8abd5..18d3488 100644
  		prevdelim = ISDELIM(prevgp->u);
  		for (;;) {
  			newx = *x + direction;
-@@ -543,14 +550,14 @@ selsnap(int *x, int *y, int direction)
+@@ -541,14 +548,14 @@ selsnap(int *x, int *y, int direction)
  					yt = *y, xt = *x;
  				else
  					yt = newy, xt = newx;
@@ -357,7 +357,7 @@ index ef8abd5..18d3488 100644
  			delim = ISDELIM(gp->u);
  			if (!(gp->mode & ATTR_WDUMMY) && (delim != prevdelim
  					|| (delim && gp->u != prevgp->u)))
-@@ -571,14 +578,14 @@ selsnap(int *x, int *y, int direction)
+@@ -569,14 +576,14 @@ selsnap(int *x, int *y, int direction)
  		*x = (direction < 0) ? 0 : term.col - 1;
  		if (direction < 0) {
  			for (; *y > 0; *y += direction) {
@@ -374,7 +374,7 @@ index ef8abd5..18d3488 100644
  						& ATTR_WRAP)) {
  					break;
  				}
-@@ -609,13 +616,13 @@ getsel(void)
+@@ -607,13 +614,13 @@ getsel(void)
  		}
  
  		if (sel.type == SEL_RECTANGULAR) {
@@ -391,7 +391,7 @@ index ef8abd5..18d3488 100644
  		while (last >= gp && last->u == ' ')
  			--last;
  
-@@ -850,6 +857,9 @@ void
+@@ -848,6 +855,9 @@ void
  ttywrite(const char *s, size_t n, int may_echo)
  {
  	const char *next;
@@ -401,7 +401,7 @@ index ef8abd5..18d3488 100644
  
  	if (may_echo && IS_SET(MODE_ECHO))
  		twrite(s, n, 1);
-@@ -1061,13 +1071,53 @@ tswapscreen(void)
+@@ -1059,13 +1069,53 @@ tswapscreen(void)
  }
  
  void
@@ -456,7 +456,7 @@ index ef8abd5..18d3488 100644
  	tsetdirt(orig, term.bot-n);
  	tclearregion(0, term.bot-n+1, term.col-1, term.bot);
  
-@@ -1077,17 +1127,28 @@ tscrolldown(int orig, int n)
+@@ -1075,17 +1125,28 @@ tscrolldown(int orig, int n)
  		term.line[i-n] = temp;
  	}
  
@@ -487,7 +487,7 @@ index ef8abd5..18d3488 100644
  	tclearregion(0, orig, term.col-1, orig+n-1);
  	tsetdirt(orig+n, term.bot);
  
-@@ -1097,7 +1158,8 @@ tscrollup(int orig, int n)
+@@ -1095,7 +1156,8 @@ tscrollup(int orig, int n)
  		term.line[i+n] = temp;
  	}
  
@@ -497,7 +497,7 @@ index ef8abd5..18d3488 100644
  }
  
  void
-@@ -1126,7 +1188,7 @@ tnewline(int first_col)
+@@ -1124,7 +1186,7 @@ tnewline(int first_col)
  	int y = term.c.y;
  
  	if (y == term.bot) {
@@ -506,7 +506,7 @@ index ef8abd5..18d3488 100644
  	} else {
  		y++;
  	}
-@@ -1291,14 +1353,14 @@ void
+@@ -1289,14 +1351,14 @@ void
  tinsertblankline(int n)
  {
  	if (BETWEEN(term.c.y, term.top, term.bot))
@@ -523,7 +523,7 @@ index ef8abd5..18d3488 100644
  }
  
  int32_t
-@@ -1735,11 +1797,11 @@ csihandle(void)
+@@ -1733,11 +1795,11 @@ csihandle(void)
  		break;
  	case 'S': /* SU -- Scroll <n> line up */
  		DEFAULT(csiescseq.arg[0], 1);
@@ -537,7 +537,7 @@ index ef8abd5..18d3488 100644
  		break;
  	case 'L': /* IL -- Insert <n> blank lines */
  		DEFAULT(csiescseq.arg[0], 1);
-@@ -2246,7 +2308,7 @@ eschandle(uchar ascii)
+@@ -2241,7 +2303,7 @@ eschandle(uchar ascii)
  		return 0;
  	case 'D': /* IND -- Linefeed */
  		if (term.c.y == term.bot) {
@@ -546,7 +546,7 @@ index ef8abd5..18d3488 100644
  		} else {
  			tmoveto(term.c.x, term.c.y+1);
  		}
-@@ -2259,7 +2321,7 @@ eschandle(uchar ascii)
+@@ -2254,7 +2316,7 @@ eschandle(uchar ascii)
  		break;
  	case 'M': /* RI -- Reverse index */
  		if (term.c.y == term.top) {
@@ -555,7 +555,7 @@ index ef8abd5..18d3488 100644
  		} else {
  			tmoveto(term.c.x, term.c.y-1);
  		}
-@@ -2481,7 +2543,7 @@ twrite(const char *buf, int buflen, int show_ctrl)
+@@ -2464,7 +2526,7 @@ twrite(const char *buf, int buflen, int show_ctrl)
  void
  tresize(int col, int row)
  {
@@ -564,7 +564,7 @@ index ef8abd5..18d3488 100644
  	int minrow = MIN(row, term.row);
  	int mincol = MIN(col, term.col);
  	int *bp;
-@@ -2518,6 +2580,14 @@ tresize(int col, int row)
+@@ -2501,6 +2563,14 @@ tresize(int col, int row)
  	term.dirty = xrealloc(term.dirty, row * sizeof(*term.dirty));
  	term.tabs = xrealloc(term.tabs, col * sizeof(*term.tabs));
  
@@ -579,7 +579,7 @@ index ef8abd5..18d3488 100644
  	/* resize each row to new width, zero-pad if needed */
  	for (i = 0; i < minrow; i++) {
  		term.line[i] = xrealloc(term.line[i], col * sizeof(Glyph));
-@@ -2576,7 +2646,7 @@ drawregion(int x1, int y1, int x2, int y2)
+@@ -2559,7 +2629,7 @@ drawregion(int x1, int y1, int x2, int y2)
  			continue;
  
  		term.dirty[y] = 0;
@@ -588,7 +588,7 @@ index ef8abd5..18d3488 100644
  	}
  }
  
-@@ -2597,8 +2667,9 @@ draw(void)
+@@ -2580,8 +2650,9 @@ draw(void)
  		cx--;
  
  	drawregion(0, 0, term.col, term.row);
@@ -617,10 +617,10 @@ index 9f11a6a..7ea2fd3 100644
 2.27.0
 
 
-From 00b76a964aaf7af3f7f3476462df246b12f3a750 Mon Sep 17 00:00:00 2001
+From fbf75742ebe19865bcfaf3a88a93cf7e89596e84 Mon Sep 17 00:00:00 2001
 From: Justinas Grigas <jstn_as@protonmail.com>
 Date: Fri, 12 Jun 2020 15:13:47 +0100
-Subject: [PATCH 5/6] Added a palette customization.
+Subject: [PATCH 5/8] Added a palette customization.
 
 ---
  config.def.h | 30 +-----------------------------
@@ -703,10 +703,10 @@ index 0000000..bcccace
 2.27.0
 
 
-From a674005e7fcad30a5a4f584c4a2e87478d3cefc9 Mon Sep 17 00:00:00 2001
+From b109d0e89803ad5f31e5140df30e406f80118fcc Mon Sep 17 00:00:00 2001
 From: Justinas Grigas <jstn_as@protonmail.com>
 Date: Fri, 12 Jun 2020 15:23:58 +0100
-Subject: [PATCH 6/6] Change the palette.
+Subject: [PATCH 6/8] Change the palette.
 
 ---
  palette.c | 8 ++++----
@@ -740,6 +740,207 @@ index bcccace..05db8cc 100644
  	[15] = "#fff1e8", /* white   */
  
  	[256] = "#5f574f", /* 8 */
+-- 
+2.27.0
+
+
+From 1471d0b4bdc4e4b7815c65d150e185b9b9e487af Mon Sep 17 00:00:00 2001
+From: Justinas Grigas <jstn_as@protonmail.com>
+Date: Sat, 13 Jun 2020 15:50:32 +0100
+Subject: [PATCH 7/8] Changed the palette.
+
+---
+ palette.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/palette.c b/palette.c
+index 05db8cc..06f7b29 100644
+--- a/palette.c
++++ b/palette.c
+@@ -3,9 +3,9 @@ static const char *colorname[] = {
+ 	[1] = "#ff004d", /* red     */
+ 	[2] = "#00e436", /* green   */
+ 	[3] = "#ffec27", /* yellow  */
+-	[4] = "#83769c", /* blue    */
++	[4] = "#29adff", /* blue    */
+ 	[5] = "#ff77a8", /* magenta */
+-	[6] = "#29adff", /* cyan    */
++	[6] = "#ffa300", /* cyan    */
+ 	[7] = "#c2c3c7", /* white   */
+ 
+ 	/* 8 bright colors */
+@@ -15,7 +15,7 @@ static const char *colorname[] = {
+ 	[11] = "#ffec27", /* yellow  */
+ 	[12] = "#83769c", /* blue    */
+ 	[13] = "#ff77a8", /* magenta */
+-	[14] = "#29adff", /* cyan    */
++	[14] = "#ffa300", /* cyan    */
+ 	[15] = "#fff1e8", /* white   */
+ 
+ 	[256] = "#5f574f", /* 8 */
+-- 
+2.27.0
+
+
+From f9f543425ffa348ff9c023f5ea3963336863011f Mon Sep 17 00:00:00 2001
+From: Justinas Grigas <jstn_as@protonmail.com>
+Date: Thu, 18 Jun 2020 01:10:41 +0100
+Subject: [PATCH 8/8] Applied the font2 patch.
+
+---
+ config.def.h |   5 +++
+ x.c          | 101 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 106 insertions(+)
+
+diff --git a/config.def.h b/config.def.h
+index b5e963c..ba27d4b 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -7,6 +7,11 @@
+  */
+ static char *font = "Gohu GohuFont:pixelsize=11:antialias=true:autohint=true";
+ static int borderpx = 4;
++/* Spare fonts */
++static char *font2[] = {
++	"Siji:pixelsize=11:antialias=true:autohint=true",
++};
++
+ 
+ /*
+  * What program is execed by st depends of these precedence rules:
+diff --git a/x.c b/x.c
+index 1bf78ab..9ad05c2 100644
+--- a/x.c
++++ b/x.c
+@@ -158,6 +158,8 @@ static void xhints(void);
+ static int xloadcolor(int, const char *, Color *);
+ static int xloadfont(Font *, FcPattern *);
+ static void xloadfonts(char *, double);
++static int xloadsparefont(FcPattern *, int);
++static void xloadsparefonts(void);
+ static void xunloadfont(Font *);
+ static void xunloadfonts(void);
+ static void xsetenv(void);
+@@ -308,6 +310,7 @@ zoomabs(const Arg *arg)
+ {
+ 	xunloadfonts();
+ 	xloadfonts(usedfont, arg->f);
++	xloadsparefonts();
+ 	cresize(0, 0);
+ 	redraw();
+ 	xhints();
+@@ -1028,6 +1031,101 @@ xloadfonts(char *fontstr, double fontsize)
+ 	FcPatternDestroy(pattern);
+ }
+ 
++int
++xloadsparefont(FcPattern *pattern, int flags)
++{
++	FcPattern *match;
++	FcResult result;
++	
++	match = FcFontMatch(NULL, pattern, &result);
++	if (!match) {
++		return 1;
++	}
++
++	if (!(frc[frclen].font = XftFontOpenPattern(xw.dpy, match))) {
++		FcPatternDestroy(match);
++		return 1;
++	}
++
++	frc[frclen].flags = flags;
++	/* Believe U+0000 glyph will present in each default font */
++	frc[frclen].unicodep = 0;
++	frclen++;
++
++	return 0;
++}
++
++void
++xloadsparefonts(void)
++{
++	FcPattern *pattern;
++	double sizeshift, fontval;
++	int fc;
++	char **fp;
++
++	if (frclen != 0)
++		die("can't embed spare fonts. cache isn't empty");
++
++	/* Calculate count of spare fonts */
++	fc = sizeof(font2) / sizeof(*font2);
++	if (fc == 0)
++		return;
++
++	/* Allocate memory for cache entries. */
++	if (frccap < 4 * fc) {
++		frccap += 4 * fc - frccap;
++		frc = xrealloc(frc, frccap * sizeof(Fontcache));
++	}
++
++	for (fp = font2; fp - font2 < fc; ++fp) {
++	
++		if (**fp == '-')
++			pattern = XftXlfdParse(*fp, False, False);
++		else
++			pattern = FcNameParse((FcChar8 *)*fp);
++	
++		if (!pattern)
++			die("can't open spare font %s\n", *fp);
++	   		
++		if (defaultfontsize > 0) {
++			sizeshift = usedfontsize - defaultfontsize;
++			if (sizeshift != 0 &&
++					FcPatternGetDouble(pattern, FC_PIXEL_SIZE, 0, &fontval) ==
++					FcResultMatch) {	
++				fontval += sizeshift;
++				FcPatternDel(pattern, FC_PIXEL_SIZE);
++				FcPatternDel(pattern, FC_SIZE);
++				FcPatternAddDouble(pattern, FC_PIXEL_SIZE, fontval);
++			}
++		}
++	
++		FcPatternAddBool(pattern, FC_SCALABLE, 1);
++	
++		FcConfigSubstitute(NULL, pattern, FcMatchPattern);
++		XftDefaultSubstitute(xw.dpy, xw.scr, pattern);
++	
++		if (xloadsparefont(pattern, FRC_NORMAL))
++			die("can't open spare font %s\n", *fp);
++	
++		FcPatternDel(pattern, FC_SLANT);
++		FcPatternAddInteger(pattern, FC_SLANT, FC_SLANT_ITALIC);
++		if (xloadsparefont(pattern, FRC_ITALIC))
++			die("can't open spare font %s\n", *fp);
++			
++		FcPatternDel(pattern, FC_WEIGHT);
++		FcPatternAddInteger(pattern, FC_WEIGHT, FC_WEIGHT_BOLD);
++		if (xloadsparefont(pattern, FRC_ITALICBOLD))
++			die("can't open spare font %s\n", *fp);
++	
++		FcPatternDel(pattern, FC_SLANT);
++		FcPatternAddInteger(pattern, FC_SLANT, FC_SLANT_ROMAN);
++		if (xloadsparefont(pattern, FRC_BOLD))
++			die("can't open spare font %s\n", *fp);
++	
++		FcPatternDestroy(pattern);
++	}
++}
++
+ void
+ xunloadfont(Font *f)
+ {
+@@ -1137,6 +1235,9 @@ xinit(int cols, int rows)
+ 	usedfont = (opt_font == NULL)? font : opt_font;
+ 	xloadfonts(usedfont, 0);
+ 
++	/* spare fonts */
++	xloadsparefonts();
++
+ 	/* colors */
+ 	xw.cmap = XCreateColormap(xw.dpy, parent, xw.vis, None);
+ 	xloadcols();
 -- 
 2.27.0
 

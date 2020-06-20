@@ -1,11 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/jstn/Repos/st'
+let g:netrw_dirhist_2='/home/jstn/.config/ncmpcpp'
+let g:netrw_dirhist_1='/home/jstn/Repos/dwm'
+let g:netrw_dirhist_0='/home/jstn/Repos/st'
 let g:netrw_dirhist_9='/home/jstn/Repos/dwm'
 let g:netrw_dirhist_8='/home/jstn'
 let g:netrw_dirhist_7='/home/jstn/Repos/dotfiles/dwm'
 let g:netrw_dirhist_6='/home/jstn/Repos/dotfiles'
 let g:netrw_dirhist_5='/home/jstn/Repos/dwm'
 let g:netrw_dirhist_4='/home/jstn/Documents/Scripts/SFML/2dPlatformer'
-let g:netrw_dirhist_3='/home/jstn/Documents/Repos/romaji'
-let g:netrw_dirhist_2='/etc/X11/xinit/xinitrc.d'
-let g:netrw_dirhist_1='/home/jstn/.vim'
