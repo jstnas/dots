@@ -6,4 +6,6 @@ Window Manager - [dwm](https://dwm.suckless.org/)
 Terminal - [st](https://st.suckless.org/)
 
 Shell - [zsh](http://www.zsh.org/)
-with [grml-zsh-config](https://grml.org/zsh/)
+
+Font - [gohufont](https://font.gohu.org/)
+with [siji](https://github.com/stark/siji) for glyphs
