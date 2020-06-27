@@ -1,0 +1,3 @@
+#!/bin/sh
+ZONE=thermal_zone0
+cat /sys/class/thermal/$ZONE/temp | sed 's/...$//'

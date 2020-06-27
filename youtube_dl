@@ -11,6 +11,7 @@
 --yes-playlist
 #--embed-thumbnail
 --add-metadata
+--ignore-errors
 
 # Save location.
 --output "~/music/%(playlist_title)s/%(playlist_index)s %(title)s.%(ext)s"

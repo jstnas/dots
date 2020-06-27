@@ -1,2 +1,12 @@
 #!/usr/bin/sh -e
-cat /sys/class/power_supply/BAT0/capacity
+BAT=BAT0
+STATUS=$(cat /sys/class/power_supply/$BAT/status)
+CAPACITY=$(cat /sys/class/power_supply/$BAT/capacity)
+
+case $STATUS in
+	Charging) ICON='+';;
+	Discharging) ICON='-';;
+	*) ICON='';;
+esac
+
+echo $CAPACITY$ICON
