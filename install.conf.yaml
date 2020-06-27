@@ -11,10 +11,9 @@
     ~/.zshrc.local:
     ~/.zshrc.pre:
 
-    ~/bin/wallpaper.sh: bin/wallpaper.sh
+    ~/bin: bin
 
-    ~/Repos/dmenu/config.h: dmenu/config.h
-    ~/Repos/surf/config.h: surf/config.h
+    ~/repos/dwmblocks/blocks.h: dwmblocks.h
     ~/.surf/styles/default.css: surf/default.css
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl/config: youtube_dl

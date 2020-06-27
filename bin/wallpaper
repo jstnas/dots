@@ -1,0 +1,5 @@
+#!/usr/bin/sh -e
+while true; do
+	feh --bg-max -z -B "#ffffff" ~/pictures/wallpapers/aki001208/Mono
+sleep 60
+done

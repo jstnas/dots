@@ -2,7 +2,7 @@
 # Set the keymap to uk.
 setxkbmap gb -option caps:escape
 # Autostart programs.
-compton &
+picom &
 firefox &
 flameshot &
 dunst &
