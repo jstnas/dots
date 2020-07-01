@@ -1,0 +1,4 @@
+#!/bin/sh -e
+MINE=$(pacman -Qe | wc -l)
+ALL=$(pacman -Q | wc -l)
+echo $MINE\|$ALL

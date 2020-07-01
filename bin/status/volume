@@ -1,0 +1,4 @@
+#!/bin/sh -e
+# SINK=$(pactl list short | grep 'RUNNING' | awk '{print $2}')
+VOLUME=$(pactl list sinks | grep '	Volume:' | awk '{print $5}')
+echo $VOLUME

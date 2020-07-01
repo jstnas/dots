@@ -1,0 +1,4 @@
+#!/bin/sh -e
+FREE=$(free -h | grep 'Mem:' | awk '{print $4}' | sed 's/i//')
+TOTAL=$(free -h | grep 'Mem:' | awk '{print $2}' | sed 's/i//')
+echo $FREE\/$TOTAL

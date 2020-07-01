@@ -15,7 +15,7 @@ dwmblocks &
 st ncmpcpp -c ncmpcpp &
 
 # Run the scripts.
-~/bin/wallpaper.sh &
+~/bin/wallpaper &
 
 # Start the window manager.
 exec dwm

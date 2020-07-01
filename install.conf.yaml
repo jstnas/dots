@@ -17,5 +17,6 @@
     ~/.surf/styles/default.css: surf/default.css
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl/config: youtube_dl
+    ~/.config/mpd/mpd.conf:
 - shell:
     - [git submodule sync --recursive, Installing submodules]

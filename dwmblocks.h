@@ -2,8 +2,11 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/			/*Update Interval*/	/*Update Signal*/
 
+	{"",	"~/bin/status/packages",	60,	0},
+	{"",	"~/bin/status/ram",			2,	0},
 	{"",	"~/bin/status/temperature",	1,	0},
 	{"",	"~/bin/status/backlight",	0,	1},
+	{"",	"~/bin/status/volume",		0,	2},
 	{"",	"~/bin/status/battery",		1,	0},
 	{"",	"~/bin/status/clock",		1,	0},
 };
