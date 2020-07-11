@@ -3,11 +3,13 @@ set nocompatible                " Not vi compatible.
 set encoding=utf-8
 syntax on                       " Enables syntax highlighting.
 set showmatch                   " Shows matching braces.
-set listchars=tab:>-,trail:~    " Configure whitespace characters.
-set list                        " Show whitespace characters.
-set number relativenumber       " Show hybrid line numbers.
-set showcmd                     " Show typed commands.
+set listchars=tab:>-,trail:~	" Configure whitespace characters.
+set list						" Show whitespace characters.
+set number relativenumber		" Show hybrid line numbers.
+set showcmd						" Show typed commands.
+set incsearch					" Move the cursor to the matched string.
 " Tabs.
+filetype plugin indent on
 set tabstop=4                   " Set the length of a tab character.
 set shiftwidth=4                " Set the width of a indent.
 set softtabstop=0               " Set the length of characters inserted when using tab.

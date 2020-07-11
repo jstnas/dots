@@ -2,6 +2,7 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/			/*Update Interval*/	/*Update Signal*/
 
+	{"",	"~/bin/status/wifi",		2,	0},
 	{"",	"~/bin/status/packages",	60,	0},
 	{"",	"~/bin/status/ram",			2,	0},
 	{"",	"~/bin/status/temperature",	1,	0},

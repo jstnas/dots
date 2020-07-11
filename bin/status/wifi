@@ -1,0 +1,2 @@
+#!/bin/sh -e
+nmcli device show | grep 'GENERAL.CONNECTION' | sed '1q;d' | sed 's/^.*: *//'

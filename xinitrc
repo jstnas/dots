@@ -11,6 +11,7 @@ syncthing -no-browser &
 discord &
 thunderbird &
 dwmblocks &
+# steam &
 
 st ncmpcpp -c ncmpcpp &
 
