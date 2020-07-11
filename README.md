@@ -1,9 +1,9 @@
 # dotfiles
 My personal dotfiles. Managed by https://git.io/dotbot
 ## programs
-Window Manager - [dwm](https://dwm.suckless.org/)
+Window Manager - [dwm](https://github.com/jstnas/dwm)
 
-Terminal - [st](https://st.suckless.org/)
+Terminal - [st](https://github.com/jstnas/st)
 
 Shell - [zsh](http://www.zsh.org/)
 
