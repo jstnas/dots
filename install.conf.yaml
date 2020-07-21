@@ -7,7 +7,6 @@
     ~/.vim:
     ~/.vimrc:
     ~/.xinitrc:
-    ~/.zshrc:
     ~/.zshrc.local:
 
     ~/bin: bin
