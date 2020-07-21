@@ -4,9 +4,9 @@
 [submodule "vim/pack/plugins/start/vim-dim"]
 	path = vim/pack/plugins/start/vim-dim
 	url = https://github.com/jeffkreeftmeijer/vim-dim
-[submodule "vim/pack/plugins/start/lightline"]
-	path = vim/pack/plugins/start/lightline
-	url = https://github.com/itchyny/lightline.vim
 [submodule "vim/pack/plugins/start/YouCompleteMe"]
 	path = vim/pack/plugins/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vim/pack/plugins/start/lightline-dim"]
+	path = vim/pack/plugins/start/lightline-dim
+	url = https://github.com/jstnas/lightline-dim.git

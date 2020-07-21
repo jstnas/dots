@@ -1,0 +1,9 @@
+#!/bin/sh -e
+DEVICES=$(bluetoothctl paired-devices)
+while IFS= read -r device; do
+	MAC=$(echo $device | awk '{print $2}')
+	ANSWER=$(bluetoothctl info $MAC | grep 'Connected:' | awk '{print $2}')
+	if [ "$ANSWER" == 'yes' ]; then
+		echo $device | awk '{print $3}'
+	fi
+done <<< $DEVICES

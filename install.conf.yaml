@@ -9,7 +9,6 @@
     ~/.xinitrc:
     ~/.zshrc:
     ~/.zshrc.local:
-    ~/.zshrc.pre:
 
     ~/bin: bin
 
