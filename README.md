@@ -13,7 +13,7 @@ Compositor - [picom](https://github.com/yshui/picom)
 
 :bell: Notification - [Dunst](https://dunst-project.org/)
 
-:camera: Screenshot - [flameshot](https://flameshot.js.org/)
+:camera: Screenshot - [maim](https://github.com/naelstrof/maim)
 
 Image Viewer - [sxiv](https://github.com/muennich/sxiv)
 
@@ -23,9 +23,11 @@ Wallpaper - [feh](https://feh.finalrewind.org/)
 
 :sound: Sound - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
 
-:clipboard: Clipboard - [xcmenu](https://github.com/dindon-sournois/xcmenu)
+:clipboard: Clipboard - [xclip](https://github.com/astrand/xclip)
 
-AUR - [pacaur](https://github.com/E5ten/pacaur)
+:earth_africa: Browser - [firefox](https://www.mozilla.org/en-US/firefox/new/)
+
+:mailbox: Mail - [thunderbird](https://www.thunderbird.net/en-US/)
 
 ## Fonts
 * [gohufont](https://font.gohu.org/)
