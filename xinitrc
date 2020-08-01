@@ -2,18 +2,19 @@
 # Set the keymap to uk.
 setxkbmap gb -option caps:escape
 # Autostart programs.
-picom &
-firefox &
-flameshot &
+xcmenu &
+picom -o 0&
+dwmblocks &
 dunst &
+flameshot &
 redshift &
 syncthing -no-browser &
+
 discord &
 thunderbird &
-dwmblocks &
-# steam &
-
+firefox &
 st ncmpcpp -c ncmpcpp &
+# steam &
 
 # Run the scripts.
 ~/bin/wallpaper &

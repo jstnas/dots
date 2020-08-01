@@ -1,0 +1,2 @@
+#!/bin/sh -e
+pactl set-sink-volume 0 $1
