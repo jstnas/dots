@@ -23,6 +23,8 @@ Wallpaper - [feh](https://feh.finalrewind.org/)
 
 :sound: Sound - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
 
+:clipboard: Clipboard - [xcmenu](https://github.com/dindon-sournois/xcmenu)
+
 AUR - [pacaur](https://github.com/E5ten/pacaur)
 
 ## Fonts
