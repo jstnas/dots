@@ -11,21 +11,23 @@ Terminal - patched [st](https://github.com/jstnas/st)
 
 Status Bar - [dwmblocks](https://github.com/torrinfail/dwmblocks)
 
-Compositor - [picom](https://github.com/yshui/picom)
+:clipboard: Clipboard - [xclip](https://github.com/astrand/xclip)
 
 :bell: Notification - [Dunst](https://dunst-project.org/)
 
 :camera: Screenshot - [maim](https://github.com/naelstrof/maim)
 
-Image Viewer - [sxiv](https://github.com/muennich/sxiv)
+Compositor - [picom](https://github.com/yshui/picom)
 
 Wallpaper - [feh](https://feh.finalrewind.org/)
+
+Image Viewer - [sxiv](https://github.com/muennich/sxiv)
 
 :package: Package Manager - [pacaur](https://github.com/E5ten/pacaur)
 
 :sound: Sound - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
 
-:clipboard: Clipboard - [xclip](https://github.com/astrand/xclip)
+Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 
 :earth_africa: Browser - [firefox](https://www.mozilla.org/en-US/firefox/new/)
 
