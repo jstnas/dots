@@ -37,4 +37,8 @@ Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 * [siji](https://github.com/stark/siji) for glyphs
 * [twemoji](https://twemoji.twitter.com/) for emojis
 ## Wallpapers
-* [acky bright](https://twitter.com/aki001208/media)
+* [あき(acky bright)](https://twitter.com/aki001208/media)
+
+* [A.Shipwright](https://twitter.com/ShipwrightA)
+## Palettes
+* [Pico 8](https://lospec.com/palette-list/pico-8)
