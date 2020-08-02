@@ -36,3 +36,5 @@ Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 * [gohufont](https://font.gohu.org/)
 * [siji](https://github.com/stark/siji) for glyphs
 * [twemoji](https://twemoji.twitter.com/) for emojis
+## Wallpapers
+* [acky bright](https://twitter.com/aki001208/media)
