@@ -1,13 +1,15 @@
 # Dotfiles
 My personal dotfiles. Managed by [dotbot](https://git.io/dotbot)
 ## Programs
-Window Manager - [dwm](https://github.com/jstnas/dwm)
+Window Manager - patched [dwm](https://github.com/jstnas/dwm)
 
-Terminal - [st](https://github.com/jstnas/st)
+Terminal - patched [st](https://github.com/jstnas/st)
 
 :shell: Shell - [zsh](http://www.zsh.org/)
 
 :pencil: Text Editor - [vim](https://www.vim.org/)
+
+Status Bar - [dwmblocks](https://github.com/torrinfail/dwmblocks)
 
 Compositor - [picom](https://github.com/yshui/picom)
 
@@ -28,7 +30,6 @@ Wallpaper - [feh](https://feh.finalrewind.org/)
 :earth_africa: Browser - [firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 :mailbox: Mail - [thunderbird](https://www.thunderbird.net/en-US/)
-
 ## Fonts
 * [gohufont](https://font.gohu.org/)
 * [siji](https://github.com/stark/siji) for glyphs
