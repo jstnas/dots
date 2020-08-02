@@ -16,5 +16,6 @@
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl/config: youtube_dl
     ~/.config/mpd/mpd.conf:
+    ~/.config/sxiv:
 - shell:
     - [git submodule sync --recursive, Installing submodules]
