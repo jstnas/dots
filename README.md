@@ -27,6 +27,9 @@ Image Viewer - [sxiv](https://github.com/muennich/sxiv)
 
 :sound: Sound - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
 
+:musical_note: Music - [mpd](https://www.musicpd.org/)
+with [ncmpc](https://www.musicpd.org/clients/ncmpc/)
+
 Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 
 :earth_africa: Browser - [firefox](https://www.mozilla.org/en-US/firefox/new/)
