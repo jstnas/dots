@@ -5,9 +5,12 @@ zsh-mime-setup
 alias -s html=firefox
 alias -s org=firefox
 
-# ls aliases.
+# aliases.
 alias ls='ls --color=auto'
 alias la='ls -alt'
+
+alias gs='git status'
+alias gl='git log'
 
 # Named directories.
 dotfiles=/home/iota/repos/dotfiles/
