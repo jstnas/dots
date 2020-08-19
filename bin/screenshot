@@ -1,2 +1,3 @@
 #!/bin/sh -e
-maim --quality 10 $@ | xclip -selection clipboard -t image/png && notify-send 'Screenshot taken'
+maim --quality 10 $@ | xclip -selection clipboard -t image/png &&
+notify-send 'Screenshot taken'
