@@ -6,6 +6,7 @@ CAPACITY=$(cat /sys/class/power_supply/$BAT/capacity)
 case $STATUS in
 	Charging) ICON='+';;
 	Discharging) ICON='-';;
+	Unknown) ICON='?';;
 	*) ICON='';;
 esac
 
