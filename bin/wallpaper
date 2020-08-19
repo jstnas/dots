@@ -1,5 +1,9 @@
 #!/usr/bin/sh -e
+background_colour=#ffffff
+wallpaper_directory=~/pictures/wallpapers/ShipwrightA
+pause=60
+
 while true; do
-	feh --bg-max -z -B "#ffffff" ~/pictures/wallpapers/aki001208/mono
-sleep 60
+	feh --bg-max -z -B $background_colour $wallpaper_directory
+sleep $pause
 done
