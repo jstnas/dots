@@ -27,6 +27,9 @@ Image Viewer - [sxiv](https://github.com/muennich/sxiv)
 
 :sound: Sound - [PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
 
+:musical_note: Music - [mpd](https://www.musicpd.org/)
+with [ncmpc](https://www.musicpd.org/clients/ncmpc/)
+
 Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 
 :earth_africa: Browser - [firefox](https://www.mozilla.org/en-US/firefox/new/)
@@ -36,3 +39,9 @@ Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 * [gohufont](https://font.gohu.org/)
 * [siji](https://github.com/stark/siji) for glyphs
 * [twemoji](https://twemoji.twitter.com/) for emojis
+## Wallpapers
+* [あき(acky bright)](https://twitter.com/aki001208/media)
+
+* [A.Shipwright](https://twitter.com/ShipwrightA)
+## Palettes
+* [Pico 8](https://lospec.com/palette-list/pico-8)
