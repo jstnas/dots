@@ -1,2 +1,2 @@
 #!/usr/bin/sh -e
-date +'%a %b %X %x'
+date +'%X %Z %a %b %x'
