@@ -1,2 +1,2 @@
 #!/usr/bin/sh -e
-xbacklight | sed 's/\..*//'
+echo `xbacklight | sed 's/\..*//'`%
