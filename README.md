@@ -42,6 +42,8 @@ Network - [NetworkManager](https://wiki.gnome.org/Projects/NetworkManager/)
 ## Wallpapers
 * [あき(acky bright)](https://twitter.com/aki001208/media)
 
-* [A.Shipwright](https://twitter.com/ShipwrightA)
+* [A.Shipwright](https://twitter.com/ShipwrightA/media)
+
+* [屁屁弹](https://twitter.com/PP_Bullet/media)
 ## Palettes
 * [Pico 8](https://lospec.com/palette-list/pico-8)
