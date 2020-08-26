@@ -11,10 +11,10 @@
 
     ~/bin: bin
 
-    ~/repos/dwmblocks/blocks.h: dwmblocks.h
     ~/.surf/styles/default.css: surf/default.css
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl/config: youtube_dl
+    ~/.config/ncmpc/config: ncmpc
     ~/.config/mpd/mpd.conf:
     ~/.config/sxiv:
 - shell:
