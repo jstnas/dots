@@ -9,8 +9,11 @@ alias -s org=firefox
 alias ls='ls --color=auto'
 alias la='ls -alt'
 
-alias gs='git status'
-alias gl='git log'
+alias Ga='git add'
+alias Gs='git status'
+alias Gl='git log'
+alias Gd='git diff'
+alias Install='doas make clean install && git clean -f'
 
 # Named directories.
 dotfiles=/home/iota/repos/dotfiles/
@@ -61,14 +64,27 @@ HISTFILE=~/.zsh/histfile
 HISTSIZE=2000
 SAVEHIST=2000
 
+# Prompt.
 PS1='%B%F{magenta}%~%b%f %L %(?.%F{green}%#%f.%F{red}%? %#%f) '
 RPS1='%(?..D:) %*'
 
+# Exports.
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export BROWSER=/usr/bin/firefox
+export KEYTIMEOUT=1
 #export REPORTTIME=5
 
 # pfetch.
 export PF_INFO='ascii title os host kernel shell editor wm de uptime pkgs memory palette'
 pfetch
+
+function zle-keymap-select() {
+	if [ $KEYMAP = vicmd ]; then
+		echo -ne '\e[1 q'
+	else
+		echo -ne '\e[5 q'
+	fi
+}
+
+#zle -N zle-keymap-select
