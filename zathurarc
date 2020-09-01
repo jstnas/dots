@@ -1,0 +1,42 @@
+set highlight-color "#FF77A8"
+set highlight-active-color "#FF004D"
+set highlight-transparency 0.8
+
+set page-padding 2
+
+set recolor true
+set recolor-keephue true
+set recolor-reverse-video true
+set recolor-darkcolor "#FFF1E8"
+set recolor-lightcolor rgba(0,0,0,0)
+
+set completion-bg "#5F574F"
+set completion-fg "#C2C3C7"
+
+set completion-group-bg "#000000"
+set completion-group-fg "#C2C3C7"
+
+set completion-highlight-bg "#FF77A8"
+set completion-highlight-fg "#FFF1E8"
+
+set default-bg rgba(0,0,0,0.7)
+set default-fg "#C2C3C7"
+
+set font "Gohu GohuFont normal 8"
+
+set inputbar-bg "#5F574F"
+set inputbar-fg "#C2C3C7"
+
+set notification-bg "#00E436"
+set notification-fg "#000000"
+
+set notification-warning-bg "#FFEC27"
+set notification-warning-fg "#000000"
+
+set notification-error-bg "#FF004D"
+set notification-error-fg "#000000"
+
+set statusbar-bg "#5F574F"
+set statusbar-fg "#FFF1E8"
+
+set selection-clipboard "clipboard"

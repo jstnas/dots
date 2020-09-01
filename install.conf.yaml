@@ -17,5 +17,6 @@
     ~/.config/ncmpc/config: ncmpc
     ~/.config/mpd/mpd.conf:
     ~/.config/sxiv:
+    ~/.config/zathura/zathurarc:
 - shell:
     - [git submodule sync --recursive, Installing submodules]
