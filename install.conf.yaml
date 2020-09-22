@@ -5,7 +5,6 @@
 - clean: ['~', '~/.config', '~/bin']
 - link:
     ~/.vim:
-    ~/.vimrc:
     ~/.xinitrc:
     ~/.zshrc:
 
