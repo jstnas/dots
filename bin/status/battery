@@ -1,4 +1,4 @@
-#!/usr/bin/sh -e
+#!/bin/sh -e
 BAT=BAT0
 STATUS=$(cat /sys/class/power_supply/$BAT/status)
 CAPACITY=$(cat /sys/class/power_supply/$BAT/capacity)
