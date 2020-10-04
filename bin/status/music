@@ -1,0 +1,14 @@
+#!/bin/sh -e
+TITLE=$(mpc current -f "%title%")
+echo $TITLE
+case $BUTTON in
+    1)
+        mpc toggle
+        ;;
+    2)
+        st ncmpc
+        ;;
+    3)
+        mpc clear
+        ;;
+esac

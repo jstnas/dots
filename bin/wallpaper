@@ -1,6 +1,6 @@
-#!/usr/bin/sh -e
+#!/bin/sh -e
 background_colour=#ffffff
-wallpaper_directory=~/pictures/wallpapers/PP_Bullet
+wallpaper_directory=~/pictures/wallpapers/ts_D3
 pause=60
 
 while true; do
