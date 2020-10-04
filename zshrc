@@ -64,6 +64,9 @@ HISTFILE=~/.zsh/histfile
 HISTSIZE=2000
 SAVEHIST=2000
 
+# Bindings.
+bindkey "^R" history-incremental-search-backward
+
 # Prompt.
 PS1='%B%F{magenta}%~%b%f %L %(?.%F{green}%#%f.%F{red}%? %#%f) '
 RPS1='%(?..D:) %*'
@@ -79,6 +82,7 @@ export KEYTIMEOUT=1
 export PF_INFO='ascii title os host kernel shell editor wm de uptime pkgs memory palette'
 pfetch
 
+# Functions.
 function zle-keymap-select() {
 	if [ $KEYMAP = vicmd ]; then
 		echo -ne '\e[1 q'
