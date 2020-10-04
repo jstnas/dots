@@ -1,0 +1,18 @@
+# No video.
+--extract-audio
+
+# Output type.
+--audio-format vorbis
+
+--restrict-filenames
+--audio-quality 0
+--no-overwrites
+--write-thumbnail
+--yes-playlist
+#--embed-thumbnail
+--add-metadata
+
+# Save location.
+--download-archive "~/.config/youtube-dl/archive"
+--batch-file "~/.config/youtube-dl/batch"
+--output "~/music/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"
