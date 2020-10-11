@@ -2,14 +2,14 @@
 --extract-audio
 
 # Output type.
---audio-format vorbis
+--audio-format mp3
 
+# ASCII output.
 --restrict-filenames
+# Highest quality.
 --audio-quality 0
---no-overwrites
---write-thumbnail
 --yes-playlist
-#--embed-thumbnail
+--embed-thumbnail
 --add-metadata
 
 # Save location.
