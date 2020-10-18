@@ -1,5 +1,7 @@
 #!/bin/sh
 setxkbmap gb -option caps:escape &
+xrandr --output LVDS-1 --primary &
+xrandr --output DP-1 --auto --above LVDS-1 &
 
 #xcmenu &
 picom -o 0 &
