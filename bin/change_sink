@@ -1,0 +1,3 @@
+#!/bin/sh -e
+SINK=`pactl list sinks short | dmenu | awk '{print $1}'`
+pactl set-default-sink $SINK
