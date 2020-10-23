@@ -15,9 +15,6 @@ alias Gl='git log'
 alias Gd='git diff'
 alias Install='doas make clean install && git clean -f'
 
-# Named directories.
-dotfiles=/home/iota/repos/dotfiles/
-
 # Options.
 setopt notify				# Notify when background jobs finish.
 setopt no_hup				# Don't hang up background jobs.
