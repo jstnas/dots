@@ -1,5 +1,5 @@
 #!/bin/sh -e
-SINK=`pactl info | grep 'Default Sink:' | awk '{print $3}'`
+SINK=`pactl info | grep 'Default Sink:' | awk '{print $3}'` &&
 pactl set-sink-volume $SINK $1 &&
 pkill -RTMIN+8 dwmblocks &&
-notify-send 'Volume' `~/bin/status/volume` -h string:x-canonical-private-synchronous:volume
+notify-send 'Volume' "`~/bin/status/volume`" -h string:x-canonical-private-synchronous:volume
