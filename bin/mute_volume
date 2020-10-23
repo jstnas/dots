@@ -1,3 +1,4 @@
 #!/bin/sh -e
-pactl set-sink-mute 0 toggle &&
+SINK=`pactl info | grep 'Default Sink:' | awk '{print $3}'`
+pactl set-sink-mute $SINK toggle &&
 pkill -RTMIN+8 dwmblocks

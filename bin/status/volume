@@ -1,4 +1,14 @@
 #!/bin/sh -e
-# SINK=$(pactl list short | grep 'RUNNING' | awk '{print $2}')
 VOLUME=$(pactl list sinks | grep '	Volume:' | awk '{print $5}')
 echo $VOLUME
+case $BUTTON in
+    1)
+        ~/bin/mute_volume
+        ;;
+    2)
+        ~/bin/change_sink
+        ;;
+    3)
+        notify-send 'Volume'
+        ;;
+esac
