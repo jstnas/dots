@@ -1,14 +1,16 @@
-# No video.
---extract-audio
-
-# Output type.
---audio-format mp3
-
 # ASCII output.
 --restrict-filenames
+
+# Audio only.
+--extract-audio
+# Prefer playlist.
+--yes-playlist
+
 # Highest quality.
 --audio-quality 0
---yes-playlist
+# Output type.
+--audio-format mp3
+# Add thumbnail and metadata.
 --embed-thumbnail
 --add-metadata
 
