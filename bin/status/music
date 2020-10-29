@@ -6,9 +6,9 @@ case $BUTTON in
         mpc toggle
         ;;
     2)
-        st ncmpc &
+        mpc update
         ;;
     3)
-        mpc clear
+        st ncmpc &
         ;;
 esac
