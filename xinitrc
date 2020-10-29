@@ -1,14 +1,12 @@
 #!/bin/sh
 setxkbmap gb -option caps:escape &
-xrandr --output LVDS-1 --primary &
-xrandr --output DP-1 --auto --above LVDS-1 &
+xrandr --output HDMI-A-0 --right-of DisplayPort-0 --rotate right &
 
-#xcmenu &
-picom -o 0 &
+picom &
 dwmblocks &
 mpd &
 dunst &
-#redshift &
+redshift &
 syncthing -no-browser &
 
 # Run the scripts.
