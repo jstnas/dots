@@ -1,3 +1,2 @@
 #!/bin/sh -e
-ALL=$(ls /var/db/pkg/* -l | grep root | wc -l)
-echo $ALL
+echo $(pacman -Qe | wc -l)/$(pacman -Q | wc -l)

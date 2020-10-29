@@ -1,0 +1,3 @@
+#!/bin/sh -e
+ALL=$(ls /var/db/pkg/* -l | grep root | wc -l)
+echo $ALL
