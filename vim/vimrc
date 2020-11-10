@@ -43,4 +43,4 @@ let g:lightline = {'colorscheme': 'dim'}
 set laststatus=2
 set noshowmode
 
-set shell=/bin/zsh
+set shell=/bin/fish
