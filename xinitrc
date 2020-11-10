@@ -1,7 +1,8 @@
 #!/bin/sh
-setxkbmap gb -option caps:escape &
-xrandr --output HDMI-A-0 --right-of DisplayPort-0 --rotate right &
-
+# Settings.
+setxkbmap gb -option caps:escape
+xrandr --output HDMI-A-0 --auto --right-of DisplayPort-0 --rotate right
+# Start programs.
 picom &
 dwmblocks &
 mpd &
@@ -10,7 +11,7 @@ redshift &
 syncthing -no-browser &
 
 # Run the scripts.
-~/bin/wallpaper &
+~/.local/bin/wallpaper &
 
 # Start the window manager.
 exec dbus-launch --sh-syntax --exit-with-session dwm

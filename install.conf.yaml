@@ -7,7 +7,7 @@
     ~/.vim:
     ~/.xinitrc:
 
-    ~/bin: bin
+    ~/.local/bin: bin
 
     ~/.surf/styles/default.css: surf/default.css
     ~/.config/fish:

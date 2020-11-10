@@ -3,12 +3,9 @@ VOLUME=$(pactl list sinks | grep '	Volume:' | awk '{print $5}')
 echo $VOLUME
 case $BUTTON in
     1)
-        ~/bin/mute_volume
-        ;;
-    2)
-        ~/bin/change_sink
+        ~/.local/bin/mute_volume
         ;;
     3)
-        notify-send 'Volume'
+        ~/.local/bin/change_sink
         ;;
 esac
