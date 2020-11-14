@@ -1,14 +1,12 @@
 #!/bin/sh
-# Settings.
-setxkbmap gb -option caps:escape
-xrandr --output HDMI-A-0 --auto --right-of DisplayPort-0 --rotate right
 # Start programs.
-picom &
+picom --experimental-backends &
 dwmblocks &
 mpd &
 dunst &
 redshift &
 syncthing -no-browser &
+discord &
 
 # Run the scripts.
 ~/.local/bin/wallpaper &
