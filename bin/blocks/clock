@@ -1,2 +1,2 @@
 #!/bin/sh -e
-date +'%X %Z %a %b %x'
+echo $(date +"%a %b %Z %H:%M:%S %d/%m/%Y")

@@ -1,9 +1,9 @@
 #!/bin/sh -e
 background_colour=#ffffff
-wallpaper_directory=~/pictures/wallpapers/ts_D3
+wallpaper_directory=~/pictures/wallpapers/itadaki_yasu
 pause=60
 
 while true; do
-	feh --bg-max -z -B $background_colour $wallpaper_directory
+	feh --no-fehbg --bg-max --randomize --image-bg $background_colour $wallpaper_directory
 sleep $pause
 done
