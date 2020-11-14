@@ -17,6 +17,6 @@
     ~/.config/mpd/mpd.conf:
     ~/.config/sxiv:
     ~/.config/zathura/zathurarc:
-    ~/.config/picom/picom.conf:
+    ~/.config/picom.conf:
 - shell:
     - [git submodule update --init --recursive, Updating submodules]
