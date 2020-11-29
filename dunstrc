@@ -69,7 +69,7 @@
     timeout = 0
     #icon = /path/to/icon
 [fullscreen_delay_everything]
-    fullscreen = pushback
+    fullscreen = show
 [fullscreen_show_critical]
     msg_urgency = critical
     fullscreen = show
