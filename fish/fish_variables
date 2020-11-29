@@ -13,8 +13,7 @@ SETUVAR _fish_abbr_grs:git\x20restore\x20\x2d\x2dstaged
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_install:doas\x20make\x20clean\x20install\x3b\x20git\x20clean\x20\x2df\x20\x2e
 SETUVAR _fish_abbr_patch:patch\x20\x2dp1\x20\x2d\x2dmerge\x20\x3c
-SETUVAR _fish_abbr_picom:picom\x20\x2d\x2dexperimental\x2dbackends\x20\x26\x20disown
-SETUVAR _fish_abbr_sxiv:sxiv\x20\x2dto\x20\x2e
+SETUVAR _fish_abbr_sxiv:sxiv\x20\x2dto
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue

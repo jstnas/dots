@@ -1,5 +1,6 @@
 function fish_prompt
-    echo (prompt_pwd) '>'
+    echo -n (prompt_pwd);
+    echo ' $ ';
 end
 
 pfetch
