@@ -12,7 +12,7 @@
     ~/.surf/styles/default.css: surf/default.css
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
-    ~/.config/youtube-dl:
+    ~/.config/youtube-dlc:
     ~/.config/ncmpc/config: ncmpc
     ~/.config/mpd/mpd.conf:
     ~/.config/sxiv:
