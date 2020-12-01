@@ -18,5 +18,7 @@
     ~/.config/sxiv:
     ~/.config/zathura/zathurarc:
     ~/.config/picom.conf:
+
+    ~/.mozilla/firefox/iota: firefox
 - shell:
     - [git submodule update --init --recursive, Updating submodules]
