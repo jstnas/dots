@@ -1,0 +1,17 @@
+*.sqlite*
+*.db
+*.txt
+*.json
+*.ini
+*.lz4
+
+lock
+
+bookmarkbackups/
+crashes/
+datareporting/
+gmp-gmpopenh264/
+security_state/
+sessionstore-backups/
+storage/
+weave/
