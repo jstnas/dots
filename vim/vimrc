@@ -19,7 +19,6 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 " Tabs.
 filetype plugin indent on
-set expandtab tabstop=4 shiftwidth=4
 " File browser.
 let g:netrw_banner=0
 let g:netrw_browse_split=4
