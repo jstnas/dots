@@ -21,4 +21,4 @@
     ~/.mozilla/firefox/iota: firefox
     ~/.config/aria2/aria2.conf:
 - shell:
-    - [git submodule update --init --recursive, Updating submodules]
+    - [git submodule update, Updating submodules]
