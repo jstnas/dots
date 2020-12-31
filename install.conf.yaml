@@ -10,6 +10,7 @@
     ~/.local/bin: bin
 
     ~/.surf/styles/default.css: surf/default.css
+
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl:
@@ -18,7 +19,9 @@
     ~/.config/sxiv:
     ~/.config/zathura/zathurarc:
     ~/.config/picom.conf:
-    ~/.mozilla/firefox/iota: firefox
     ~/.config/aria2/aria2.conf:
+    ~/.config/newsboat:
+
+    ~/.mozilla/firefox/iota: firefox
 - shell:
     - [git submodule update, Updating submodules]
