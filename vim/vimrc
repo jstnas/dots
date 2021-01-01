@@ -12,6 +12,7 @@ set ignorecase smartcase
 set completeopt-=preview
 set noswapfile
 set complete=.,w,b,u,t,i,kspell
+set tabstop=4
 let mapleader = " "
 " Hightlight column.
 highlight ColorColumn ctermbg=magenta
