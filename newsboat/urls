@@ -1,6 +1,23 @@
 https://www.lrt.lt/mediateka/video/gustavo-enciklopedija?rss
+https://github.com/Ralim/IronOS/releases.atom
+
+# Reddit
+https://www.reddit.com/r/unixporn.rss "reddit"
+
+# Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsooa4yRKGN_zEE8iknghZA "youtube" # TED Ed
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCODtTcd5M1JavPCOr_Uydg "youtube" # Extra Credits
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw "youtube" # GMTK
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0fDG3byEcMtbOqPMymDNbw "youtube" # Noclip
+https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A "youtube" # Tom Scott
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOuddH5GyBXp-_tv_ASdp_A "youtube" # Nick Robinson
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw "youtube" # Linus Tech Tips
+https://www.youtube.com/feeds/videos.xml?channel_id=UCY3A_5R_m3PXCn5XDhvBBsg "youtube" # Adam Millard
+https://www.youtube.com/feeds/videos.xml?channel_id=UCQALLeQPoZdZC4JNUboVEUg "youtube" # Jabrils
 
 # Twitter Walls
 https://nitter.net/itadaki_yasu/media/rss "walls"
 https://nitter.net/ts_D3/media/rss "walls"
 https://nitter.net/zeen_chin/media/rss "walls"
+https://nitter.net/_8bitwizard/media/rss "walls"
+https://nitter.net/aki001208/media/rss "walls"
