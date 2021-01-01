@@ -1,6 +1,7 @@
 #!/bin/sh -e
-background_colour=#ffffff
-wallpaper_directory=~/pictures/wallpapers/itadaki_yasu
+# Skeen.
+background_colour=#efeee9
+wallpaper_directory=~/pictures/wallpapers/zeen_chin/skeen
 pause=60
 
 while true; do

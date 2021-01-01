@@ -1,2 +1,7 @@
 #!/bin/sh -e
 top -bn1 | grep '%Cpu(s):' | awk '{print $2}'
+case $BUTTON in
+	1)
+		st htop &
+		;;
+esac
