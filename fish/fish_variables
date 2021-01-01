@@ -5,6 +5,7 @@ SETUVAR --export PF_INFO:ascii\x20title\x20os\x20host\x20kernel\x20uptime\x20pkg
 SETUVAR __fish_git_prompt_show_informative_status:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_cb:cmake\x20\x2d\x2dbuild\x20\x2e
+SETUVAR _fish_abbr_fcl:fc\x2dlist\x20\x7c\x20grep\x20\x2di
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gd:git\x20diff
@@ -14,7 +15,10 @@ SETUVAR _fish_abbr_grm:git\x20rm
 SETUVAR _fish_abbr_grs:git\x20restore\x20\x2d\x2dstaged
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_install:doas\x20make\x20clean\x20install\x3b\x20git\x20clean\x20\x2df\x20\x2e
+SETUVAR _fish_abbr_nbu:vim\x20\x7e/repos/dotfiles/newsboat/urls
 SETUVAR _fish_abbr_patch:patch\x20\x2dp1\x20\x2d\x2dmerge\x20\x3c
+SETUVAR _fish_abbr_pipl:python\x20\x2dm\x20pip\x20list
+SETUVAR _fish_abbr_pipu:python\x20\x2dm\x20pip\x20install\x20\x2d\x2dupgrade
 SETUVAR _fish_abbr_sxiv:sxiv\x20\x2dto
 SETUVAR _fish_abbr_vimrc:vim\x20/home/iota/\x2evim/vimrc
 SETUVAR _fish_abbr_ytdl:python\x20\x2dm\x20youtube_dl
