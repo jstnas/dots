@@ -1,7 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:/usr/bin/vim
 SETUVAR --export PF_COL1:5
 SETUVAR --export PF_INFO:ascii\x20title\x20os\x20host\x20kernel\x20uptime\x20pkgs\x20memory\x20shell\x20editor\x20wm\x20de\x20palette
+SETUVAR --export QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR __fish_git_prompt_show_informative_status:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_cb:cmake\x20\x2d\x2dbuild\x20\x2e
