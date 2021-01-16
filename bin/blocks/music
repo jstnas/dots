@@ -9,6 +9,6 @@ case $BUTTON in
         mpc update
         ;;
     3)
-        st ncmpc &
+        st ncmpcpp &
         ;;
 esac
