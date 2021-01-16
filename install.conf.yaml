@@ -9,8 +9,6 @@
 
     ~/.local/bin: bin
 
-    ~/.surf/styles/default.css: surf/default.css
-
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl:
@@ -21,6 +19,7 @@
     ~/.config/picom.conf:
     ~/.config/aria2/aria2.conf:
     ~/.config/newsboat:
+    ~/.config/surf:
 
     ~/.mozilla/firefox/iota: firefox
 - shell:
