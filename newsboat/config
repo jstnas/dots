@@ -2,7 +2,7 @@
 auto-reload yes
 reload-time 20
 reload-threads 100
-browser "firefox"
+browser "surf"
 
 # Keybinds.
 unbind-key q
