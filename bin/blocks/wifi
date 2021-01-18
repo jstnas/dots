@@ -1,2 +1,2 @@
 #!/bin/sh -e
-nmcli -f in-use,ssid,signal dev wifi list | grep '\*' | awk '{print $2,$3}'
+echo $(nmcli -f in-use,ssid,signal dev wifi list | grep '\*' | awk '{print $2,$3}')

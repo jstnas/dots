@@ -1,2 +1,2 @@
 #!/bin/sh -e
-echo $(free -h | grep 'Mem:' | awk '{print $3,$2}' | sed 's/ /\//')
+echo $(free -h | grep 'Mem:' | awk '{printf("%s/%s", $3, $2)}')

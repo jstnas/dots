@@ -1,6 +1,5 @@
 #!/bin/sh -e
-VOLUME=$(pactl list sinks | grep '	Volume:' | awk '{print $5}')
-echo $VOLUME
+echo $(pactl list sinks | grep '	Volume:' | awk '{print $5}')
 case $BUTTON in
     1)
         ~/.local/bin/mute_volume;;

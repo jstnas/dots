@@ -1,0 +1,2 @@
+#!/bin/sh -e
+echo $(speedtest --simple | awk '{gsub("Mbit/s", "mbps", $3);printf("%s%s", $2, $3)}')
