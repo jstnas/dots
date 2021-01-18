@@ -3,4 +3,5 @@ function fish_prompt
     echo ' $ ';
 end
 
+set GPG_TTY (tty)
 pfetch
