@@ -1,0 +1,3 @@
+#!/bin/sh -e
+SONG=$(mpc current)
+notify-send "Now Playing" "$SONG" -h string:x-canonical-private-synchronous:playing
