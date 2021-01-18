@@ -39,12 +39,14 @@ with [ncmpc](https://www.musicpd.org/clients/ncmpc/)
 * [siji](https://github.com/stark/siji) for glyphs
 * [twemoji](https://twemoji.twitter.com/) for emojis
 ## Wallpapers
-* [あき(acky bright)](https://twitter.com/aki001208/media)
+* [@aki001208](https://twitter.com/aki001208/media)
 
-* [A.Shipwright](https://twitter.com/ShipwrightA/media)
+* [@ShipwrightA](https://twitter.com/ShipwrightA/media)
 
-* [屁屁弹](https://twitter.com/PP_Bullet/media)
+* [@PP_Bullet](https://twitter.com/PP_Bullet/media)
 
-* [つませう. 紅楼夢つ28](https://twitter.com/ts_D3/media)
+* [@ts_D3](https://twitter.com/ts_D3/media)
+
+* [@zeen_chin](https://twitter.com/zeen_chin/media)
 ## Palettes
 * [Pico 8](https://lospec.com/palette-list/pico-8)
