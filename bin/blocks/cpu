@@ -1,5 +1,5 @@
 #!/bin/sh -e
-echo $(top -bn1 | grep '%Cpu(s):' | awk '{print $2}')
+echo $(top -bn1 | awk 'NR==3{print$2}')
 case $BUTTON in
 	1)
 		st htop &

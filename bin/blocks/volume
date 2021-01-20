@@ -1,8 +1,10 @@
 #!/bin/sh -e
-echo $(pactl list sinks | grep '	Volume:' | awk '{print $5}')
+echo $(pactl list sinks | grep '	Volume:' | awk '{print$5}')
 case $BUTTON in
-    1)
-        ~/.local/bin/mute_volume;;
-    3)
-        ~/.local/bin/change_sink;;
+	1)
+		~/.local/bin/mute_volume
+		;;
+	3)
+		~/.local/bin/change_sink
+		;;
 esac
