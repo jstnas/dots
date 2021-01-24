@@ -10,7 +10,7 @@ syncthing -no-browser &
 discord &
 
 # Run the scripts.
-~/.local/bin/wall_tile &
+~/.local/bin/wallpaper &
 
 # Start the window manager.
 exec dbus-launch --sh-syntax --exit-with-session dwm
