@@ -20,7 +20,5 @@
     ~/.config/aria2/aria2.conf:
     ~/.config/newsboat:
     ~/.config/surf:
-
-    ~/.mozilla/firefox/iota: firefox
 - shell:
     - [git submodule update, Updating submodules]
