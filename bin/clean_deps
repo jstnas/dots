@@ -1,2 +1,2 @@
-#!/bin/sh -e
-yay -Rsn $(yay -Qdtq)
+#!/bin/sh
+pacman -Rsn $(pacman -Qdtq)

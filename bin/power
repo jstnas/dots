@@ -1,0 +1,3 @@
+#!/bin/sh
+OPS='poweroff\nreboot\nsuspend\nhibernate\nhybrid-sleep\nsuspend-then-hibernate'
+loginctl $(echo -e $OPS | dmenu)
