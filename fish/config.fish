@@ -1,7 +1,3 @@
-function fish_prompt
-    echo -n (prompt_pwd);
-    echo ' $ ';
-end
-
+set EDITOR (which vim)
+set BROWSER (which surf)
 set GPG_TTY (tty)
-pfetch
