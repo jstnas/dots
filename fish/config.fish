@@ -1,14 +1,24 @@
+## Vi mode
+fish_vi_key_bindings
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one line blink
+set fish_cursor_visual block
+
+## Variables
 set EDITOR (which vim)
 set BROWSER (which surf)
 set GPG_TTY (tty)
-# Abbreviations
+
+## Abbreviations
 abbr -a cb 'cmake --build'
 abbr -a fcl 'fc-list | grep -i'
 abbr -a install 'doas make clean install; git clean -f .'
 abbr -a patch 'patch -p1 --merge <'
 abbr -a nbu 'vim ~/repos/dotfiles/newsboat/urls'
 abbr -a pls 'pacman -Q | grep -i'
-abbr -a sxiv 'sxiv -o'
+abbr -a Sxiv  'sxiv -o'
+abbr -a Picom 'picom --experimental-backends & disown'
 abbr -a vimrc 'vim ~/.vim/vimrc'
 # Git
 abbr -a ga 'git add'
