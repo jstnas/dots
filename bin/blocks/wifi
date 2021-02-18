@@ -1,2 +1,4 @@
 #!/bin/sh -e
-echo $(nmcli -f in-use,ssid,signal dev wifi list | grep '\*' | awk '{print $2,$3}')
+DEVICE='wlp3s0'
+ADDRESS=$(ip a s $DEVICE | awk '/inet / {split($2,a,"/");print a[1]}')
+echo $ADDRESS
