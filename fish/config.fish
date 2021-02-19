@@ -6,9 +6,10 @@ set fish_cursor_replace_one line blink
 set fish_cursor_visual block
 
 ## Variables
-set EDITOR (which vim)
-set BROWSER (which surf)
-set GPG_TTY (tty)
+set -U EDITOR (which vim)
+set -U BROWSER (which surf)
+set -U GPG_TTY (tty)
+set -U PF_INFO 'ascii title os host kernel uptime pkgs memory palette'
 
 ## Abbreviations
 abbr -a cb 'cmake --build'
@@ -31,8 +32,10 @@ abbr -a gp 'git push'
 abbr -a grm 'git rm'
 abbr -a grs 'git restore --staged'
 abbr -a gs 'git status'
-# Pip
+# Python
+abbr -a pipv 'python -m venv .venv'
+abbr -a pips 'source .venv/bin/activate.fish'
 abbr -a pipl 'python -m pip list'
-abbr -a pipu 'python -m pip install --upgrade'
+abbr -a pipi 'python -m pip install'
 # Youtube dl
 abbr -a ytdlb 'vim ~/.config/youtube-dl/batch'
