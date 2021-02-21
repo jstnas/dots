@@ -1,13 +1,13 @@
 #!/bin/sh
 xset r rate 300 50
 # Start programs.
-picom --experimental-backends &
+#picom --experimental-backends &
 dwmblocks &
 mpd &
 dunst &
-redshift &
+#redshift &
 syncthing -no-browser &
-discord &
+#discord &
 
 # Run the scripts.
 ~/.local/bin/wallpaper &
