@@ -1,7 +1,7 @@
 #!/bin/sh
 xset r rate 300 50
 # Start programs.
-#picom --experimental-backends &
+picom --experimental-backends &
 dwmblocks &
 mpd &
 dunst &
