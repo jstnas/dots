@@ -231,9 +231,9 @@
 ## Note: colors can be nested.
 ##
 #
-song_list_format = {%a - }{%t}|{$8%f$9}$R{$5%l$9}
+song_list_format = "{%t}$R{$8%b - $9}%a"
 #
-#song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
+song_status_format = "$4%t$9 by $4%a"
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
@@ -249,7 +249,7 @@ song_list_format = {%a - }{%t}|{$8%f$9}$R{$5%l$9}
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-#now_playing_prefix = $b
+now_playing_prefix = "$b-- "
 #
 #now_playing_suffix = $/b
 #
@@ -331,9 +331,9 @@ song_list_format = {%a - }{%t}|{$8%f$9}$R{$5%l$9}
 #
 #playlist_show_mpd_host = no
 #
-#playlist_show_remaining_time = no
+playlist_show_remaining_time = no
 #
-#playlist_shorten_total_times = no
+playlist_shorten_total_times = yes
 #
 #playlist_separate_albums = no
 #
@@ -358,7 +358,7 @@ playlist_display_mode = classic
 #
 #volume_change_step = 2
 #
-#autocenter_mode = no
+autocenter_mode = yes
 #
 #centered_cursor = no
 #
@@ -374,7 +374,7 @@ progressbar_look = -~-
 #
 ## Available values: classic, alternative.
 ##
-#user_interface = classic
+user_interface = classic
 #
 #data_fetching_delay = yes
 #
@@ -392,7 +392,7 @@ progressbar_look = -~-
 #
 #default_tag_editor_pattern = %n - %t
 #
-header_visibility = no
+header_visibility = yes
 #
 #statusbar_visibility = yes
 #
