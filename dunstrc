@@ -1,4 +1,5 @@
 [global]
+	fullscreen = show
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -64,7 +65,7 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#3f4f5f"
 
     # Define a color for the separator.
     # possible values are:
@@ -292,23 +293,25 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#0f1f2f"
+    foreground = "#6f7f8f"
+	frame_color = "#3f4f5f"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
+    background = "#0f1f2f"
+    foreground = "#6f7f8f"
+	frame_color = "#9f7f4f"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
-    frame_color = "#ff0000"
+    background = "#0f1f2f"
+    foreground = "#cfdfef"
+    frame_color = "#cf7f9f"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
@@ -376,7 +379,7 @@
 # pushback: same as delay, but when switching into fullscreen, the notification will get
 #           withdrawn from screen again and will get delayed like a new notification
 #[fullscreen_delay_everything]
-#    fullscreen = delay
+#    fullscreen = show
 [fullscreen_show_critical]
     msg_urgency = critical
     fullscreen = show

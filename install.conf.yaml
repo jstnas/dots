@@ -13,7 +13,7 @@
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl:
     ~/.config/ncmpc/config: ncmpc
-    ~/.config/ncmpcpp/config: ncmpcpp
+    ~/.config/ncmpcpp:
     ~/.config/mpd/mpd.conf:
     ~/.config/sxiv:
     ~/.config/zathura/zathurarc:

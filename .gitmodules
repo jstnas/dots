@@ -10,3 +10,6 @@
 [submodule "vim/pack/plugins/start/lightline.dim"]
 	path = vim/pack/plugins/start/lightline.dim
 	url = https://github.com/jstnas/lightline.dim
+[submodule "vim/pack/plugins/start/vim-gdscript3"]
+	path = vim/pack/plugins/start/vim-gdscript3
+	url = https://github.com/calviken/vim-gdscript3.git

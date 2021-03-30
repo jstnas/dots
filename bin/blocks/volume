@@ -2,9 +2,10 @@
 echo $(pactl list sinks | grep '	Volume:' | awk '{print$5}')
 case $BUTTON in
 	1)
-		~/.local/bin/mute_volume
-		;;
+		~/.local/bin/mute_volume ;;
+	2)
+		pulseaudio -k &&
+		pulseaudio -D ;;
 	3)
-		~/.local/bin/change_sink
-		;;
+		~/.local/bin/change_sink ;;
 esac

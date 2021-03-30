@@ -2,7 +2,7 @@
 fish_vi_key_bindings
 set fish_cursor_default block
 set fish_cursor_insert line
-set fish_cursor_replace_one line blink
+set fish_cursor_replace_one block
 set fish_cursor_visual block
 
 ## Colours.
@@ -15,8 +15,8 @@ set fish_color_error			red
 set fish_color_param			cyan
 set fish_color_comment			white
 set fish_color_match			green
-set fish_color_selection		white --background=magenta
-set fish_color_search_match		white --background=brblack
+set fish_color_selection		normal --background=brblack
+set fish_color_search_match		normal --background=brblack
 set fish_color_operator			magenta
 set fish_color_escape			yellow
 set fish_color_cwd				yellow
@@ -46,7 +46,7 @@ abbr -a vimrc 'vim ~/.vim/vimrc'
 abbr -a xrdbm 'xrdb -merge ~/.Xresources'
 # Git
 abbr -a ga 'git add'
-abbr -a gc 'git commit -S -m'
+abbr -a gc 'git commit -S'
 abbr -a gcl 'git clean -f .'
 abbr -a gco 'git checkout'
 abbr -a gd 'git diff'
@@ -61,4 +61,5 @@ abbr -a pips 'source .venv/bin/activate.fish'
 abbr -a pipl 'python -m pip list'
 abbr -a pipi 'python -m pip install'
 # Youtube dl
+abbr -a ytdl 'youtube-dl --batch-file ~/.config/youtube-dl/batch --download-archive ~/.config/youtube-dl/archive'
 abbr -a ytdlb 'vim ~/.config/youtube-dl/batch'

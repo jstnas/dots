@@ -1,5 +1,8 @@
 https://www.lrt.lt/mediateka/video/gustavo-enciklopedija?rss
-https://github.com/Ralim/IronOS/releases.atom
+
+# Software
+https://github.com/Ralim/IronOS/releases.atom "soft"
+http://suckless.org/atom.xml "soft"
 
 # Reddit
 https://www.reddit.com/r/unixporn.rss "reddit"
