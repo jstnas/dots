@@ -9,6 +9,8 @@
 
     ~/.local/bin: bin
 
+    ~/.gnupg/gpg-agent.conf:
+
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl:
