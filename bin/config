@@ -1,0 +1,11 @@
+#!/bin/sh -e
+CONFIGS="
+ytdlb $HOME/.config/youtube-dl/batch\n
+dunst $HOME/.config/dunst/dunstrc\n
+newsboat $HOME/.config/newsboat/urls\n
+fish $HOME/.config/fish/config.fish\n
+vim $HOME/.vim/vimrc
+"
+FILE=$(echo $CONFIGS | dmenu -l 10 | awk '{print $2}')
+[ ! -z "$FILE" ] &&
+	st vim $FILE
