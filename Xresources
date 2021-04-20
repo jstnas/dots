@@ -1,3 +1,6 @@
+!! Cursor
+Xcursor.size: 16
+
 !! Urxvt
 ! Font
 URxvt.font: xft:Gohu GohuFont:style=Regular:pixelsize=8
