@@ -16,12 +16,16 @@ set tabstop=4
 let mapleader = " "
 set path+=**
 set wildmenu
+set hlsearch
+
 " Hightlight column.
 highlight ColorColumn ctermbg=magenta
 "set colorcolumn=81
 call matchadd('ColorColumn', '\%81v', 100)
+
 " Tabs.
 filetype plugin indent on
+
 " File browser.
 let g:netrw_banner=0
 let g:netrw_browse_split=4
@@ -30,7 +34,9 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 "let g:netrw_winsize=25
 "let g:netrw_preview=1
+
 " Remaps.
+" Command without shift
 nnoremap ; :
 nnoremap : ;
 " Window splits.
@@ -38,11 +44,15 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" Toggle highlight search
+nnoremap <F4> :set hlsearch! hlsearch?<CR>
+
 " Colourscheme.
 colorscheme dim
+
 " Lightline.
 let g:lightline = {'colorscheme': 'dim'}
 set laststatus=2
 set noshowmode
 
-set shell=/bin/fish
+set shell=/bin/dash
