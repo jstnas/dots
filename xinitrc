@@ -2,6 +2,7 @@
 xrdb -merge ~/.Xresources
 xset r rate 300 50
 fc-cache -fr
+
 # Start programs.
 picom --experimental-backends &
 dwmblocks &
@@ -11,7 +12,7 @@ dunst &
 syncthing -no-browser &
 discord &
 
-# Run the scripts.
+# Wallpaper
 ~/.local/bin/wall &
 
 # Start the window manager.
