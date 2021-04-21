@@ -1,0 +1,9 @@
+#!/bin/sh
+PAUSE=60
+COLOR='#cfdfef'
+WALL_DIR=~/pictures/wallpapers/zeen_chin/ink/fellow
+
+while true; do
+	feh --no-fehbg --bg-max --randomize --image-bg $COLOR $WALL_DIR
+	sleep $PAUSE
+done
