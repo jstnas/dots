@@ -1,6 +1,6 @@
 #!/bin/sh
 PAUSE=60
-COLOR='#cfdfef'
+COLOUR='#cfdfef'
 WALL_DIR=~/pictures/wallpapers/zeen_chin/ink/fellow
 
 while true; do

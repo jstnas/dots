@@ -1,0 +1,3 @@
+#!/bin/sh
+WALL=~/repos/dotfiles/wallpapers/topo_sofft.png
+feh --no-fehbg --bg-tile $WALL

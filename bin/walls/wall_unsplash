@@ -1,0 +1,8 @@
+#!/bin/sh
+PAUSE=60
+WALL_DIR=~/pictures/wallpapers/Unsplash
+
+while true; do
+	feh --no-fehbg --bg-fill --randomize $WALL_DIR
+	sleep $PAUSE
+done
