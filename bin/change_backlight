@@ -1,4 +1,4 @@
 #!/bin/sh -e
 xbacklight $1 &&
-pkill -RTMIN+7 dwmblocks &&
+pkill -RTMIN+1 dwmblocks &&
 notify-send 'Backlight' `~/.local/bin/blocks/backlight` -h string:x-canonical-private-synchronous:backlight
