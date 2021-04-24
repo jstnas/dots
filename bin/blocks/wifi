@@ -1,4 +1,3 @@
 #!/bin/sh -e
-DEVICE='wlp3s0'
-ADDRESS=$(ip a s $DEVICE | awk '/inet / {split($2,a,"/");print a[1]}')
-echo $ADDRESS
+DEVICE='wlp5s0'
+echo $(ip a s $DEVICE | awk '/inet /{split($2,a,"/");print a[1]}')
