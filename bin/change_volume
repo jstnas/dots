@@ -1,4 +1,5 @@
 #!/bin/sh -e
+SIGNAL=4
 pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ $1 &&
-pkill -RTMIN+2 dwmblocks &&
+pkill -RTMIN+$SIGNAL dwmblocks &&
 notify-send 'Volume' "`~/.local/bin/blocks/volume`" -h string:x-canonical-private-synchronous:volume

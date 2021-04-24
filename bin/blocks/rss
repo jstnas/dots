@@ -1,3 +1,3 @@
 #!/bin/sh
-UNREAD=$(newsboat -x print-unread | awk '{print $1}')
-echo $UNREAD
+newsboat -x reload &&
+echo $(newsboat -x print-unread | awk '{print$1}')

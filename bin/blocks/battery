@@ -1,11 +1,6 @@
 #!/bin/sh -e
 BAT=BAT0
 DIR="/sys/class/power_supply/$BAT"
-# Skip if folder doesn't exist.
-if [ ! -d "$DIR" ]; then
-	exit 1
-fi
-
 STATUS=$(cat $DIR/status)
 CAPACITY=$(cat $DIR/capacity)
 
