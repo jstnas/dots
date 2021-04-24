@@ -1,0 +1,2 @@
+#!/bin/sh -e
+echo $(ip a show $1 | awk '/inet /{split($2,a,"/");print a[1]}')

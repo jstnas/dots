@@ -1,3 +1,0 @@
-#!/bin/sh -e
-DEVICE='wlp5s0'
-echo $(ip a s $DEVICE | awk '/inet /{split($2,a,"/");print a[1]}')

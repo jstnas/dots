@@ -1,3 +1,0 @@
-#!/bin/sh -e
-DEV='eth0'
-echo $(ip a show $DEV | awk '/inet /{split($2,a,"/");print a[1]}')
