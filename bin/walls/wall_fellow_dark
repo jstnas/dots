@@ -1,0 +1,9 @@
+#!/bin/sh
+PAUSE=60
+COLOUR='#0e1e2e'
+WALL_DIR=~/pictures/wallpapers/custom/zeen_chin_ink_fellow_dark
+
+while true; do
+	feh --no-fehbg --bg-max --randomize --image-bg $COLOUR $WALL_DIR
+	sleep $PAUSE
+done
