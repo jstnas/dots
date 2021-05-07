@@ -1,8 +1,8 @@
 ## Vi mode
 fish_vi_key_bindings
-set fish_cursor_default block
-set fish_cursor_insert line
-set fish_cursor_replace_one block
+set fish_cursor_default block blink
+set fish_cursor_insert line blink
+set fish_cursor_replace_one underscore blink
 set fish_cursor_visual block
 
 ## Colours.
@@ -28,7 +28,7 @@ set fish_color_cancel			brred
 
 ## Variables
 set -x EDITOR vim
-set -x BROWSER surf
+set -x BROWSER firefox
 set -x GPG_TTY (tty)
 set -x PF_INFO 'ascii title os host kernel uptime pkgs memory palette'
 
@@ -37,22 +37,34 @@ abbr -a cb 'cmake --build'
 abbr -a ct 'ctags -R'
 abbr -a fcl 'fc-list | less'
 abbr -a install 'doas make clean install; git clean -f .'
-abbr -a patch 'patch -p1 --merge <'
+abbr -a patch 'patch -p1 <'
 abbr -a pls 'pacman -Qq | grep -i'
 abbr -a Sxiv  'sxiv -o'
 abbr -a Picom 'picom --experimental-backends & disown'
+
 # Git
 abbr -a ga 'git add'
+abbr -a gb 'git branch'
+abbr -a gbd 'git branch -D'
+abbr -a gclo 'git clone'
 abbr -a gc 'git commit -S'
-abbr -a gcl 'git clean -f .'
-abbr -a gco 'git checkout'
-abbr -a gcb 'git checkout -b'
 abbr -a gd 'git diff'
+abbr -a gdc 'git diff --cached'
+abbr -a gi 'git init'
 abbr -a gl 'git log'
-abbr -a gp 'git push'
+abbr -a glo 'git log --oneline'
+abbr -a gm 'git merge'
+abbr -a gpl 'git pull'
+abbr -a gpu 'git push'
+abbr -a gpuu 'git push --set-upstream'
+abbr -a gr 'git restore'
+abbr -a grs 'git restore -S'
 abbr -a grm 'git rm'
-abbr -a grs 'git restore --staged'
+abbr -a grm 'git rm --cached'
 abbr -a gs 'git status'
+abbr -a gsw 'git switch'
+abbr -a gswc 'git switch -c'
+
 # Python
 abbr -a venv 'python -m venv .venv'
 abbr -a venvs 'source .venv/bin/activate.fish'
