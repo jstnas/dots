@@ -17,6 +17,7 @@ let mapleader = " "
 set path+=**
 set wildmenu
 set hlsearch
+set background=dark
 
 " Hightlight column.
 highlight ColorColumn ctermbg=magenta
