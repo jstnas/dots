@@ -1,8 +1,5 @@
 # Options.
-auto-reload yes
-reload-time 20
-reload-threads 100
-browser "surf"
+browser "firefox"
 
 # Keybinds.
 unbind-key q

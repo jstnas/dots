@@ -1,9 +1,10 @@
 https://www.lrt.lt/mediateka/video/gustavo-enciklopedija?rss
 https://www.raspberrypi.org/blog/feed/
+http://suckless.org/atom.xml
+https://godotengine.org/rss.xml
 
-# Software
-https://github.com/Ralim/IronOS/releases.atom "soft"
-http://suckless.org/atom.xml "soft"
+# Repos
+https://github.com/Ralim/IronOS/releases.atom "repo"
 
 # Reddit
 https://www.reddit.com/r/unixporn.rss "reddit"
@@ -38,8 +39,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCsn9MzwyPKeCE6MEGtMU4gg "yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCfVFSjHQ57zyxajhhRc7i0g "youtube" # GameHut
 
 # Twitter Walls
-https://nitter.net/itadaki_yasu/media/rss "walls"
-https://nitter.net/ts_D3/media/rss "walls"
-https://nitter.net/zeen_chin/media/rss "walls"
-https://nitter.net/_8bitwizard/media/rss "walls"
-https://nitter.net/aki001208/media/rss "walls"
+https://birdsite.xanny.family/itadaki_yasu/media/rss "walls"
+https://birdsite.xanny.family/zeen_chin/media/rss "walls"
+https://birdsite.xanny.family/_8bitwizard/media/rss "walls"
+https://birdsite.xanny.family/aki001208/media/rss "walls"
