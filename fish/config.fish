@@ -72,4 +72,4 @@ abbr -a pipl 'python -m pip list'
 abbr -a pipi 'python -m pip install'
 abbr -a pipu 'python -m pip uninstall'
 # Youtube dl
-abbr -a ytdl 'youtube-dl --batch-file ~/.config/youtube-dl/batch --download-archive ~/.config/youtube-dl/archive'
+abbr -a ytdl 'youtube-dl --config-location ~/.config/youtube-dl/music-config'
