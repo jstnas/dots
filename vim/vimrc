@@ -19,11 +19,6 @@ set wildmenu
 set hlsearch
 set background=dark
 
-" Hightlight column.
-highlight ColorColumn ctermbg=magenta
-"set colorcolumn=81
-call matchadd('ColorColumn', '\%81v', 100)
-
 " Tabs.
 filetype plugin indent on
 
@@ -55,5 +50,9 @@ colorscheme dim
 let g:lightline = {'colorscheme': 'dim'}
 set laststatus=2
 set noshowmode
+
+" Hightlight column.
+set colorcolumn=81
+highlight ColorColumn ctermbg=4
 
 set shell=/bin/dash
