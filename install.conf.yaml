@@ -11,6 +11,7 @@
     ~/.local/bin: bin
 
     ~/.gnupg/gpg-agent.conf:
+    ~/.gitconfig:
 
     ~/.config/fish:
     ~/.config/dunst/dunstrc:

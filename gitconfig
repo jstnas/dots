@@ -1,0 +1,15 @@
+[user]
+	email = jstn_as@protonmail.com
+	name = Justinas Grigas
+	signingkey = 73CCAE21F47C4142
+[credential]
+	helper = store
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[commit]
+	gpgsign = true
