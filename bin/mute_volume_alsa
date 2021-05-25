@@ -1,0 +1,4 @@
+#!/bin/sh -e
+SIGNAL=4
+amixer set Master toggle &&
+pkill -RTMIN+$SIGNAL dwmblocks
