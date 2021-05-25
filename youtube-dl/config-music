@@ -18,5 +18,5 @@
 
 # Save location.
 --download-archive "~/.config/youtube-dl/archive"
---batch-file "~/.config/youtube-dl/batch"
---output "~/music/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"
+--batch-file "~/.config/youtube-dl/batch-music"
+--output "~/music/music/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"

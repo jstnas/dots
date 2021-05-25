@@ -1,0 +1,22 @@
+# ASCII output.
+--restrict-filenames
+
+--ignore-errors
+
+# Audio only.
+--extract-audio
+# Prefer playlist.
+--yes-playlist
+
+# Highest quality.
+#--audio-quality 0
+# Output type.
+--audio-format mp3
+# Add thumbnail and metadata.
+--embed-thumbnail
+--add-metadata
+
+# Save location.
+--download-archive "~/.config/youtube-dl/archive"
+--batch-file "~/.config/youtube-dl/batch-game"
+--output "~/music/game/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"
