@@ -7,8 +7,9 @@
     ~/.vim:
     ~/.xinitrc:
     ~/.Xresources:
+    ~/.profile:
 
-    ~/.local/bin: bin
+    ~/.local/bin:
 
     ~/.gnupg/gpg-agent.conf:
     ~/.gitconfig:
