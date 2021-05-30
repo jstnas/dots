@@ -17,6 +17,6 @@
 --add-metadata
 
 # Save location.
---download-archive "~/.config/youtube-dl/archive"
---batch-file "~/.config/youtube-dl/batch-game"
---output "~/music/game/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"
+--download-archive "~/.config/youtube-dl/ltu/archive"
+--batch-file "~/.config/youtube-dl/ltu/batch"
+--output "~/music/ltu/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"

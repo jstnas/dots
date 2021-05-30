@@ -17,6 +17,6 @@
 --add-metadata
 
 # Save location.
---download-archive "~/.config/youtube-dl/archive"
---batch-file "~/.config/youtube-dl/batch-anime"
---output "~/music/anime/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"
+--download-archive "~/.config/youtube-dl/music/archive"
+--batch-file "~/.config/youtube-dl/music/batch"
+--output "~/music/music/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s"
