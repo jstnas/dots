@@ -8,11 +8,11 @@
     ~/.xinitrc:
     ~/.Xresources:
     ~/.profile:
+    ~/.gitconfig:
 
     ~/.local/bin:
-
+    ~/.sfeed/sfeedrc:
     ~/.gnupg/gpg-agent.conf:
-    ~/.gitconfig:
 
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
