@@ -14,6 +14,7 @@
     ~/.sfeed/sfeedrc:
     ~/.gnupg/gpg-agent.conf:
 
+    ~/.config/sxhkd/sxhkdrc:
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
     ~/.config/youtube-dl:

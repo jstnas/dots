@@ -1,0 +1,26 @@
+# Terminal.
+super + shift + Return
+	st zsh
+# Dmenu.
+super + p
+	dmenu_run
+# Media keys.
+XF86Audio{Raise,Lower}Volume
+	~/.local/bin/change_volume {+,-}
+XF86AudioMute
+	~/.local/bin/mute_volume
+XF86MonBrightness{Up,Down}
+	~/.local/bin/change_backlight {+,-}
+Print
+	~/.local/bin/scrot
+control + Print
+	~/.local/bin/scrot -s
+# Programs.
+super + shift + d
+	discord
+super + shift + f
+	firefox
+super + shift + g
+	godot
+super + shift + s
+	tabbed surf -e
