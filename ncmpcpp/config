@@ -231,9 +231,9 @@
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{%t}$R{$8%b - $9}%a"
+song_list_format = "{%t$R$8%b - $9%a}|{%f}"
 #
-song_status_format = "$4%t$9 by $4%a"
+song_status_format = "{$4%t$9 by $4%a}|{%f}"
 #
 #song_library_format = {%n - }{%t}|{%f}
 #
