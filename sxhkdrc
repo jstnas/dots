@@ -16,11 +16,11 @@ Print
 control + Print
 	~/.local/bin/scrot -s
 # Programs.
-super + shift + d
+super + d
 	discord
-super + shift + f
+super + b
 	firefox
-super + shift + g
+super + g
 	godot
-super + shift + s
+super + s
 	tabbed surf -e
