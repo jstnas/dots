@@ -1,5 +1,5 @@
 #!/bin/sh -e
-echo $(mpc current -f '%title%')
+printf "$(mpc current -f '%file%' | cut -d. -f1 | rev | cut -d/ -f1 | rev)\n"
 case $BUTTON in
 	1)
 		mpc toggle
