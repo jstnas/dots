@@ -4,7 +4,7 @@ set completion-group-bg \#ff00ff
 set completion-group-fg \#ff00ff
 set completion-highlight-bg \#6f7f8f
 set completion-highlight-fg \#0f1f2f
-set default-bg \#7f4f2f
+set default-bg rgba(15,31,47,0.9)
 set default-fg \#7f4f2f
 set inputbar-bg \#0f1f2f
 set inputbar-fg \#6f7f8f
@@ -24,7 +24,6 @@ set statusbar-fg \#6f7f8f
 set highlight-color \#2f4f7f
 set highlight-active-color \#7f4f2f
 set recolor-darkcolor \#6f7f8f
-set recolor-lightcolor \#0f1f2f
 set render-loading-bg \#0f1f2f
 set render-loading-fg \#6f7f8f
 set index-bg \#ff00ff

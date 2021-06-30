@@ -1,4 +1,4 @@
-include fellow
+include palettes/fellow
 set font "Gohu GohuFont 8"
 set adjust-open width
 set dbus-service false
@@ -6,3 +6,4 @@ set recolor true
 set recolor-keephue true
 #set recolor-reverse-video true
 set selection-clipboard clipboard
+set recolor-lightcolor rgba(0,0,0,0)
