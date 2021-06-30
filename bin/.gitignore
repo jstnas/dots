@@ -1,3 +1,8 @@
-wall
+# Symlinks.
 change_volume
 mute_volume
+wall
+
+# Python.
+pip*
+wheel

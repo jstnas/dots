@@ -1,10 +1,9 @@
 #!/bin/sh
 CONFIGS=""
-CONFIGS=$CONFIGS"ytdlb $HOME/.config/youtube-dl/batch\n"
 CONFIGS=$CONFIGS"dunst $HOME/.config/dunst/dunstrc\n"
-CONFIGS=$CONFIGS"newsboat $HOME/.config/newsboat/urls\n"
 CONFIGS=$CONFIGS"fish $HOME/.config/fish/config.fish\n"
-CONFIGS=$CONFIGS"vim $HOME/.vim/vimrc"
+CONFIGS=$CONFIGS"mpd $HOME/.config/mpd/mpd.conf\n"
+CONFIGS=$CONFIGS"ytdlm $HOME/.config/youtube-dl/music/batch\n"
 
 FILE=$(echo -e $CONFIGS | dmenu -l 10 | cut -d' ' -f2)
 if test -n "$FILE"; then

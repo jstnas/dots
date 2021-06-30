@@ -1,6 +1,6 @@
 # Terminal.
 super + shift + Return
-	st zsh
+	st fish
 # Dmenu.
 super + p
 	dmenu_run

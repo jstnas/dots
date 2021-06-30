@@ -27,12 +27,10 @@ set fish_color_host_remote		yellow
 set fish_color_cancel			brred
 
 ## Variables
-set -x EDITOR vim
-set -x BROWSER firefox
 set -x GPG_TTY (tty)
-set -x PF_INFO 'ascii title os host kernel uptime pkgs memory palette'
 
 ## Abbreviations
+abbr -a v 'vim'
 abbr -a cb 'cmake --build'
 abbr -a ct 'ctags -R'
 abbr -a cfg '~/.local/bin/config'

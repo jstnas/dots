@@ -1,26 +1,20 @@
-" Variables.
-set nocompatible
-set encoding=utf-8
+set ai nocp hid ru sc sm nosol wmnu
+set noeb
+set nu rnu
+set ic scs
+set is hls
+set bs=2 ls=2 shm=at ww=<,>,h,l
+set noet ts=4 sts=4 sw=4
+set list lcs=tab:>-,trail:.
+set vif=~/.vim/viminfo
 syntax on
-set showmatch
-set listchars=tab:>~,nbsp:_,trail:.
-set list
-set number relativenumber
-set showcmd
-set incsearch
-set ignorecase smartcase
+filetype plugin indent on
+
 set completeopt-=preview
 set noswapfile
 set complete=.,w,b,u,t,i,kspell
-set tabstop=4
-let mapleader = " "
 set path+=**
-set wildmenu
-set hlsearch
-set background=dark
-
-" Tabs.
-filetype plugin indent on
+let mapleader=" "
 
 " File browser.
 let g:netrw_banner=0
@@ -41,18 +35,18 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " Toggle highlight search
-nnoremap <F4> :set hlsearch! hlsearch?<CR>
+nnoremap <F4> :noh<CR>
 
 " Colourscheme.
 colorscheme dim
+set background=dark
 
 " Lightline.
 let g:lightline = {'colorscheme': 'dim'}
-set laststatus=2
 set noshowmode
 
 " Hightlight column.
 set colorcolumn=81
 highlight ColorColumn ctermbg=4
 
-set shell=/bin/dash
+set shell=/bin/sh
