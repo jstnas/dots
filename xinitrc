@@ -10,12 +10,15 @@ ibus-daemon -drx
 
 # Start programs.
 syncthing -no-browser &
+sxhkd &
 mpd &
-picom --experimental-backends &
+#picom --experimental-backends &
 dunst &
 dwmblocks &
 #redshift &
 #discord &
+doas thinkfan &
+xbanish &
 
 # Start the window manager.
 exec dbus-launch --sh-syntax --exit-with-session dwm
