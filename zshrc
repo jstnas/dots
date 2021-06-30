@@ -8,7 +8,6 @@ alias -s org=firefox
 # aliases.
 alias ls='ls --color=auto'
 alias la='ls -alt'
-
 alias Ga='git add'
 alias Gs='git status'
 alias Gl='git log'
@@ -69,14 +68,10 @@ PS1='%B%F{magenta}%~%b%f %L %(?.%F{green}%#%f.%F{red}%? %#%f) '
 RPS1='%(?..D:) %*'
 
 # Exports.
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
-export BROWSER=/usr/bin/firefox
 export KEYTIMEOUT=1
 #export REPORTTIME=5
 
 # pfetch.
-export PF_INFO='ascii title os host kernel shell editor wm de uptime pkgs memory palette'
 pfetch
 
 # Functions.
