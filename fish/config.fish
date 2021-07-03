@@ -67,6 +67,7 @@ abbr -a grmc 'git rm --cached'
 abbr -a gs 'git status'
 abbr -a gsw 'git switch'
 abbr -a gswc 'git switch -c'
+abbr -a gt 'cd (git rev-parse --show-toplevel)'
 
 # Python
 abbr -a venv 'python -m venv .venv'
