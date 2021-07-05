@@ -4,7 +4,6 @@
         relink: true
 - clean: ['~', '~/.config', '~/bin']
 - link:
-    ~/.vim:
     ~/.xinitrc:
     ~/.Xresources:
     ~/.profile:
@@ -14,6 +13,7 @@
     ~/.sfeed/sfeedrc:
     ~/.gnupg/gpg-agent.conf:
 
+    ~/.config/nvim:
     ~/.config/sxhkd/sxhkdrc:
     ~/.config/fish:
     ~/.config/dunst/dunstrc:
