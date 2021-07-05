@@ -1,7 +1,0 @@
-#!/bin/sh -e
-echo $(top -n1 | awk 'NR==2{print$2}')
-case $BUTTON in
-	1)
-		st htop &
-		;;
-esac

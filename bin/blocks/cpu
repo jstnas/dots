@@ -1,5 +1,5 @@
 #!/bin/sh -e
-echo $(top -bn1 | awk 'NR==3{print$2}')
+echo $(cat /proc/loadavg | cut -d' ' -f1)
 case $BUTTON in
 	1)
 		st htop &
