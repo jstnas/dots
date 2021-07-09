@@ -28,5 +28,5 @@ export EDITOR='/usr/bin/nvim'
 # Program variables.
 export LESSHISTFILE=-
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export SXHKD_SHELL='/usr/bin/zsh'
+export SXHKD_SHELL='/bin/sh'
 export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
