@@ -1,7 +1,6 @@
 " Options.
 set showmatch
 set startofline
-set ignorecase smartcase
 set shortmess=at
 set whichwrap=b,s,h,l
 set tabstop=4
