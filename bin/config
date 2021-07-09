@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 CONFIGS=""
 CONFIGS=$CONFIGS"dunst $HOME/.config/dunst/dunstrc\n"
 CONFIGS=$CONFIGS"fish $HOME/.config/fish/config.fish\n"

@@ -1,6 +1,5 @@
 #!/bin/sh -e
-SIGNAL=3
 AMOUNT=5
 xbacklight $1$AMOUNT &&
-pkill -RTMIN+$SIGNAL dwmblocks &&
-notify-send 'Backlight' `~/.local/bin/blocks/backlight` -h string:x-canonical-private-synchronous:backlight
+pkill -RTMIN+$2 dwmblocks &&
+notify-send 'Backlight' "$(~/.local/bin/blocks/backlight)" -h string:x-canonical-private-synchronous:backlight

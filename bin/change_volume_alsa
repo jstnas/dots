@@ -1,6 +1,5 @@
 #!/bin/sh -e
-SIGNAL=4
 STEP=2
 amixer set Master unmute $STEP$1 &&
-pkill -RTMIN+$SIGNAL dwmblocks &&
-notify-send 'Volume' "`~/.local/bin/blocks/volume`"
+pkill -RTMIN+$2 dwmblocks &&
+notify-send 'Volume' "$(~/.local/bin/blocks/volume)"

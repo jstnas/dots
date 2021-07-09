@@ -1,5 +1,5 @@
 #!/bin/sh -e
 SCROT_DIR=~/pictures/scrots
-FILE=$SCROT_DIR/$(date +%Y-%m-%d-%H-%M-%S).png
+FILE="$SCROT_DIR/$(date +%Y-%m-%d-%H-%M-%S).png"
 maim -b 2 -f png -m 10 $@ | tee $FILE | xclip -selection clipboard -t image/png &&
 notify-send 'Scrot taken'
