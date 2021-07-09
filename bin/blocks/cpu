@@ -1,5 +1,5 @@
 #!/bin/sh -e
-echo $(cat /proc/loadavg | cut -d' ' -f1)
+printf "$(cat /proc/loadavg | cut -d' ' -f1)\n"
 case $BUTTON in
 	1)
 		st htop &

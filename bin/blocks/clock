@@ -1,2 +1,2 @@
 #!/bin/sh -e
-echo $(date +'%a %b %Z %H:%M:%S %d/%m/%Y')
+printf "$(date +'%a %b %Z %H:%M:%S %d/%m/%Y')\n"

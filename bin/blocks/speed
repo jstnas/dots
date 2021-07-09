@@ -1,2 +1,0 @@
-#!/bin/sh -e
-echo $(speedtest --csv | awk '{split($0,a,",");printf("%dP %dD %dU\n",a[6],a[7]/800000,a[8]/800000)}')
