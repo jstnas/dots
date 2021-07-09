@@ -6,7 +6,7 @@ CONFIGS=$CONFIGS"mpd $HOME/.config/mpd/mpd.conf\n"
 CONFIGS=$CONFIGS"ytdlm $HOME/.config/youtube-dl/music/batch\n"
 CONFIGS=$CONFIGS"nvim $HOME/.config/nvim/init.vim\n"
 
-FILE=$(echo -e $CONFIGS | dmenu -l 10 | cut -d' ' -f2)
+FILE=$(printf "$CONFIGS" | dmenu -l 10 | cut -d' ' -f2)
 if test -n "$FILE"; then
 	$EDITOR $FILE
 fi
