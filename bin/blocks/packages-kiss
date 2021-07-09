@@ -1,2 +1,2 @@
 #!/bin/sh -e
-echo $(kiss l | wc -l)
+printf "$(kiss o | wc -l)/$(kiss l | wc -l)\n"

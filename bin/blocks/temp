@@ -1,0 +1,2 @@
+#!/bin/sh -e
+printf "$(cat /sys/class/thermal/$1/temp | awk '{print $1/1000}')\n"
