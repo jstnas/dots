@@ -5,22 +5,19 @@ Programs
 --------
 * distro - [kisslinux](https://k1sslinux.org) on cerasus
 [arch](https://archlinux.org) on x220
-* wm - [patched dwm](https://github.com/jstnas/dwm)
-* term - [patched st](https://github.com/jstnas/st)
+* wm - [dwl](https://github.com/djpohly/dwl)
+* term - [foot](https://codeberg.org/dnkl/foot)
 * shell - [fish](https://fishshell.com)
 * editor - [neovim](https://neovim.io)
-* statusbar - [patched dwmblocks](https://github.com/jstnas/dwmblocks)
-* clipboard - [xclip](https://github.com/jstnas/dwmblocks)
-* scrot - [maim](https://github.com/naelstrof/maim)
-* compositor - [picom](https://github.com/yshui/picom)
-* wallpaper - [feh](https://feh.finalrewind.org)
-* image viewer - [sxiv](https://github.com/muennich/sxiv)
+* statusbar - None
+* clipboard - None
+* scrot - None
+* wallpaper - None
+* image viewer - None
 * sound - [alsa](https://alsa-project.org/wiki/Main_Page) on cerasus
 [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio) on x220
 * music - [mpd](https://www.musicpd.org)
 with [ncmpcpp](https://rybczak.net/ncmpcpp)
-* notification - [dunst](https://dunst-project.org) for arch
-[herbe](https://github.com/dudik/herbe) for kiss
 * network - [connman](https://git.kernel.org/pub/scm/network/connman/connman.git) on x220
 * browser - [firefox](https://www.mozilla.org/en-US/firefox/new)
 
