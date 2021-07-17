@@ -1,4 +1,4 @@
-export XDG_DATA_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 
 # Kiss variables.
@@ -30,3 +30,8 @@ export LESSHISTFILE=-
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export SXHKD_SHELL='/bin/sh'
 export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
+
+# Wayland.
+export MOZ_ENABLE_WAYLAND=1
+export XKB_DEFAULT_LAYOUT=gb
+export XKB_DEFAULT_OPTIONS=caps:escape

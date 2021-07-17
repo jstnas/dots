@@ -60,10 +60,10 @@
 	frame_color = "#3f4f5f"
 	timeout = 10
 [urgency_normal]
-	frame_color = "#9f6f4f"
+	frame_color = "#7f4f2f"
 	timeout = 10
 [urgency_critical]
-	frame_color = "#9f4f6f"
+	frame_color = "#7f2f4f"
 	timeout = 0
 [background]
 	summary = "*"
