@@ -42,6 +42,7 @@ abbr -a Patch 'patch -p1 <'
 abbr -a pls 'pacman -Qq | grep -i'
 abbr -a Sxiv  'sxiv -o'
 abbr -a Picom 'picom --experimental-backends & disown'
+abbr -a todo 'grep TODO *'
 
 # Git
 abbr -a ga 'git add'
