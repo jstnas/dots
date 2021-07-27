@@ -34,7 +34,7 @@ highlight Search		ctermfg=0		ctermbg=11
 highlight LineNr		ctermfg=8
 highlight CursorLineNr	ctermfg=7
 highlight Comment		ctermfg=8
-highlight ColorColumn	ctermfg=7		ctermbg=8
+highlight ColorColumn	ctermfg=NONE	ctermbg=NONE	cterm=inverse
 highlight Folded		ctermfg=7		ctermbg=8
 highlight FoldColumn	ctermfg=7		ctermbg=8
 highlight Pmenu			ctermfg=15		ctermbg=8
