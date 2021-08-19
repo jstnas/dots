@@ -1,5 +1,7 @@
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_RUNTIME_DIR=/tmp/$(id -u)
+mkdir -m 0700 -p $XDG_RUNTIME_DIR
 
 # Kiss variables.
 export KISS_SU='doas'
@@ -8,7 +10,7 @@ export KISS_PATH=''
 KISS_PATH=$KISS_PATH:$HOME/repos/kiss-jstnas
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/core
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/extra
-KISS_PATH=$KISS_PATH:$HOME/repos/repo/xorg
+KISS_PATH=$KISS_PATH:$HOME/repos/repo/wayland
 KISS_PATH=$KISS_PATH:$HOME/repos/community/community
 KISS_PATH=$KISS_PATH:$HOME/repos/kiss-godot
 
@@ -32,6 +34,8 @@ export SXHKD_SHELL='/bin/sh'
 export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
 
 # Wayland.
-export MOZ_ENABLE_WAYLAND=1
-export XKB_DEFAULT_LAYOUT=gb
+export XKB_DEFAULT_LAYOUT=us
 export XKB_DEFAULT_OPTIONS=caps:escape
+export LIBSEAT_BACKEND=seatd
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_WAYLAND_DRM_DEVICE=/dev/dri/renderD128
