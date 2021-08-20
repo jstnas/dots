@@ -39,3 +39,7 @@ export XKB_DEFAULT_OPTIONS=caps:escape
 export LIBSEAT_BACKEND=seatd
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_WAYLAND_DRM_DEVICE=/dev/dri/renderD128
+export QT_QPA_PLATFORM=wayland
+export CLUTTER_BACKEND=wayland
+export SDL_VIDEODRIVER=wayland
+#export SDL_VIDEODRIVER=x11
