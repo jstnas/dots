@@ -319,7 +319,7 @@ browser_sort_mode = name
 ## Note: Custom command that will be executed each time song changes. Useful for
 ## notifications etc.
 ##
-execute_on_song_change = "~/.local/bin/on_song_change"
+#execute_on_song_change = "~/.local/bin/on_song_change"
 #
 ##
 ## Note: Custom command that will be executed each time player state
