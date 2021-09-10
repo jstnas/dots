@@ -2,10 +2,9 @@
 
 CONFIG="~/.config/youtube-dl/music-config"
 ARCHIVE="~/.config/youtube-dl/$1/archive"
-BATCH="~/.config/youtube-dl/$1/batch"
+BATCH="~/.config/youtube-dl/$1"
 OUTPUT="~/music/$1/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s"
 
 youtube-dl --config-location $CONFIG \
-	--download-archive $ARCHIVE \
 	--batch-file $BATCH \
-	--output $OUTPUT
+	--output $OUTPUT \
