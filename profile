@@ -20,7 +20,7 @@ export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS='-j12'
 export SCONSFLAGS='-j12'
 
-export PASSWORD_STORE_GENERATED_LENGTH=16
+export PASSWORD_STORE_GENERATED_LENGTH=32
 export PASSWORD_STORE_CHARACTER_SET='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
 
 export PAGER='/usr/bin/less'
