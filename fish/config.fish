@@ -45,6 +45,7 @@ abbr -a Picom 'picom --experimental-backends & disown'
 abbr -a todo 'grep TODO *'
 abbr -a Dunst 'dunst &; disown'
 abbr -a pIP 'curl https://ipinfo.io/ip'
+abbr -a sfc 'sfeed_curses ~/feeds/*'
 
 # Git
 abbr -a ga 'git add'
