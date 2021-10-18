@@ -94,3 +94,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 " Disable highlight search.
 nnoremap <F4> :noh<CR>
+
+" Skeleton files.
+autocmd BufNewFile ?akefile* 0r ~/.config/nvim/templates/skeleton.make
