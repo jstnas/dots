@@ -1,0 +1,14 @@
+#!/bin/sh -e
+printf "$(mpc current -f '%title%')\n"
+#printf "$(mpc current -f '%file%' | cut -d. -f1 | rev | cut -d/ -f1 | rev)\n"
+case $BUTTON in
+	1)
+		mpc toggle
+		;;
+	2)
+		mpc update
+		;;
+	3)
+		st ncmpcpp &
+		;;
+esac
