@@ -1,6 +1,6 @@
 #!/bin/sh
 PAUSE=60
-COLOUR='#0e1e2e'
+COLOUR='#001020'
 WALL_DIR=~/pictures/wallpapers/custom/zeen_chin_ink_fellow_dark
 
 while true; do

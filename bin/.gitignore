@@ -3,6 +3,8 @@ change_volume
 mute_volume
 wall
 
+youtube-dl
+
 # Python.
 pip*
 wheel

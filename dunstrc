@@ -57,16 +57,16 @@
 	history = ctrl+grave
 	context = ctrl+shift+period
 [urgency_low]
-	frame_color = "#3f4f5f"
+	frame_color = "#304050"
 	timeout = 10
 [urgency_normal]
-	frame_color = "#7f4f2f"
+	frame_color = "#704020"
 	timeout = 10
 [urgency_critical]
-	frame_color = "#7f2f4f"
+	frame_color = "#702040"
 	timeout = 0
 [background]
 	summary = "*"
-	background = "#0f1f2f"
-	foreground = "#6f7f8f"
+	background = "#001020"
+	foreground = "#607080"
 # vim: ft=cfg
