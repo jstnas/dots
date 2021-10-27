@@ -1,6 +1,7 @@
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_RUNTIME_DIR=/tmp/$(id -u)
+export GPG_TTY=$(tty)
 mkdir -m 0700 -p $XDG_RUNTIME_DIR
 
 # Kiss variables.
