@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Create symlinks
+ln -s "bin"			"$HOME/.local"
+ln -s "gitconfig"	"$HOME/.gitconfig"
+ln -s "profile"		"$HOME/.profile"
+ln -s "fish"		"$XDG_CONFIG_HOME"
+ln -s "mpd.conf"	"$XDG_CONFIG_HOME/mpd"
+ln -s "ncmcpp"		"$XDG_CONFIG_HOME"
+ln -s "nvim"		"$XDG_CONFIG_HOME"
+ln -s "sxhkdrc"		"$XDG_CONFIG_HOME/sxhkd"
+ln -s "youtube-dl"	"$XDG_CONFIG_HOME"
+ln -s "zathura"		"$XDG_CONFIG_HOME"
