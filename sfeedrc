@@ -1,17 +1,12 @@
-#sfeedpath="$HOME/.sfeed/feeds"
+sfeedpath="$HOME/feeds"
 
-# list of feeds to fetch:
 feeds() {
-	# feed <name> <feedurl> [basesiteurl] [encoding]
-	feed 'godot' 'https://godotengine.org/rss.xml'
-	feed 'kiss' 'https://k1sslinux.org/blog/blog.xml'
-	feed 'suckless' 'http://suckless.org/atom.xml'
-	feed 'iron_os' 'https://github.com/Ralim/IronOS/releases.atom'
-	feed 'xkcd' 'https://xkcd.com/rss.xml'
-	feed 'raspberry_pi' 'https://www.raspberrypi.org/blog/feed/'
-	feed 'gustavo_enciklopedia' 'https://www.lrt.lt/mediateka/video/gustavo-enciklopedija?rss'
-	feed 'r_unixporn' 'https://www.reddit.com/r/unixporn.rss'
-	feed 'r_mechmarket' 'https://www.reddit.com/r/mechmarket.rss'
-	feed 'r_mechanical_keyboards' 'https://www.reddit.com/r/MechanicalKeyboards.rss'
-	feed 'r_kisslinux' 'https://www.reddit.com/r/kisslinux.rss'
+	feed "archlinux" "https://archlinux.org/feeds/news/"
+	feed "godot" "https://godotengine.org/rss.xml"
+	feed "iron-os" "https://github.com/Ralim/IronOS/releases.atom"
+	feed "kiss-posts" "https://kisslinux.org/rss/post.rss"
+	feed "kiss-tidbits" "https://kisslinux.org/rss/tidbits.rss"
+	feed "project-euler" "https://projecteuler.net/rss2_euler.xml"
+	feed "suckless" "https://suckless.org/atom.xml"
+	feed "xkcd" "https://xkcd.com/atom.xml"
 }
