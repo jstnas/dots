@@ -7,19 +7,17 @@ mkdir -m 0700 -p $XDG_RUNTIME_DIR
 # Kiss variables.
 export KISS_SU='doas'
 # Kiss path.
-export KISS_PATH=''
-KISS_PATH=$KISS_PATH:$HOME/repos/kiss-jstnas
+export KISS_PATH=$HOME/repos/kiss-jstnas
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/core
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/extra
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/wayland
 KISS_PATH=$KISS_PATH:$HOME/repos/community/community
-KISS_PATH=$KISS_PATH:$HOME/repos/kiss-godot
 
 export CFLAGS='-O3 -pipe -march=native'
 export CXXFLAGS="$CFLAGS"
 
-export MAKEFLAGS='-j12'
-export SCONSFLAGS='-j12'
+export MAKEFLAGS="-j$(nproc)"
+export SCONSFLAGS="-j$(nproc)"
 
 export PASSWORD_STORE_GENERATED_LENGTH=32
 export PASSWORD_STORE_CHARACTER_SET='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
