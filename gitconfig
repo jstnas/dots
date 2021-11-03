@@ -9,6 +9,7 @@
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
+	verifySignatures = true
 [mergetool]
 	prompt = false
 [commit]
