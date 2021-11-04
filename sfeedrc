@@ -9,5 +9,5 @@ feeds() {
 	feed "kiss-tidbits" "https://kisslinux.org/rss/tidbits.rss"
 	feed "project-euler" "https://projecteuler.net/rss2_euler.xml"
 	feed "suckless" "https://suckless.org/atom.xml"
-	feed "xkcd" "https://xkcd.com/atom.xml"
+	feed "xkcd" "https://xkcd.com/rss.xml"
 }
