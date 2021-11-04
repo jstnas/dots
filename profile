@@ -8,7 +8,7 @@ mkdir -m 0700 -p $XDG_RUNTIME_DIR
 # Kiss variables.
 export KISS_SU='doas'
 # Kiss path.
-export KISS_PATH=$HOME/repos/kiss-jstnas
+export KISS_PATH=$HOME/repos/kiss-jstnas/kiss-jstnas
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/core
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/extra
 KISS_PATH=$KISS_PATH:$HOME/repos/repo/wayland
