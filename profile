@@ -42,3 +42,7 @@ export QT_QPA_PLATFORM=wayland
 export CLUTTER_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 #export SDL_VIDEODRIVER=x11
+
+# Lynx.
+export LYNX_CFG=$XDG_CONFIG_HOME/lynx/lynx.cfg
+export LYNX_LSS=$XDG_CONFIG_HOME/lynx/lynx.lss
