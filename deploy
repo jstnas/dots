@@ -4,6 +4,7 @@
 ln -sT "$PWD/bin"			"$HOME/.local/bin"
 ln -sT "$PWD/gitconfig"		"$HOME/.gitconfig"
 ln -sT "$PWD/profile"		"$HOME/.profile"
+ln -sT "$PWD/ssh/config"	"$HOME/.ssh/config"
 ln -sT "$PWD/fish"			"$XDG_CONFIG_HOME/fish"
 ln -sT "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
 ln -sT "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
