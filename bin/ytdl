@@ -1,10 +1,11 @@
 #!/bin/sh -e
 
-CONFIG="~/.config/youtube-dl/music-config"
-ARCHIVE="~/.config/youtube-dl/$1/archive"
-BATCH="~/.config/youtube-dl/$1"
+CONF_DIR="~/.config/ytdl"
+CONFIG="$CONF_DIR/music-config"
+ARCHIVE="$CONF_DIR/$1/archive"
+BATCH="$CONF_DIR/$1"
 OUTPUT="~/music/$1/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s"
 
-youtube-dl --config-location $CONFIG \
+yt-dlp --config-location $CONFIG \
 	--batch-file $BATCH \
 	--output $OUTPUT \
