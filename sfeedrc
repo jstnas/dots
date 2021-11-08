@@ -2,12 +2,14 @@ sfeedpath="$HOME/feeds"
 
 feeds() {
 	feed "archlinux" "https://archlinux.org/feeds/news/"
+	feed "glfw" "https://github.com/glfw/glfw/releases.atom"
 	feed "godot" "https://godotengine.org/rss.xml"
 	feed "htop" "https://github.com/htop-dev/htop/releases.atom"
 	feed "iron-os" "https://github.com/Ralim/IronOS/releases.atom"
 	feed "kiss-posts" "https://kisslinux.org/rss/post.rss"
 	feed "kiss-tidbits" "https://kisslinux.org/rss/tidbits.rss"
 	feed "project-euler" "https://projecteuler.net/rss2_euler.xml"
+	feed "raylib" "https://github.com/raysan5/raylib/releases.atom"
 	feed "suckless" "https://suckless.org/atom.xml"
 	feed "xkcd" "https://xkcd.com/rss.xml"
 }
