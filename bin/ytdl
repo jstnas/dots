@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 CONF_DIR="~/.config/ytdl"
-CONFIG="$CONF_DIR/music-config"
+CONFIG="$CONF_DIR/config"
 ARCHIVE="$CONF_DIR/$1/archive"
 BATCH="$CONF_DIR/$1"
 OUTPUT="~/music/$1/%(playlist_title)s/%(playlist_index)s-%(title)s.%(ext)s"
