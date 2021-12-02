@@ -98,6 +98,9 @@ bindsym $mod+Shift+Return exec $term
 bindsym $mod+Shift+c kill
 # Start your launcher
 bindsym $mod+p exec $menu
+# Screenshot
+bindsym Print exec ~/.local/bin/scrot
+bindsym Shift+Print exec ~/.local/bin/scrot r
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.
