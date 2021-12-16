@@ -6,7 +6,7 @@ set whichwrap=b,s,h,l
 set tabstop=4
 set shiftwidth=4
 set softtabstop=-1
-set list listchars=tab:>-,trail:-,nbsp:+
+set list listchars=tab:>-,trail:.,nbsp:+
 set colorcolumn=80
 set number relativenumber
 set scrolloff=8
