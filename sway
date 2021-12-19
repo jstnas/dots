@@ -1,26 +1,37 @@
-### Hide cursor
+## startup
+exec wlsunset -l 51.3 -L 0.1
+
+## hide cursor
 seat seat0 hide_cursor 3000
 
-### Font
+## font
 font pango:JetBrains Mono 10
 
-### Colours
-#class                  border  background text    indicator child_border
-client.focused          #704020 #704020    #90a0b0 #207040   #704020
-client.focused_inactive #304050 #304050    #90a0b0 #207040   #304050
-client.unfocused        #304050 #304050    #607080 #207040   #304050
-client.urgent           #702040 #702040    #90a0b0 #207040   #702040
-client.placeholder      #207040 #207040    #90a0b0 #207040   #207040
+## colours
+# grays
+set $col0 #001020
+set $col1 #304050
+set $col2 #607080
+set $col3 #90a0b0
+# accent
+set $col4 #704020
+# indicator
+set $col5 #207040
+# class                 border background text  indicator child_border
+client.focused          $col4  $col4      $col3 $col5     $col4
+client.focused_inactive $col1  $col1      $col3 $col5     $col1
+client.unfocused        $col1  $col1      $col2 $col5     $col1
+client.urgent           $col4  $col4      $col3 $col5     $col4
+client.placeholder      $col5  $col5      $col3 $col5     $col5
 
-### Gaps
+## gaps
 gaps inner 8
 smart_gaps on
 smart_borders on
-
-### Titlebars
+# disable titlebars
 default_border pixel 2
 
-### Workspaces
+## workspaces
 set $ws1 workspace 0α
 set $ws2 workspace 1β
 set $ws3 workspace 2γ
@@ -32,7 +43,7 @@ set $ws8 workspace 7θ
 set $ws9 workspace 8ι
 set $ws10 workspace 9κ
 
-### Variables
+## variables
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -51,8 +62,8 @@ set $menu dmenu-wl_run | xargs swaymsg exec --
 # Example configuration:
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg #001020 solid_color
-#output * bg ~/wall.jpg fit #001020
+output * bg $col0 solid_color
+#output * bg ~/wall.jpg fit $col0
 output DP-1 mode 1920x1080@143.855Hz
 output HDMI-A-1 resolution 1920x1080 position 0,0 transform 270
 
@@ -82,7 +93,7 @@ output HDMI-A-1 resolution 1920x1080 position 0,0 transform 270
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-## Thinkpad keyboard
+## thinkpad keyboard
 input 1:1:AT_Translated_Set_2_keyboard {
 	xkb_layout "gb"
 	xkb_options "caps:escape"
@@ -117,6 +128,9 @@ bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym XF86AudioMute exec ~/.local/bin/mute
 bindsym XF86AudioRaiseVolume exec ~/.local/bin/vol +
 bindsym XF86AudioLowerVolume exec ~/.local/bin/vol -
+# backlight
+bindsym XF86MonBrightnessUp exec ~/.local/bin/bl +
+bindsym XF86MonBrightnessDown exec ~/.local/bin/bl -
 
 ## Moving around:
 # Move your focus around
@@ -208,12 +222,12 @@ bar {
     # The default just shows the current date and time.
     status_command while date +'%a %b %Z %H:%M:%S %d/%m/%y'; do sleep 1; done
     colors {
-        statusline #607080
-        background #001020
+        statusline $col2
+        background $col0
         #class             border  backgr  text
-        focused_workspace  #704020 #704020 #90a0b0
-        active_workspace   #304050 #304050 #90a0b0
-        inactive_workspace #001020 #001020 #607080
-        urgent_workspace   #702040 #702040 #90a0b0
+        focused_workspace  $col4 $col4 $col3
+        active_workspace   $col1 $col1 $col3
+        inactive_workspace $col0 $col0 $col2
+        urgent_workspace   $col4 $col4 $col3
     }
 }
