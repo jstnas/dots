@@ -1,6 +1,6 @@
 #!/bin/sh -e
-SIGNAL=4
+
 STEP=10%
-pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ $1$STEP &&
-pkill -RTMIN+$SIGNAL dwmblocks &&
-notify-send 'Volume' "`~/.local/bin/blocks/volume`" -h string:x-canonical-private-synchronous:volume
+
+pactl set-sink-mute @DEFAULT_SINK@ false
+pactl set-sink-volume @DEFAULT_SINK@ $1$STEP

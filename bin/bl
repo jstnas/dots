@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+step=10
+
+backlight_control $1$step

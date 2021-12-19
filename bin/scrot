@@ -1,6 +1,9 @@
 #!/bin/sh
-file="~/pictures/scrots/$(date +%y%m%d%H%M%S).png"
+file="$HOME/pictures/scrots/$(date +%y%m%d%H%M%S).png"
 slurp_opts='-b#00102090 -c#704020ff'
+
+# make sure the scorts foler exists
+mkdir -p $(dirname $file)
 
 case "$1" in
 	r )
