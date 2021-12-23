@@ -28,6 +28,8 @@ filetype plugin indent on
 " command without shift
 nn ; :
 nn : ;
+vn ; :
+vn : ;
 " change splits
 nn <C-H> <C-W><C-H>
 nn <C-J> <C-W><C-J>
