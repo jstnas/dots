@@ -1,5 +1,5 @@
 " options
-se cul sm sol so=8 shm=at ww=b,s,h,l
+se cb=unnamedplus cul sm sol so=8 shm=at ww=b,s,h,l
 " tabs
 se ts=4 sw=0 sts=-1
 se tw=80 cc=+1
@@ -16,6 +16,8 @@ se stl+=%=       " right align
 se stl+=%c:%l/%L " position
 " search
 se ic scs is
+" spelling
+se spl=en_gb
 
 " colors
 syntax on
@@ -25,6 +27,9 @@ colo sim
 filetype plugin indent on
 
 " keymaps
+" leader
+let mapleader=" "
+set tm=500
 " command without shift
 nn ; :
 nn : ;
@@ -36,4 +41,8 @@ nn <C-J> <C-W><C-J>
 nn <C-K> <C-W><C-K>
 nn <C-L> <C-W><C-L>
 " turn off highlights
-nn <F4> :noh<CR>
+nn <Leader>h :noh<CR>
+" toggle spelling
+nn <Leader>s :se spell!<CR>
+" toggle line numbers
+nn <Leader>n :se nu! rnu!<CR>
