@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+
+BACKLIGHT='intel_backlight'
+DIR="/sys/class/backlight/$BACKLIGHT"
+MAX="$(cat $DIR/max_brightness)"
+CUR="$(cat $DIR/actual_brightness)"
+
+awk "BEGIN {printf \"%.0f\n\", $CUR / $MAX * 100}"

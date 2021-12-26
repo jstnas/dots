@@ -1,11 +1,9 @@
-#!/bin/sh -e
-echo $(pactl list sinks | grep '	Volume:' | awk '{print$5}')
-case $BUTTON in
-	1)
-		~/.local/bin/mute_volume ;;
-	2)
-		pulseaudio -k &&
-		pulseaudio -D ;;
-	3)
-		~/.local/bin/change_sink ;;
-esac
+#!/bin/sh
+
+VOL=$(pactl get-sink-volume @DEFAULT_SINK@ \
+	| cut -sd'%' -f1 \
+	| rev \
+	| cut -d' ' -f1 \
+	| rev)
+
+printf "$VOL\n"

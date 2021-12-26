@@ -1,4 +1,3 @@
-#!/bin/sh -e
-SIGNAL=4
-pactl set-sink-mute @DEFAULT_SINK@ toggle &&
-pkill -RTMIN+$SIGNAL dwmblocks
+#!/bin/sh
+
+pactl set-sink-mute @DEFAULT_SINK@ toggle

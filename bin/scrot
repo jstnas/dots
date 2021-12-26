@@ -1,4 +1,5 @@
 #!/bin/sh
+
 file="$HOME/pictures/scrots/$(date +%y%m%d%H%M%S).png"
 slurp_opts='-b#00102090 -c#704020ff'
 
@@ -6,10 +7,6 @@ slurp_opts='-b#00102090 -c#704020ff'
 mkdir -p $(dirname $file)
 
 case "$1" in
-	r )
-		grim -g "$(slurp $slurp_opts)" $file
-		;;
-	* )
-		grim $file
-		;;
+	r) grim -g "$(slurp $slurp_opts)" $file;; # region
+	*) grim $file;;
 esac

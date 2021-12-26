@@ -1,7 +1,7 @@
-#!/bin/sh -e
-printf "$(cat /proc/loadavg | cut -d' ' -f1)\n"
-case $BUTTON in
-	1)
-		st htop &
-		;;
-esac
+#!/bin/sh
+
+CPU=$(cat /proc/loadavg \
+	| cut -d ' ' -f 1 \
+	| awk '{print $0 * 100}')
+
+printf "$CPU\n"

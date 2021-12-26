@@ -1,2 +1,3 @@
-#!/bin/sh -e
+#!/bin/sh
+
 pacman -Rsn $(pacman -Qdtq)

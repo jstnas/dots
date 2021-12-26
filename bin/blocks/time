@@ -1,2 +1,5 @@
-#!/bin/sh -e
-printf "$(date +'%a %b %Z %H:%M:%S %d/%m/%Y')\n"
+#!/bin/sh
+
+TIME=$(date +'%a %b %Z %H:%M:%S %d/%m/%Y')
+
+printf "$TIME\n"

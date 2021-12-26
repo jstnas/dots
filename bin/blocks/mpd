@@ -1,21 +1,15 @@
-#!/bin/sh -e
-# Print title if song has one, otherwise print the file name
+#!/bin/sh
+
 TITLE="$(mpc current -f '%title%')"
+
+# print the title if the song has one, otherwise print the filename
 if [ -n "$TITLE" ]; then
 	printf "$TITLE\n"
 else
-	printf "$(mpc current -f '%file%' | cut -d. -f1 | rev | cut -d/ -f1 | rev)\n"
+	FILE=$(mpc current -f '%file%' \
+		| cut -d '.' -f 1 \
+		| rev \
+		| cut -d '/' -f 1 \
+		| rev)
+	printf "$FILE\n"
 fi
-
-
-case $BUTTON in
-	1)
-		mpc toggle
-		;;
-	2)
-		mpc update
-		;;
-	3)
-		st ncmpcpp &
-		;;
-esac

@@ -1,5 +1,0 @@
-#!/bin/sh -e
-
-STEP=2
-
-amixer set Master unmute $STEP$1 &&

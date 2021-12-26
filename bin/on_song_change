@@ -1,9 +1,0 @@
-#!/bin/sh -e
-SONG=$(mpc current)
-MPD_DIR="$HOME/music/"
-FILE=$MPD_DIR$(mpc current -f %file%)
-IMG='/tmp/mpd_cover.png'
-SIZE=128
-FILTER="scale=-1:$SIZE,crop=$SIZE:$SIZE:(in_w-$SIZE)/2:0"
-ffmpeg -loglevel fatal -y -i $FILE -vf $FILTER $IMG
-notify-send 'Now Playing' "$SONG" -h string:x-canonical-private-synchronous:playing -i $IMG

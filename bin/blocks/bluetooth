@@ -1,9 +1,0 @@
-#!/bin/sh -e
-devices=`bluetoothctl paired-devices`
-while read -r device; do
-	mac=`echo $device | awk '{print $2}'`
-	connected=`bluetoothctl info $mac | grep 'Connected:' | awk '{print $2}'`
-	if [[ "$connected" == 'yes' ]]; then
-		echo $device | awk '{print $3}'
-	fi
-done <<< $devices

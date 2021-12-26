@@ -1,6 +1,0 @@
-#!/bin/sh -e
-echo $(amixer get Master | tail -n 1 | cut -d ' ' -f 6 | tr -d [])
-case $BUTTON in
-	1)
-		~/.local/bin/mute_volume ;;
-esac

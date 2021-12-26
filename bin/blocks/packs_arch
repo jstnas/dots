@@ -1,2 +1,3 @@
-#!/bin/sh -e
-echo $(pacman -Qet | wc -l)/$(pacman -Qdt | wc -l)/$(pacman -Q | wc -l)
+#!/bin/sh
+
+printf "$(pacman -Qet | wc -l)/$(pacman -Qdt | wc -l)/$(pacman -Q | wc -l)\n"

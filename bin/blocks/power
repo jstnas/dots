@@ -1,6 +1,0 @@
-#!/bin/sh -e
-case $BUTTON in
-	1)
-		~/.local/bin/power
-		;;
-esac
