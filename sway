@@ -1,5 +1,7 @@
 ## startup
 exec wlsunset -l 51.3 -L 0.1
+exec fnott
+exec discord
 
 ## hide cursor
 seat seat0 hide_cursor 3000
@@ -17,11 +19,14 @@ set $col3 #90a0b0
 set $col4 #704020
 # indicator
 set $col5 #207040
+# urgent
+set $col6 #702040
+
 # class                 border background text  indicator child_border
 client.focused          $col4  $col4      $col3 $col5     $col4
 client.focused_inactive $col1  $col1      $col3 $col5     $col1
 client.unfocused        $col1  $col1      $col2 $col5     $col1
-client.urgent           $col4  $col4      $col3 $col5     $col4
+client.urgent           $col6  $col6      $col3 $col5     $col6
 client.placeholder      $col5  $col5      $col3 $col5     $col5
 
 ## gaps
@@ -62,8 +67,8 @@ set $menu dmenu-wl_run | xargs swaymsg exec --
 # Example configuration:
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg $col0 solid_color
-#output * bg ~/wall.jpg fit $col0
+#output * bg $col0 solid_color
+output * bg ~/pictures/wall.png fill $col0
 output DP-1 mode 1920x1080@143.855Hz
 output HDMI-A-1 resolution 1920x1080 position 0,0 transform 270
 
@@ -94,11 +99,23 @@ output HDMI-A-1 resolution 1920x1080 position 0,0 transform 270
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 ## thinkpad keyboard
-input 1:1:AT_Translated_Set_2_keyboard {
-	xkb_layout "gb"
+input type:keyboard {
 	xkb_options "caps:escape"
 	repeat_delay 300
 	repeat_rate 30
+}
+
+input 1:1:AT_Translated_Set_2_keyboard {
+	xkb_layout "gb"
+}
+
+input type:pointer {
+	natural_scroll disabled
+}
+
+input type:touchpad {
+	tap enabled
+	natural_scroll disabled
 }
 
 ### Key bindings
@@ -121,10 +138,12 @@ floating_modifier $mod normal
 # Reload the configuration file
 bindsym $mod+Shift+r reload
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+q exec swaymsg exit
+# close notification (fnott)
+bindsym $mod+Backspace exec fnottctl dismiss
 
-## Media keys:
-# Volume
+## media keys
+# volume
 bindsym XF86AudioMute exec ~/.local/bin/mute
 bindsym XF86AudioRaiseVolume exec ~/.local/bin/vol +
 bindsym XF86AudioLowerVolume exec ~/.local/bin/vol -
@@ -132,20 +151,22 @@ bindsym XF86AudioLowerVolume exec ~/.local/bin/vol -
 bindsym XF86MonBrightnessUp exec ~/.local/bin/bl +
 bindsym XF86MonBrightnessDown exec ~/.local/bin/bl -
 
-## Moving around:
-# Move your focus around
+## moving around
+# move your focus around
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-# Move the focused window with the same, but add Shift
+# move the focused window with the same, but add shift
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-## Workspaces:
-# Switch to workspace
+## workspaces
+# move back and fourth
+bindsym $mod+Tab workspace back_and_forth
+# switch to workspace
 bindsym $mod+1 $ws1
 bindsym $mod+2 $ws2
 bindsym $mod+3 $ws3
@@ -156,7 +177,7 @@ bindsym $mod+7 $ws7
 bindsym $mod+8 $ws8
 bindsym $mod+9 $ws9
 bindsym $mod+0 $ws10
-# Move focused container to workspace
+# move focused container to workspace
 bindsym $mod+Shift+1 move container to $ws1
 bindsym $mod+Shift+2 move container to $ws2
 bindsym $mod+Shift+3 move container to $ws3
@@ -214,7 +235,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-### Status Bar:
+### status bar
 bar {
 	strip_workspace_numbers yes
     position top
@@ -228,6 +249,10 @@ bar {
         focused_workspace  $col4 $col4 $col3
         active_workspace   $col1 $col1 $col3
         inactive_workspace $col0 $col0 $col2
-        urgent_workspace   $col4 $col4 $col3
+        urgent_workspace   $col6 $col6 $col3
     }
 }
+
+# assignments
+assign [app_id=firefox] $ws3
+for_window [class=discord] move container to $ws4
