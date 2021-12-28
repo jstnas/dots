@@ -1,5 +1,5 @@
 " options
-se cb=unnamedplus cul sm sol so=8 shm=at ww=b,s,h,l
+se cb=unnamed cul shm=at sm so=8 sol tm=500 ww=b,s,h,l
 " tabs
 se ts=4 sw=0 sts=-1
 se tw=80 cc=+1
@@ -27,9 +27,6 @@ colo sim
 filetype plugin indent on
 
 " keymaps
-" leader
-let mapleader=" "
-set tm=500
 " command without shift
 nn ; :
 nn : ;
@@ -40,9 +37,20 @@ nn <C-H> <C-W><C-H>
 nn <C-J> <C-W><C-J>
 nn <C-K> <C-W><C-K>
 nn <C-L> <C-W><C-L>
-" turn off highlights
+
+" leader
+let mapleader=" "
+" toggle goyo
+nn <Leader>g :Goyo<CR>
+" toggle line numbers
 nn <Leader>h :noh<CR>
+" turn off highlights
+nn <Leader>n :se nu! rnu!<CR>
 " toggle spelling
 nn <Leader>s :se spell!<CR>
-" toggle line numbers
-nn <Leader>n :se nu! rnu!<CR>
+
+" plugs
+" lightline goyo interation
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_conceal_ctermfg = 8
