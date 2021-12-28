@@ -18,3 +18,7 @@
 	program = gpg2
 [add "interactive"]
 	useBuiltin = true
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
