@@ -1,17 +1,17 @@
 #!/bin/sh
 
-# Set config home temporarily if unset
+# if config dir is unset, use the default one
 if [ -z $XDG_CONFIG_HOME ]; then
 	export XDG_CONFIG_HOME=$HOME/.config
 fi
 
 dot() {
-	# Usage: dot "from" "to"
+	# usage: dot "from" "to"
 	printf '%s -> %s ' $1 $2
-	# Return if dot already exits
+	# skip if the dot already exists
 	if [ -e $2 ]; then
 		printf 'Already exists\n'
-	# Otherwise create it
+	# otherwise create it
 	else
 		dir="$(dirname $2)"
 		mkdir -p $dir
@@ -22,12 +22,12 @@ dot() {
 
 # Create symlinks
 dot "$PWD/bin"			"$HOME/.local/bin"
-dot "$PWD/gitconfig"	"$HOME/.gitconfig"
 dot "$PWD/profile"		"$HOME/.profile"
 dot "$PWD/ssh"			"$HOME/.ssh"
 dot "$PWD/fish"			"$XDG_CONFIG_HOME/fish"
 dot "$PWD/fnott.ini"	"$XDG_CONFIG_HOME/fnott/fnott.ini"
 dot "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
+dot "$PWD/gitconfig"	"$XDG_CONFIG_HOME/git/config"
 dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
 dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"
 dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
