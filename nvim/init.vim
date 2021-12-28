@@ -54,3 +54,10 @@ nn <Leader>s :se spell!<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 8
+
+" autogenerate spelling files
+for d in glob('~/.config/nvim/spell/*.add', 1, 1)
+	if filereadable(d) && (!filereadable(d . '.spl') || getftime(d) > getftime(d . '.spl'))
+		exec 'mkspell! ' . fnameescape(d)
+	endif
+endfor
