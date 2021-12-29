@@ -43,9 +43,9 @@ let mapleader=" "
 " toggle goyo
 nn <Leader>g :Goyo<CR>
 " toggle line numbers
-nn <Leader>h :noh<CR>
-" turn off highlights
 nn <Leader>n :se nu! rnu!<CR>
+" toggle highlights
+nn <Leader>h :se hls!<CR>
 " toggle spelling
 nn <Leader>s :se spell!<CR>
 
