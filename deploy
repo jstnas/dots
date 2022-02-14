@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # if config dir is unset, use the default one
-if [ -z $XDG_CONFIG_HOME ]; then
+if [ -z "$XDG_CONFIG_HOME" ]; then
+	printf "config path is unset, using default!\n"
 	export XDG_CONFIG_HOME=$HOME/.config
 fi
 
@@ -33,6 +34,7 @@ dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"
 dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
 dot "$PWD/ncmpcpp"		"$XDG_CONFIG_HOME/ncmpcpp"
 dot "$PWD/nvim"			"$XDG_CONFIG_HOME/nvim"
+dot "$PWD/profiles"		"$XDG_CONFIG_HOME/profiles"
 dot "$PWD/sfeedrc"		"$XDG_CONFIG_HOME/sfeedrc"
 dot "$PWD/sway"			"$XDG_CONFIG_HOME/sway/config"
 dot "$PWD/sxhkdrc"		"$XDG_CONFIG_HOME/sxhkd/sxhkdrc"

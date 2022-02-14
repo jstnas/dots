@@ -1,49 +1,37 @@
-export GPG_TTY=$(tty)
+# default programs
+export BROWSER='librewolf'
+export DMENU='dmenu-wl'
+export EDITOR='nvim'
+export PAGER='less'
+export TERMINAL='foot'
 
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_RUNTIME_DIR=/tmp/$(id -u)
-mkdir -m 0700 -p $XDG_RUNTIME_DIR
-
-# Kiss variables.
-export KISS_SU='doas'
-# Kiss path.
-export KISS_PATH=$HOME/repos/kiss-jstnas/kiss-jstnas
-KISS_PATH=$KISS_PATH:$HOME/repos/repo/core
-KISS_PATH=$KISS_PATH:$HOME/repos/repo/extra
-KISS_PATH=$KISS_PATH:$HOME/repos/repo/wayland
-KISS_PATH=$KISS_PATH:$HOME/repos/community/community
-
+# program variables
+# compiler
 export CFLAGS='-O3 -pipe -march=native'
 export CXXFLAGS="$CFLAGS"
-
 export MAKEFLAGS="-j$(nproc)"
 export SCONSFLAGS="-j$(nproc)"
-
-export PASSWORD_STORE_GENERATED_LENGTH=32
-export PASSWORD_STORE_CHARACTER_SET='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
-
-export PAGER='/usr/bin/less'
-export BROWSER='/usr/bin/firefox'
-export EDITOR='/usr/bin/nvim'
-
-# Program variables.
+# grim
+export GRIM_DEFAULT_DIR='~/pictures/scrots'
+# less
+export LESS='-R --use-color -Dd+W$Du+b'
 export LESSHISTFILE=-
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export SXHKD_SHELL='/bin/sh'
-export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
-
-# Wayland.
-export XKB_DEFAULT_LAYOUT=us
-export XKB_DEFAULT_OPTIONS=caps:escape
-export LIBSEAT_BACKEND=seatd
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_WAYLAND_DRM_DEVICE=/dev/dri/renderD128
-export QT_QPA_PLATFORM=wayland
-export CLUTTER_BACKEND=wayland
-export SDL_VIDEODRIVER=wayland
-#export SDL_VIDEODRIVER=x11
-
-# Lynx.
+# lynx
 export LYNX_CFG=$XDG_CONFIG_HOME/lynx/lynx.cfg
 export LYNX_LSS=$XDG_CONFIG_HOME/lynx/lynx.lss
+# pass
+export PASSWORD_STORE_GENERATED_LENGTH=32
+export PASSWORD_STORE_CHARACTER_SET='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
+# pfetch
+export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
+# sxhkd
+export SXHKD_SHELL='/bin/sh'
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# qt5ct
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+# wayland
+source $XDG_CONFIG_HOME/profiles/wayland.sh
+
+# vim:ft=sh
