@@ -9,6 +9,7 @@ feeds() {
 	feed "kiss-posts" "https://kisslinux.org/rss/post.rss"
 	feed "kiss-tidbits" "https://kisslinux.org/rss/tidbits.rss"
 	feed "mpd" "https://github.com/MusicPlayerDaemon/MPD/releases.atom"
+	feed "n-o-d-e" "https://n-o-d-e.net/rss/rss.xml"
 	feed "project-euler" "https://projecteuler.net/rss2_euler.xml"
 	feed "raylib" "https://github.com/raysan5/raylib/releases.atom"
 	feed "suckless" "https://suckless.org/atom.xml"

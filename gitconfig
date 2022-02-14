@@ -9,11 +9,11 @@
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
-	verifySignatures = true
 [mergetool]
 	prompt = false
 [commit]
 	gpgsign = true
+	verbose = true
 [gpg]
 	program = gpg2
 [add "interactive"]
