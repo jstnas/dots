@@ -5,6 +5,10 @@ export EDITOR='nvim'
 export PAGER='less'
 export TERMINAL='foot'
 
+# XDG
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+
 # program variables
 # compiler
 export CFLAGS='-O3 -pipe -march=native'
@@ -32,6 +36,6 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # wayland
-source $XDG_CONFIG_HOME/profiles/wayland.sh
+. $XDG_CONFIG_HOME/profiles/wayland.sh
 
 # vim:ft=sh

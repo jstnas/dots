@@ -2,7 +2,7 @@
 set -x GPG_TTY (tty)
 set fish_prompt_pwd_dir_length 8
 
-srouce ~/.config/fish/alias.fish
+source ~/.config/fish/alias.fish
 
 source ~/.config/fish/vi.fish
 
