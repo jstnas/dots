@@ -22,21 +22,22 @@ dot() {
 }
 
 # Create symlinks
-dot "$PWD/bin"			"$HOME/.local/bin"
-dot "$PWD/profile"		"$HOME/.profile"
-dot "$PWD/ssh"			"$HOME/.ssh"
+# base
 dot "$PWD/fish"			"$XDG_CONFIG_HOME/fish"
-dot "$PWD/fnott.ini"	"$XDG_CONFIG_HOME/fnott/fnott.ini"
-dot "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
 dot "$PWD/gitconfig"	"$XDG_CONFIG_HOME/git/config"
-dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
-dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"
-dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
-dot "$PWD/ncmpcpp"		"$XDG_CONFIG_HOME/ncmpcpp"
 dot "$PWD/nvim"			"$XDG_CONFIG_HOME/nvim"
+dot "$PWD/profile"		"$HOME/.profile"
 dot "$PWD/profiles"		"$XDG_CONFIG_HOME/profiles"
 dot "$PWD/sfeedrc"		"$XDG_CONFIG_HOME/sfeedrc"
-dot "$PWD/sway"			"$XDG_CONFIG_HOME/sway/config"
-dot "$PWD/sxhkdrc"		"$XDG_CONFIG_HOME/sxhkd/sxhkdrc"
-dot "$PWD/ytdl"			"$XDG_CONFIG_HOME/ytdl"
-dot "$PWD/zathura"		"$XDG_CONFIG_HOME/zathura"
+dot "$PWD/ssh"			"$HOME/.ssh"
+# wayland
+#dot "$PWD/fnott.ini"	"$XDG_CONFIG_HOME/fnott/fnott.ini"
+#dot "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
+#dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
+#dot "$PWD/ncmpcpp"		"$XDG_CONFIG_HOME/ncmpcpp"
+#dot "$PWD/sway"			"$XDG_CONFIG_HOME/sway/config"
+#dot "$PWD/zathura"		"$XDG_CONFIG_HOME/zathura"
+# misc
+#dot "$PWD/bin"			"$HOME/.local/bin"
+#dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
+#dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"
