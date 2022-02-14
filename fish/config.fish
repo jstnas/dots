@@ -9,3 +9,5 @@ source ~/.config/fish/colors.fish
 source ~/.config/fish/abbr/abbr.fish
 source ~/.config/fish/abbr/git.fish
 source ~/.config/fish/abbr/python.fish
+
+alias ls='ls -X --group-directories-first --color=auto'

@@ -1,4 +1,3 @@
-abbr -a ls 'ls -X --group-directories-first'
 abbr -a Install 'doas make clean install; git clean -f .'
 abbr -a Patch 'patch -p1 <'
 abbr -a cb 'cmake --build'
