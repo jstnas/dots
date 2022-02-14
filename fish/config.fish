@@ -6,6 +6,6 @@ source ~/.config/fish/vi.fish
 
 source ~/.config/fish/colors.fish
 
-source ~/.config/abbr/abbr.fish
-source ~/.config/abbr/git.fish
-source ~/.config/abbr/python.fish
+source ~/.config/fish/abbr/abbr.fish
+source ~/.config/fish/abbr/git.fish
+source ~/.config/fish/abbr/python.fish
