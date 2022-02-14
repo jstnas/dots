@@ -1,12 +1,13 @@
-#!/bin/sh -e
-CONFIGS=""
-CONFIGS=$CONFIGS"dunst $HOME/.config/dunst/dunstrc\n"
-CONFIGS=$CONFIGS"fish $HOME/.config/fish/config.fish\n"
-CONFIGS=$CONFIGS"mpd $HOME/.config/mpd/mpd.conf\n"
-CONFIGS=$CONFIGS"ytdlm $HOME/.config/youtube-dl/music/batch\n"
-CONFIGS=$CONFIGS"nvim $HOME/.config/nvim/init.vim\n"
+#!/bin/sh
 
-FILE=$(printf "$CONFIGS" | dmenu -l 10 | cut -d' ' -f2)
-if test -n "$FILE"; then
-	$EDITOR $FILE
+CONFIGS="\
+mpd $HOME/.config/mpd/mpd.conf
+nvim $HOME/.config/nvim/init.vim"
+
+FILE=$(printf "$CONFIGS" \
+	| $DMENU -l 10 \
+	| cut -d ' ' -f 2)
+
+if [ -n "$FILE" ]; then
+	$TERMINAL -d none $EDITOR $FILE
 fi
