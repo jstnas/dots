@@ -1,6 +1,10 @@
-sfeedpath="$HOME/feeds"
+sfeedpath="$HOME/.local/share/sfeed/"
 
 feeds() {
+	feed "100r" "https://100r.co/links/rss.xml"
+	feed "anime-akebis-sailor-uniform" "https://nyaa.si/?page=rss&q=%5Banime+time%5D+sailor+uniform&c=1_2&f=0"
+	feed "anime-attack-on-titan" "https://nyaa.si/?page=rss&q=%5Bjudas%5D+attack+on+titan+s04&c=1_2&f=0"
+	feed "anime-dress-up-darling" "https://nyaa.si/?page=rss&q=%5BEMBER%5D+my+dress+up+darling&c=1_2&f=0"
 	feed "archlinux" "https://archlinux.org/feeds/news/"
 	feed "glfw" "https://github.com/glfw/glfw/releases.atom"
 	feed "godot" "https://godotengine.org/rss.xml"
@@ -14,4 +18,5 @@ feeds() {
 	feed "raylib" "https://github.com/raysan5/raylib/releases.atom"
 	feed "suckless" "https://suckless.org/atom.xml"
 	feed "xkcd" "https://xkcd.com/rss.xml"
+	feed "yarmo" "https://yarmo.eu/blog/atom.xml"
 }
