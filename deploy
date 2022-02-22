@@ -30,6 +30,9 @@ dot "$PWD/profile"		"$HOME/.profile"
 dot "$PWD/profiles"		"$XDG_CONFIG_HOME/profiles"
 dot "$PWD/sfeedrc"		"$XDG_CONFIG_HOME/sfeedrc"
 dot "$PWD/ssh"			"$HOME/.ssh"
+dot "$PWD/msmtprc"		"$XDG_CONFIG_HOME/msmtp/config"
+# arch
+dot "$PWD/paru.conf"	"$XDG_CONFIG_HOME/paru/paru.conf"
 # wayland
 #dot "$PWD/fnott.ini"	"$XDG_CONFIG_HOME/fnott/fnott.ini"
 #dot "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
@@ -39,5 +42,5 @@ dot "$PWD/ssh"			"$HOME/.ssh"
 #dot "$PWD/zathura"		"$XDG_CONFIG_HOME/zathura"
 # misc
 #dot "$PWD/bin"			"$HOME/.local/bin"
-#dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
+dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
 #dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"
