@@ -255,4 +255,6 @@ bar {
 
 # assignments
 assign [app_id=firefox] $ws3
+assign [app_id=librewolf] $ws3
 for_window [class=discord] move container to $ws4
+for_window [class=Steam] move container to $ws5
