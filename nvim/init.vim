@@ -49,6 +49,10 @@ nn <Leader>h :se hls!<CR>
 " toggle spelling
 nn <Leader>s :se spell!<CR>
 
+" remember cursor position
+au BufWinEnter * silent! loadview
+au BufWinLeave * mkview
+
 " plugs
 " lightline goyo interation
 autocmd! User GoyoEnter Limelight
