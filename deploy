@@ -3,12 +3,12 @@
 # if config dir is unset, use the default one
 if [ -z "$XDG_CONFIG_HOME" ]; then
 	printf "config path is unset, using default!\n"
-	export XDG_CONFIG_HOME=$HOME/.config
+	export XDG_CONFIG_HOME="$HOME/.config"
 fi
 
 dot() {
 	# usage: dot "from" "to"
-	printf '%s -> %s ' $1 $2
+	printf '%s -> %s ' "$1" "$2"
 	# skip if the dot already exists
 	if [ -e $2 ]; then
 		printf 'Already exists\n'
@@ -34,13 +34,14 @@ dot "$PWD/msmtprc"		"$XDG_CONFIG_HOME/msmtp/config"
 # arch
 dot "$PWD/paru.conf"	"$XDG_CONFIG_HOME/paru/paru.conf"
 # wayland
-#dot "$PWD/fnott.ini"	"$XDG_CONFIG_HOME/fnott/fnott.ini"
-#dot "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
-#dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
-#dot "$PWD/ncmpcpp"		"$XDG_CONFIG_HOME/ncmpcpp"
-#dot "$PWD/sway"			"$XDG_CONFIG_HOME/sway/config"
-#dot "$PWD/zathura"		"$XDG_CONFIG_HOME/zathura"
+dot "$PWD/fnott.ini"	"$XDG_CONFIG_HOME/fnott/fnott.ini"
+dot "$PWD/foot.ini"		"$XDG_CONFIG_HOME/foot/foot.ini"
+dot "$PWD/kanshi"		"$XDG_CONFIG_HOME/kanshi"
+dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
+dot "$PWD/ncmpcpp"		"$XDG_CONFIG_HOME/ncmpcpp"
+dot "$PWD/sway"			"$XDG_CONFIG_HOME/sway/config"
+dot "$PWD/zathura"		"$XDG_CONFIG_HOME/zathura"
 # misc
-#dot "$PWD/bin"			"$HOME/.local/bin"
+dot "$PWD/bin"			"$HOME/.local/bin"
 dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
 #dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"

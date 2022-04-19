@@ -1,0 +1,5 @@
+profile cerasus {
+	output "Unknown MSI MAG241C 0x00000273" position 1080,0 mode 1920x1080@143.855Hz
+	output "BenQ Corporation BenQ GW2480 ETT5L04278SL0" position 0,0 mode 1920x1080@60.000Hz transform 90
+}
+# vim: ft=conf tw=0
