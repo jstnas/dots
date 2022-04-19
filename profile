@@ -24,6 +24,7 @@ export LESSHISTFILE=-
 export LYNX_CFG=$XDG_CONFIG_HOME/lynx/lynx.cfg
 export LYNX_LSS=$XDG_CONFIG_HOME/lynx/lynx.lss
 # pass
+export PASSWORD_STORE_DIR=$HOME/repos/pass
 export PASSWORD_STORE_GENERATED_LENGTH=32
 export PASSWORD_STORE_CHARACTER_SET='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~'
 # pfetch
