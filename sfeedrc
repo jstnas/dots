@@ -19,7 +19,7 @@ feeds() {
 	feed "mpd" "https://github.com/MusicPlayerDaemon/MPD/releases.atom"
 	feed "n-o-d-e" "https://n-o-d-e.net/rss/rss.xml"
 	feed "pico8" "https://www.lexaloffle.com/bbs/feed.php?uid=1"
-	feed "project zomboid" "https://projectzomboid.com/blog/feed/"
+	feed "project-zomboid" "https://projectzomboid.com/blog/feed/"
 	feed "project-euler" "https://projecteuler.net/rss2_euler.xml"
 	feed "raylib" "https://github.com/raysan5/raylib/releases.atom"
 	feed "suckless" "https://suckless.org/atom.xml"
