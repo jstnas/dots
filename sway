@@ -3,6 +3,7 @@ exec wlsunset -l 51.3 -L 0.1
 exec fnott
 exec discord
 exec kanshi
+exec mako
 
 ## hide cursor
 seat seat0 hide_cursor 3000
