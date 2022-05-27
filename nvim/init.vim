@@ -1,5 +1,5 @@
 " options
-se cb=unnamed cul shm=at sm so=8 sol tm=500 ww=b,s,h,l
+se cul shm=at sm so=8 sol tm=500 ww=b,s,h,l
 " tabs
 se ts=4 sw=0 sts=-1
 se tw=80 cc=+1
