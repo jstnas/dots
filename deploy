@@ -8,17 +8,27 @@ fi
 
 dot() {
 	# usage: dot "from" "to"
-	printf '%s -> %s ' "$1" "$2"
-	# skip if the dot already exists
-	if [ -e $2 ]; then
-		printf 'Already exists\n'
+	# setup colours
+	tc='\e['
+	rst="${tc}0m"
+	lnk="${tc}33m" # link colour
+	sym="${tc}36m" # symlinked colour
+	occ="${tc}31m" # occupied colour
+	cre="${tc}32m" # created colour
+	# skip if dot deployed
+	if [ -h $2 ]; then
+		printf "${sym}%s$rst" "symlinked "
+	# skip if dot occupied
+	elif [ -e $2 ]; then
+		printf "${occ}%s$rst" "occupied  "
 	# otherwise create it
 	else
 		dir="$(dirname $2)"
 		mkdir -p $dir
 		ln -sT $1 $2
-		printf 'Created\n'
+		printf "${cre}%s$rst" "created   "
 	fi
+	printf " $lnk%s$rst -> $lnk%s$rst\n" $1 $2
 }
 
 # Create symlinks
