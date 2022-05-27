@@ -15,6 +15,8 @@ export CFLAGS='-O3 -pipe -march=native'
 export CXXFLAGS="$CFLAGS"
 export MAKEFLAGS="-j$(nproc)"
 export SCONSFLAGS="-j$(nproc)"
+# dircolors
+eval "$(dircolors -b)"
 # grim
 export GRIM_DEFAULT_DIR='~/pictures/scrots'
 # less

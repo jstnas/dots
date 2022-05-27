@@ -4,7 +4,7 @@ se cb=unnamed cul shm=at sm so=8 sol tm=500 ww=b,s,h,l
 se ts=4 sw=0 sts=-1
 se tw=80 cc=+1
 " whitespace
-se list lcs=tab:>-,trail:.,nbsp:+
+se list lcs=tab:\|\ ,trail:.,nbsp:+
 " line numbers
 se nu rnu nuw=4
 " statusline
