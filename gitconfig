@@ -1,3 +1,4 @@
+# vim: ft=gitconfig
 [user]
 	email = jstn_as@protonmail.com
 	name = Justinas Grigas
@@ -15,10 +16,17 @@
 	gpgsign = true
 	verbose = true
 [gpg]
-	program = gpg2
+	program = gpg
 [add "interactive"]
 	useBuiltin = true
 [pull]
 	rebase = true
 [rebase]
 	autostash = true
+[color "diff"]
+	context = normal
+	meta = yellow
+	frag = cyan
+	func = magenta
+	old = red
+	new = green
