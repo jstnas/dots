@@ -1,0 +1,8 @@
+#!/bin/sh
+
+. ./deploy/base
+
+heading "global"
+
+dot "$PWD/gitconfig"	"$XDG_CONFIG_HOME/git/config"
+dot "$PWD/ssh"			"$HOME/.ssh"

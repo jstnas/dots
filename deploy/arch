@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. ./deploy/base
+
+heading "arch"
+
+dot "$PWD/paru.conf"	"$XDG_CONFIG_HOME/paru/paru.conf"
