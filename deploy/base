@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# make symlinks work on windows
+export MSYS='winsymlinks:nativestrict'
+export CYGWIN="$MSYS"
+
 # if config dir is unset, use the default one
 if [ -z "$XDG_CONFIG_HOME" ]; then
 	printf "config path is unset, using default!\n"
