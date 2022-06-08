@@ -1,5 +1,0 @@
-[date]
-command=date +'%a %b %Z %T %d/%m/%Y'
-interval=1
-
-# vim: ft=dosini

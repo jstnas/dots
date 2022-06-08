@@ -1,0 +1,5 @@
+[date]
+command=./date
+interval=1
+
+# vim: ft=dosini
