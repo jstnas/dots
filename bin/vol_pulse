@@ -6,9 +6,9 @@ pactl set-sink-mute @DEFAULT_SINK@ false
 case $1 in
 	M) pactl set-sink-volume @DEFAULT_SINK@ 100%;;
 	m) pactl set-sink-volume @DEFAULT_SINK@ 0%;;
-	-) ;&
-	+) pactl set-sink-volume @DEFAULT_SINK@ $1$step;;
+	+ | -) pactl set-sink-volume @DEFAULT_SINK@ $1$step;;
 esac
 
 volume="$(~/.local/bin/blocks/vol_pulse)"
-notify-send -a 'volume' -t 500 $volume
+
+notify-send -t 500 'volume' $volume
