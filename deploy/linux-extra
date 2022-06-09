@@ -6,4 +6,3 @@ heading "linux extra"
 
 dot "$PWD/bin"			"$HOME/.local/bin"
 dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"
-dot "$PWD/mpd.conf"		"$XDG_CONFIG_HOME/mpd/mpd.conf"

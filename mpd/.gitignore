@@ -1,0 +1,7 @@
+# mpd
+database
+log
+state
+sticker.sql
+# symlinks
+output.conf
