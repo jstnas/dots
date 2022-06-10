@@ -37,6 +37,12 @@ nn <C-H> <C-W><C-H>
 nn <C-J> <C-W><C-J>
 nn <C-K> <C-W><C-K>
 nn <C-L> <C-W><C-L>
+" unmap arrow keys
+" TODO: figure out how to better utilise them
+no <Down> <NOP>
+no <Left> <NOP>
+no <Right> <NOP>
+no <Up> <NOP>
 
 " leader
 let mapleader=" "
@@ -50,8 +56,8 @@ nn <Leader>h :se hls!<CR>
 nn <Leader>s :se spell!<CR>
 
 " remember cursor position
-au BufWinEnter * silent! loadview
-au BufWinLeave * mkview
+"au BufWinEnter * silent! loadview
+"au BufWinLeave * mkview
 
 " plugs
 " lightline goyo interation
