@@ -25,8 +25,6 @@ export LESSHISTFILE=-
 # lynx
 export LYNX_CFG=$XDG_CONFIG_HOME/lynx/lynx.cfg
 export LYNX_LSS=$XDG_CONFIG_HOME/lynx/lynx.lss
-# ncmpc
-export MPD_HOST='jstnas.com'
 # pass
 export PASSWORD_STORE_DIR=$HOME/repos/pass
 export PASSWORD_STORE_GENERATED_LENGTH=32

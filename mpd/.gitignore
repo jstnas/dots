@@ -1,7 +1,3 @@
-# mpd
-database
-log
-state
-sticker.sql
 # symlinks
+database.conf
 output.conf
