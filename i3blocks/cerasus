@@ -1,3 +1,7 @@
+[mpd]
+command=./mpd
+interval=1
+
 [date]
 command=./date
 interval=1
