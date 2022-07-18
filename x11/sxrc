@@ -1,0 +1,6 @@
+# launch programs
+dwmblocks &
+picom &
+sxhkd &
+# start window manager
+exec dwm
