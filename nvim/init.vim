@@ -19,10 +19,6 @@ se ic scs is
 " spelling
 se spl=en_gb
 
-" colors
-syntax on
-colo sim
-
 " filetype
 filetype plugin indent on
 
@@ -64,6 +60,12 @@ nn <Leader>s :se spell!<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 8
+" gruvbox italics
+let g:gruvbox_italic = 1
+
+" colors
+syntax on
+colo gruvbox
 
 " autogenerate spelling files
 for d in glob('~/.config/nvim/spell/*.add', 1, 1)
