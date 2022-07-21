@@ -1,8 +1,0 @@
-#!/bin/sh
-
-IP=$(ip a show $1 \
-	| grep 'inet ' \
-	| cut -d ' ' -f 6 \
-	| cut -d '/' -f 1)
-
-printf "$IP\n"
