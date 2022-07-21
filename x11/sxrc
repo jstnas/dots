@@ -1,6 +1,15 @@
+#!/bin/sh
+
+# audio
+pipewire &
+pipewire-pulse &
+wireplumber &
+
 # launch programs
+dunst &
 dwmblocks &
 picom &
 sxhkd &
+
 # start window manager
 exec dwm
