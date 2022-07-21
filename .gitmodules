@@ -4,3 +4,9 @@
 [submodule "nvim/pack/plugs/start/limelight"]
 	path = nvim/pack/plugs/start/limelight
 	url = https://github.com/junegunn/limelight.vim.git
+[submodule "dracula"]
+	path = nvim/pack/themes/start/dracula
+	url = https://github.com/dracula/vim.git
+[submodule "nvim/pack/themes/start/gruvbox"]
+	path = nvim/pack/themes/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
