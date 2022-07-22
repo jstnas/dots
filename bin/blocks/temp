@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cat "/sys/class/thermal/thermal_zone$1/temp" \
-	| awk '{printf "%i\n", $0 / 1000}'
