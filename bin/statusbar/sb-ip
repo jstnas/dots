@@ -1,6 +1,6 @@
 #!/bin/sh
 
 IP=$(ip -br -j a s $1 \
-	| cut -d '"' -f 14)
+	| jq -r .[0].addr_info[0].local)
 
 printf "$IP\n"

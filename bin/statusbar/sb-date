@@ -1,5 +1,5 @@
 #!/bin/sh
 
-date=$(date +'%a %b %Z %T %d/%m/%Y')
+DATE=$(date +'%a %b %Z %T %d/%m/%Y')
 
-printf "$date\n"
+printf "$DATE\n"

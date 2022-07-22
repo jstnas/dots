@@ -1,9 +1,6 @@
 #!/bin/sh
 
-VOL=$(pactl get-sink-volume @DEFAULT_SINK@ \
-	| cut -sd'%' -f1 \
-	| rev \
-	| cut -d' ' -f1 \
-	| rev)
+VOL=$(pactl -f json list sinks \
+	| jq -r .[].base_volume.value_percent)
 
-printf "$VOL\n"
+printf "%s\n" $VOL
