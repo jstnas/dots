@@ -5,7 +5,8 @@ STEP=10
 case $1 in
 	M) backlight_control 100;;
 	m) backlight_control 0;;
-	+ | -) backlight_control $1$STEP;;
+	+ | -) backlight_control "$1"$STEP;;
+	*) backlight_control "$1";;
 esac
 
 BACKLIGHT=$(sb-bl)
@@ -14,4 +15,4 @@ NAME='backlight'
 notify-send \
 	-a $NAME \
 	-t 1000 \
-	$NAME $BACKLIGHT
+	$NAME "$BACKLIGHT"

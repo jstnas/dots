@@ -2,14 +2,14 @@
 
 FILE="$XDG_PICTURES_DIR/$(date +%y%m%d%H%M%S).png"
 
-mkdir -p $(dirname $FILE)
+mkdir -p "$(dirname "$FILE")"
 
 case "$1" in
 	r) MAIM_OPTS='-s';;
 esac
 
 maim -b 2 -t 16 -c 0.7,0.4,0.2,1.0 $MAIM_OPTS \
-	| tee $FILE \
+	| tee "$FILE" \
 	| xclip -selection clipboard -t image/png
 
 notify-send -a 'screenshot' -t 1000 'screenshot taken'

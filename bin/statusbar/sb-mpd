@@ -4,12 +4,13 @@ TITLE="$(mpc current -f '%title%')"
 
 # print the title if the song has one, otherwise print the filename
 if [ -n "$TITLE" ]; then
-	printf "$TITLE\n"
+	printf "%s\n" "$TITLE"
 else
+	# TODO: use sed
 	FILE=$(mpc current -f '%file%' \
 		| cut -d '.' -f 1 \
 		| rev \
 		| cut -d '/' -f 1 \
 		| rev)
-	printf "$FILE\n"
+	printf "%s\n" "$FILE"
 fi

@@ -4,4 +4,4 @@ USED=$(pacman -Qet | wc -l)
 UNUSED=$(pacman -Qdt | wc -l)
 ALL=$(pacman -Q | wc -l)
 
-printf "%d/%d/%d\n" $USED $UNUSED $ALL
+printf "%d/%d/%d\n" "$USED" "$UNUSED" "$ALL"

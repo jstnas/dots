@@ -1,3 +1,8 @@
-#!/bin/sh -e
-SINK=$(pactl list sinks short | awk '{sub(/^.{29}/,"",$2);print$1" "$2}' | dmenu | awk '{print$1}')
-pactl set-default-sink $SINK
+#!/bin/sh
+
+SINK=$(pactl list sinks short \
+	| awk '{sub(/^.{29}/,"",$2);print$1" "$2}' \
+	| dmenu \
+	| awk '{print$1}')
+
+pactl set-default-sink "$SINK"

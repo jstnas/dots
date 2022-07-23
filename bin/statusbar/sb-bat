@@ -12,4 +12,4 @@ case $STATUS in
 	*) ICON='?';;
 esac
 
-printf "%d%c\n" $CAPACITY $ICON
+printf "%d%c\n" "$CAPACITY" "$ICON"

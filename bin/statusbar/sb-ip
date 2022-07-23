@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IP=$(ip a s $1 \
+IP=$(ip a s "$1" \
 	| sed -nE 's/\s+inet\s+(.*)\/.*/\1/p')
 
-printf "%s\n" $IP
+printf "%s\n" "$IP"

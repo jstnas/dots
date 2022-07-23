@@ -2,4 +2,4 @@
 
 DATE=$(date +'%a %b %Z %T %d/%m/%Y')
 
-printf "$DATE\n"
+printf "%s\n" "$DATE"

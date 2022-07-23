@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 BACKLIGHT='intel_backlight'
 DIR="/sys/class/backlight/$BACKLIGHT"

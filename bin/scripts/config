@@ -5,10 +5,10 @@ mpd $XDG_CONFIG_HOME/mpd/mpd.conf
 nvim $XDG_CONFIG_HOME/nvim/init.vim
 "
 
-FILE=$(printf "$CONFIGS" \
+FILE=$(printf "%s" "$CONFIGS" \
 	| $DMENU -l 10 \
 	| cut -d ' ' -f 2)
 
 if [ -n "$FILE" ]; then
-	$TERMINAL -e $EDITOR $FILE
+	$TERMINAL -e "$EDITOR" "$FILE"
 fi

@@ -1,2 +1,6 @@
-#!/bin/sh -e
-printf "$(kiss o | wc -l)/$(kiss l | wc -l)\n"
+#!/bin/sh
+
+ORPHANS=$(kiss o | wc -l)
+ALL=$(kiss l | wc -l)
+
+printf "%d/%d\n" "$ORPHANS" "$ALL"

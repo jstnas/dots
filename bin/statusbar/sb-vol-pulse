@@ -3,4 +3,4 @@
 VOL=$(pactl list sinks \
 	| sed -nE 's/\tVolume:.*\/\s+(.*)%.*/\1/p')
 
-printf "%d\n" $VOL
+printf "%d\n" "$VOL"
