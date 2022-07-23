@@ -5,3 +5,4 @@
 heading "mpd"
 
 dot "$PWD/mpd"		"$XDG_CONFIG_HOME/mpd"
+dot "$PWD/ncmpcpp"		"$XDG_CONFIG_HOME/ncmpcpp"

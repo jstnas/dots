@@ -2,7 +2,6 @@
 
 . ./deploy/base
 
-heading "linux extra"
+heading "bin"
 
 dot "$PWD/bin"			"$HOME/.local/bin"
-dot "$PWD/lynx"			"$XDG_CONFIG_HOME/lynx"

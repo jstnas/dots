@@ -1,0 +1,10 @@
+#!/bin/sh
+
+. ./deploy/arch
+. ./deploy/bin
+. ./deploy/global
+. ./deploy/linux
+. ./deploy/lynx
+. ./deploy/mpd
+. ./deploy/mpv
+. ./deploy/x11

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. ./deploy/base
+
+heading "mpv"
+
+dot "$PWD/mpv"			"$XDG_CONFIG_HOME/mpv"
