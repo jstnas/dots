@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FILE="$XDG_PICTURES_DIR/$(date +%y%m%d%H%M%S).png"
+SLURP_OPTS='-b#00102090 -c#704020ff'
+
+# make sure the scorts foler exists
+mkdir -p $(dirname $FILE)
+
+case "$1" in
+	r) grim -g "$(slurp $SLURP_OPTS)" $FILE;; # region
+	*) grim $FILE;;
+esac

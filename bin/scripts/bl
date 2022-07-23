@@ -8,5 +8,10 @@ case $1 in
 	+ | -) backlight_control $1$STEP;;
 esac
 
-BACKLIGHT="$(~/.local/bin/blocks/bl)"
-notify-send -a 'backlight' -t 500 $BACKLIGHT
+BACKLIGHT=$(sb-bl)
+NAME='backlight'
+
+notify-send \
+	-a $NAME \
+	-t 1000 \
+	$NAME $BACKLIGHT

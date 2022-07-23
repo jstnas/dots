@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VOL=$(pactl -f json list sinks \
-	| jq -r .[].base_volume.value_percent)
+VOL=$(pactl list sinks \
+	| sed -nE 's/\tVolume:.*\/\s+(.*)%.*/\1/p')
 
-printf "%s\n" $VOL
+printf "%d\n" $VOL
