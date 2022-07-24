@@ -10,3 +10,15 @@
 [submodule "nvim/pack/themes/start/gruvbox"]
 	path = nvim/pack/themes/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "nvim/pack/autocomplete/start/denops"]
+	path = nvim/pack/autocomplete/start/denops
+	url = https://github.com/vim-denops/denops.vim
+[submodule "nvim/pack/autocomplete/start/deoplete.nvim"]
+	path = nvim/pack/autocomplete/start/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "nvim/pack/autocomplete/start/deoplete-jedi"]
+	path = nvim/pack/autocomplete/start/deoplete-jedi
+	url = https://github.com/deoplete-plugins/deoplete-jedi
+[submodule "nvim/pack/autocomplete/start/deoplete-clang"]
+	path = nvim/pack/autocomplete/start/deoplete-clang
+	url = https://github.com/deoplete-plugins/deoplete-clang

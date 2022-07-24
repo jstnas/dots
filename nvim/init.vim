@@ -1,7 +1,7 @@
 " options
 se cul shm=at sm so=8 sol tm=500 ww=b,s,h,l
 " tabs
-se ts=4 sw=0 sts=-1
+se ts=4 sw=0 sts=-1 noet
 se tw=80 cc=+1
 " whitespace
 se list lcs=tab:\|\ ,trail:.,nbsp:+
@@ -18,6 +18,8 @@ se stl+=%c:%l/%L " position
 se ic scs is
 " spelling
 se spl=en_gb
+" clipboard
+set clipboard+=unnamedplus
 
 " filetype
 filetype plugin indent on
@@ -39,6 +41,8 @@ no <Down> <NOP>
 no <Left> <NOP>
 no <Right> <NOP>
 no <Up> <NOP>
+" tab to autocomplete
+ino <expr> <TAB> pumvisible() ? "<C-n>" : "<TAB>"
 
 " leader
 let mapleader=" "
@@ -62,6 +66,9 @@ autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 8
 " gruvbox italics
 let g:gruvbox_italic = 1
+
+" autocomplete
+let g:deoplete#enable_at_startup = 1
 
 " colors
 syntax on

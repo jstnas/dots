@@ -1,2 +1,2 @@
-au BufNewFile,BufRead *.c set filetype=c
-au BufNewFile,BufRead *.h set filetype=c
+au BufNewFile,BufRead *.c se ft=c
+au BufNewFile,BufRead *.h se ft=c
