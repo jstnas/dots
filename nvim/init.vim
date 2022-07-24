@@ -1,3 +1,26 @@
+" dein
+set runtimepath+=~/.local/share/dein/repos/github.com/Shougo/dein.vim 
+call dein#begin('~/.local/share/dein')
+call dein#add('~/.local/share/dein/repos/github.com/Shougo/dein.vim')
+" add plugins
+" goyo
+call dein#add('junegunn/goyo.vim')
+call dein#add('junegunn/limelight.vim')
+" autocomplete
+call dein#add('vim-denops/denops.vim')
+call dein#add('Shougo/ddc.vim')
+call dein#add('deoplete-plugins/deoplete-jedi')
+call dein#add('deoplete-plugins/deoplete-clang')
+" themes
+call dein#add('morhetz/gruvbox')
+call dein#add('dracula/vim')
+" end
+call dein#end()
+" automatically install not installed plugins
+if dein#check_install()
+	call dein#install()
+endif
+
 " options
 se cul shm=at sm so=8 sol tm=500 ww=b,s,h,l
 " tabs
