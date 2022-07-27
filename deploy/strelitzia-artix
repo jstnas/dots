@@ -8,3 +8,4 @@
 . ./deploy/mpd
 . ./deploy/mpv
 . ./deploy/x11
+. ./deploy/fontconfig
