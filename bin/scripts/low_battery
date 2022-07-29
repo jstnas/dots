@@ -1,0 +1,32 @@
+#!/bin/sh
+
+BAT=0
+INTERVAL=5
+THRESHOLD=10
+NOTIFIED=0 # 0 for false, 1 for true
+
+NAME='low_battery'
+CAPACITY_FILE="/sys/class/power_supply/BAT$BAT/capacity"
+
+warn() {
+	# usage: warn "CAPACITY"
+	notify-send \
+		-a $NAME \
+		-h "string:x-canonical-private-synchronous:$NAME" \
+		-u critical \
+		"Your battery is running low ($1)" "You might want to plug in your PC."
+}
+
+while true; do
+	CAPACITY=$(cat $CAPACITY_FILE)
+	printf "capacity is: %d\n" "$CAPACITY"
+	# warn once capacity is below threshold
+	if [ "$CAPACITY" -le $THRESHOLD ] && [ $NOTIFIED -eq 0 ]; then
+		NOTIFIED=1
+		warn "$CAPACITY"
+	# reset notified once capacity is above the threshold
+	elif [ "$CAPACITY" -gt $THRESHOLD ] && [ $NOTIFIED -eq 1 ]; then
+		NOTIFIED=0
+	fi
+	sleep $INTERVAL
+done

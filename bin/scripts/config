@@ -1,6 +1,7 @@
 #!/bin/sh
 
 CONFIGS="\
+bin $HOME/.local/bin
 dots $XDG_CONFIG_HOME
 mpd $XDG_CONFIG_HOME/mpd/mpd.conf
 nvim $XDG_CONFIG_HOME/nvim/init.vim
