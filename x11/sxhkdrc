@@ -2,3 +2,19 @@ super + shift + Return
 	st fish
 super + p
 	dmenu_run
+super + shift + b
+	$BROWSER
+XF86MonBrightnessUp
+	bl +
+XF86MonBrightnessDown
+	bl -
+XF86AudioRaiseVolume
+	vol +
+XF86AudioLowerVolume
+	vol -
+shift + XF86AudioRaiseVolume
+	vol M
+shift + XF86AudioLowerVolume
+	vol m
+XF86AudioMute
+	mute

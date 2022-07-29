@@ -5,7 +5,9 @@
 heading "x11"
 
 dot "$PWD/profile.d/x11.sh"	"$XDG_CONFIG_HOME/profile.d/x11.sh"
+dot "$PWD/x11/Xresources"	"$XDG_CONFIG_HOME/Xresources"
 dot "$PWD/x11/dunstrc"		"$XDG_CONFIG_HOME/dunst/dunstrc"
 dot "$PWD/x11/picom.conf"	"$XDG_CONFIG_HOME/picom/picom.conf"
 dot "$PWD/x11/sxhkdrc"		"$XDG_CONFIG_HOME/sxhkd/sxhkdrc"
+dot "$PWD/x11/sxiv"			"$XDG_CONFIG_HOME/sxiv/exec"
 dot "$PWD/x11/sxrc"			"$XDG_CONFIG_HOME/sx/sxrc"

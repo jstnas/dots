@@ -1,5 +1,7 @@
 #!/bin/sh
 
+xrdb ~/.config/Xresources
+
 # audio
 pipewire &
 pipewire-pulse &
@@ -10,6 +12,7 @@ dunst &
 dwmblocks &
 picom &
 sxhkd &
+xbanish -t 3 &
 
 # start window manager
 exec dwm
