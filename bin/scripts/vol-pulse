@@ -1,12 +1,14 @@
 #!/bin/sh
 
 STEP=10%
+TIMEOUT=1000
 
 pactl set-sink-mute @DEFAULT_SINK@ false
 case $1 in
 	M) pactl set-sink-volume @DEFAULT_SINK@ 100%;;
 	m) pactl set-sink-volume @DEFAULT_SINK@ 0%;;
-	+ | -) pactl set-sink-volume @DEFAULT_SINK@ "$1"$STEP;;
+	+ | -) pactl set-sink-volume @DEFAULT_SINK@ "$1$STEP";;
+	*) pactl set-sink-volume @DEFAULT_SINK@ "$1";;
 esac
 
 VOLUME="$(sb-vol-pulse)"
@@ -14,4 +16,6 @@ NAME='volume'
 
 notify-send \
 	-a $NAME \
+	-t $TIMEOUT \
+	-h "string:x-canonical-private-synchronous:$NAME" \
 	$NAME "$VOLUME"

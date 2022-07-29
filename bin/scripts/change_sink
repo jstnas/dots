@@ -1,8 +1,8 @@
 #!/bin/sh
 
-SINK=$(pactl list sinks short \
-	| awk '{sub(/^.{29}/,"",$2);print$1" "$2}' \
-	| dmenu \
-	| awk '{print$1}')
+SINK=$(pactl list sinks short |
+	sed -nE 's/^(\S+).*\.(\S+).*/\1 \1/p' |
+	$DMENU -l 10 |
+	cut -d ' ' -f 1)
 
 pactl set-default-sink "$SINK"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CPU=$(cut -d ' ' -f 1 /proc/loadavg \
-	| awk '{print $0 * 100}')
+CPU=$(cut -d ' ' -f 1 /proc/loadavg |
+	awk '{print $0 * 100}')
 
 printf "%d\n" "$CPU"

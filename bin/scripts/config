@@ -1,13 +1,14 @@
 #!/bin/sh
 
 CONFIGS="\
+dots $XDG_CONFIG_HOME
 mpd $XDG_CONFIG_HOME/mpd/mpd.conf
 nvim $XDG_CONFIG_HOME/nvim/init.vim
 "
 
-FILE=$(printf "%s" "$CONFIGS" \
-	| $DMENU -l 10 \
-	| cut -d ' ' -f 2)
+FILE=$(printf "%s" "$CONFIGS" |
+	$DMENU -l 10 |
+	cut -d ' ' -f 2)
 
 if [ -n "$FILE" ]; then
 	$TERMINAL -e "$EDITOR" "$FILE"
