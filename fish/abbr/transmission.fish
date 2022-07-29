@@ -1,1 +1,1 @@
-abbr -a tr 'transmission-remote -n admin:(pass cosmos/transmission | head -n 1)'
+abbr -a Transmission-remote 'transmission-remote -n admin:(pass cosmos/transmission | head -n 1)'
