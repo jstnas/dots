@@ -1,0 +1,84 @@
+#!/bin/sh
+
+USAGE="\
+Usage: $0: [-c COLOR] -h [-i INTERVAL] [-m MODE] WALL_DIR
+
+Options:
+	-c COLOR solid background color
+	-h display this message and exit
+	-i INTERVAL time to pause between changing wallpapers
+	-m MODE mode for rendering images
+
+COLOR formats are: #rgb, #rrggbb, #rrggbbaa, rgb:1/2/3 or X color name
+MODE: center, cover, tile, full, extend, fill
+"
+
+usage() {
+	# shellcheck disable=SC2059
+	printf "$USAGE" "$0"
+}
+
+# shellcheck disable=SC2120
+random() {
+	# http://www.shelldorado.com/scripts/cmds/rand.txt
+	# https://redhat-list.redhat.narkive.com/SgF1Xkvk/how-to-generate-a-random-number-using-a-posix-shell
+	# usage: random "END"
+	MAX=$(( 1 << 62 - 1 ))
+	END=${1:-$MAX}
+	# shellcheck disable=SC2016
+	HEX=$(head -c 8 /dev/urandom | # get random data
+		od -t x1 | # turn it into hex
+		sed -n '$q;p' | # remove last line
+		cut -d ' ' -f 2- | # remove offsets
+		tr -d ' ' | # combine into a single line
+		tail -c 16) # remove 1st hex character to prevent overflow
+	DIGIT=$(( 0x$HEX % END ))
+	echo $DIGIT
+}
+
+MODE='extend' # hsetroot image mode
+COLOR='#282828' # background color
+INTERVAL=60 # time between wallpaper swap
+
+while getopts m:c:i:h name; do
+	case $name in
+		m) # hsetroot's mode
+			case "$OPTARG" in
+				center | cover | tile | full | extend | fill)
+					MODE="$OPTARG" ;;
+			esac ;;
+		c) # background color
+			COLOR="$OPTARG" ;;
+		i) # interval
+			INTERVAL="$OPTARG" ;;
+		h) # help
+			usage
+			exit 0 ;;
+		?) # everything else
+			usage
+			exit 2 ;;
+	esac
+done
+
+shift $(( OPTIND - 1 ))
+
+if [ $# -lt 1 ]; then
+	printf "WALL_DIR not specified\n"
+	usage
+	exit 2
+fi
+
+FINDOPTS="$1 -maxdepth 1 -type f -print0"
+
+# keep picking random wallpapers from WALL_DIR
+while true; do
+	COUNT=$(find $FINDOPTS |
+		grep -zc .)
+	INDEX=$(( 1 + $(random "$COUNT") ))
+	RANDOM_WALL=$(find $FINDOPTS |
+		head -zn "$INDEX" |
+		tail -zn 1)
+	# pick a random wallpaper from the directory
+	hsetroot -solid "$COLOR" "-$MODE" "$RANDOM_WALL"
+	sleep "$INTERVAL"
+done

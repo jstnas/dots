@@ -1,9 +1,0 @@
-#!/bin/sh
-PAUSE=60
-COLOUR='#efeee9'
-WALL_DIR=~/pictures/wallpapers/zeen_chin/skeen
-
-while true; do
-	feh --no-fehbg --bg-max --randomize --image-bg $COLOUR $WALL_DIR
-	sleep $PAUSE
-done
