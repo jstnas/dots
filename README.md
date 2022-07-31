@@ -36,7 +36,7 @@
 [dunst](https://github.com/dunst-project/dunst) on x11,
 [fnott](https://codeberg.org/dnkl/fnott) on wl
 * wallpaper -
-None
+[hsetroot](https://github.com/himdel/hsetroot) on x11
 * image viewer -
 [sxiv](https://github.com/muennich/sxiv) on x11
 * sound -
@@ -55,7 +55,8 @@ None
 ## Fonts
 
 * [Gohufont](https://font.gohu.org)
-* [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+* [Pragmata Pro](https://fsd.it/shop/fonts/pragmatapro/)
+* [JetBrains Mono](https://www.jetbrains.com/lp/mono/) as a free alternative
 * [siji](https://github.com/stark/siji)
 * [stix](https://www.stixfonts.org)
 

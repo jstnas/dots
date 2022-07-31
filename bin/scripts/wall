@@ -1,21 +1,26 @@
 #!/bin/sh
 
 USAGE="\
-Usage: $0: [-c COLOR] -h [-i INTERVAL] [-m MODE] WALL_DIR
+Usage: $0: [-c COLOR] [-e EXTENSION] -h [-i INTERVAL] [-m MODE] WALL_DIR
 
 Options:
 	-c COLOR solid background color
+	-e EXTENSION image file name extension (default: jpg)
 	-h display this message and exit
-	-i INTERVAL time to pause between changing wallpapers
-	-m MODE mode for rendering images
+	-i INTERVAL time to pause between changing wallpapers (default: 60)
+	-m MODE mode for rendering images (default: extend)
+	WALL_DIR path to wallpaper directory
 
 COLOR formats are: #rgb, #rrggbb, #rrggbbaa, rgb:1/2/3 or X color name
 MODE: center, cover, tile, full, extend, fill
 "
 
 usage() {
-	# shellcheck disable=SC2059
-	printf "$USAGE" "$0"
+	printf "%s" "$USAGE"
+}
+
+wfind() {
+	find "$1" -maxdepth 1 -type f -name "*.$EXTENSION" -print0
 }
 
 # shellcheck disable=SC2120
@@ -38,17 +43,24 @@ random() {
 
 MODE='extend' # hsetroot image mode
 COLOR='#282828' # background color
+EXTENSION='jpg' # image file extension
 INTERVAL=60 # time between wallpaper swap
 
-while getopts m:c:i:h name; do
+while getopts m:c:e:i:h name; do
 	case $name in
 		m) # hsetroot's mode
 			case "$OPTARG" in
 				center | cover | tile | full | extend | fill)
 					MODE="$OPTARG" ;;
+				*)
+					printf "Illegal MODE\n"
+					usage
+					exit 2 ;;
 			esac ;;
 		c) # background color
 			COLOR="$OPTARG" ;;
+		e) # image file extension
+			EXTENSION="$OPTARG" ;;
 		i) # interval
 			INTERVAL="$OPTARG" ;;
 		h) # help
@@ -68,14 +80,18 @@ if [ $# -lt 1 ]; then
 	exit 2
 fi
 
-FINDOPTS="$1 -maxdepth 1 -type f -print0"
-
 # keep picking random wallpapers from WALL_DIR
 while true; do
-	COUNT=$(find $FINDOPTS |
+	COUNT=$(wfind "$@" |
 		grep -zc .)
+	# stop if no images found
+	if [ "$COUNT" -le 0 ]; then
+		printf "No images found\n"
+		usage
+		exit 2
+	fi
 	INDEX=$(( 1 + $(random "$COUNT") ))
-	RANDOM_WALL=$(find $FINDOPTS |
+	RANDOM_WALL=$(wfind "$@" |
 		head -zn "$INDEX" |
 		tail -zn 1)
 	# pick a random wallpaper from the directory

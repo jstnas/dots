@@ -10,9 +10,13 @@ wireplumber &
 # launch programs
 dunst &
 dwmblocks &
-picom &
+picom --experimental-backends &
 sxhkd &
 xbanish -t 3 &
+low_battery &
+
+# wallpaper
+wall -m full -c '#efeee9' ~/pictures/walls/zeen_chin/skeen &
 
 # start window manager
 exec dwm

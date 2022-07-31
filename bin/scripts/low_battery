@@ -6,7 +6,7 @@ THRESHOLD=10
 NOTIFIED=0 # 0 for false, 1 for true
 
 NAME='low_battery'
-CAPACITY_FILE="/sys/class/power_supply/BAT$BAT/capacity"
+BAT_DIR="/sys/class/power_supply/BAT$BAT"
 
 warn() {
 	# usage: warn "CAPACITY"
@@ -18,15 +18,23 @@ warn() {
 }
 
 while true; do
-	CAPACITY=$(cat $CAPACITY_FILE)
-	printf "capacity is: %d\n" "$CAPACITY"
-	# warn once capacity is below threshold
-	if [ "$CAPACITY" -le $THRESHOLD ] && [ $NOTIFIED -eq 0 ]; then
-		NOTIFIED=1
-		warn "$CAPACITY"
-	# reset notified once capacity is above the threshold
-	elif [ "$CAPACITY" -gt $THRESHOLD ] && [ $NOTIFIED -eq 1 ]; then
+	STATUS=$(cat "$BAT_DIR/status")
+	printf "status: [%s] " "$STATUS"
+	if [ "$STATUS" = 'Discharging' ]; then
+		CAPACITY=$(cat "$BAT_DIR/capacity")
+		printf "capacity: [%s] " "$CAPACITY"
+		if [ "$CAPACITY" -le $THRESHOLD ] && [ $NOTIFIED -eq 0 ]; then
+			printf " warning\n"
+			NOTIFIED=1
+			warn "$CAPACITY"
+		else
+			printf "skipping\n"
+		fi
+	elif [ "$NOTIFIED" -ne 0 ]; then
 		NOTIFIED=0
+		printf "reset notified trigger\n"
+	else
+		printf "skipping\n"
 	fi
 	sleep $INTERVAL
 done
