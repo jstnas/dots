@@ -1,38 +1,18 @@
 " plugins: vim-plug
 call plug#begin()
-
 "" distraction free: goyo.vim
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-
 "" autocompletion: coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 "" lsp
 Plug 'neovim/nvim-lspconfig'
-
 "" statusbar: lightline
 Plug 'itchyny/lightline.vim'
-
 "" themes
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
-
 call plug#end()
-
-" lsp
-" https://neovim.io/doc/lsp/
-lua require'lspconfig'.clangd.setup{}
-lua require'lspconfig'.jedi_language_server.setup{}
-
-" lightline
-let g:lightline = {'colorscheme': 'gruvbox'}
-
-" goyo
-" automatically toggle limelight with goyo
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-let g:limelight_conceal_ctermfg = 8
 
 " options
 "" misc options
@@ -58,7 +38,6 @@ set spelllang=en_us,en_gb
 set clipboard+=unnamedplus
 "" autocompletion
 set completeopt=menu,menuone,noselect
-
 "" coc.nvim options
 set nobackup
 set nowritebackup
@@ -66,10 +45,14 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
-" filetype
-filetype plugin indent on
+" plugin: lsp
+" https://neovim.io/doc/lsp/
+lua require'lspconfig'.clangd.setup{}
+lua require'lspconfig'.pyright.setup{}
+lua require'lspconfig'.vimls.setup{}
+"lua require'lspconfig'.jedi_language_server.setup{}
 
-" keymaps
+" keymapping
 "" enter command-line mode without holding down shift
 nnoremap ; :
 nnoremap : ;
@@ -86,27 +69,7 @@ no <Down> <NOP>
 no <Left> <NOP>
 no <Right> <NOP>
 no <Up> <NOP>
-"" tab to autocomplete
-""" coc.nvim
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" use <c-space> to trigger completion
-if has('nvim')
-	inoremap <silent><expr> <c-space> coc#refresh()
-else
-	inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" leader
+" keymappings: leader
 let mapleader=" "
 "" toggle goyo
 nn <Leader>g :Goyo<CR>
@@ -116,6 +79,26 @@ nn <Leader>n :se nu! rnu!<CR>
 nn <Leader>h :se hls!<CR>
 "" toggle spelling
 nn <Leader>s :se spell!<CR>
+" keymappings: lsp
+"" rename symbols
+nnoremap <Leader>r :lua vim.lsp.buf.rename()<CR>
+" keymappings: coc.nvim
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" lightline
+let g:lightline = {'colorscheme': 'gruvbox'}
+
+" goyo
+" automatically toggle limelight with goyo
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_conceal_ctermfg = 8
+
+" keybinds
+
+" filetype
+filetype plugin indent on
 
 " remember cursor position
 "au BufWinEnter * silent! loadview
