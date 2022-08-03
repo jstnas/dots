@@ -6,12 +6,16 @@ set.clipboard = 'unnamedplus'
 set.completeopt = {'menu', 'menuone', 'noselect'}
 set.cursorline = true -- highlight current line
 set.scrolloff = 8 -- prevent cursor from reaching screen edges
-set.shortmess = 'at' -- avoig hit-enter prompts
+set.shortmess = 'atc' -- avoig hit-enter prompts
 set.signcolumn = 'yes' -- always show to prevent it shifting text
 set.startofline = true -- movement operations move cursor to the start of line
 set.timeoutlen = 500
 set.updatetime = 300
 set.whichwrap = 'b,s,h,l'
+set.guicursor = {
+	'n-v-c:block',
+	'i-ci-ve:ver25',
+}
 -- show matching bracket
 set.showmatch = true -- show matching bracket
 set.matchtime = 5 -- for how long in tenths of a second
@@ -40,8 +44,14 @@ set.spelllang = {'en_gb', 'en_us'}
 -- visuals
 set.termguicolors = true -- enables RGB colors
 set.pumblend = 10 -- makes popup menu transparent
+-- netrw browsing
+vim.g.netrw_banner = 0 -- hide the ugly banner
+vim.g.netrw_liststyle = 3 -- list files using tree style
+vim.g.netrw_browse_split = 4 -- open files in previous window
+vim.g.netrw_winsize = 25 -- window size percentage
+vim.g.netrw_altv = 1 -- right splitting
 
 -- plugin
 vim.g.lightline = {colorscheme = 'gruvbox'}
 vim.g.limelight_conceal_ctermfg = 15
---vim.g.gruvbox_italic = 1
+vim.g.gruvbox_italic = 1

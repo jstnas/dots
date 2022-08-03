@@ -1,11 +1,17 @@
-require('paq', {
-	-- paq manages itself
-	'savq/paq-nvim';
+require 'paq' {
+	'savq/paq-nvim'; -- package manager
 	-- zen: goyo.vim
 	'junegunn/goyo.vim';
 	'junegunn/limelight.vim';
-	-- autocompletion: coc.nvim
-	{'neoclide/coc.nvim', branch = 'release'};
+	-- autocompletion: nvim-cmp
+	'hrsh7th/cmp-nvim-lsp';
+	'hrsh7th/cmp-buffer';
+	'hrsh7th/cmp-path';
+	'hrsh7th/cmp-cmdline';
+	'hrsh7th/nvim-cmp';
+	-- snippets: luasnip
+	'L3MON4D3/LuaSnip';
+	'saadparwaiz1/cmp_luasnip';
 	-- lsp
 	'neovim/nvim-lspconfig';
 	-- statusbar: lightline
@@ -13,4 +19,4 @@ require('paq', {
 	-- themes
 	'morhetz/gruvbox';
 	--'dracula/vim';
-})
+}

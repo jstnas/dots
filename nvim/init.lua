@@ -1,12 +1,10 @@
 require('plugins')
 require('options')
-require('lsp')
 require('keymaps')
+require('autocomplete')
+require('lsp')
 
 vim.cmd [[
-inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : "\<TAB>"
-inoremap <silent><expr> <S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<S-TAB>"
-
 " automatically toggle limelight with goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
