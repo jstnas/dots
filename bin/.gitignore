@@ -1,2 +1,4 @@
-jedi-language-server
-normalizer
+!scripts/*
+!statusbar/*
+!walls/*
+*

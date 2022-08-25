@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SINK=$(pactl list sinks short |
-	sed -nE 's/^(\S+).*\.(\S+).*/\1 \1/p' |
+	sed -nE 's/^(\S+).*\.(\S+).*/\1 \2/p' |
 	$DMENU -l 10 |
 	cut -d ' ' -f 1)
 
