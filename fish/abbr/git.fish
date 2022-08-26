@@ -25,3 +25,5 @@ abbr -a gs 'git status'
 abbr -a gsw 'git switch'
 abbr -a gswc 'git switch -c'
 abbr -a gt 'cd (git rev-parse --show-toplevel)'
+
+abbr -a mkpatch 'git format-patch --stdout HEAD^ > (basename (pwd))-PATCHNAME-(date +%Y%m%d)-SHORTHASH.diff'
