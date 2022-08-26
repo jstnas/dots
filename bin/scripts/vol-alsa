@@ -1,0 +1,20 @@
+#!/bin/sh
+
+STEP=10%
+SCONTROL='Master'
+
+amixer sset $SCONTROL unmute
+case $1 in
+	M) amixer sset $SCONTROL 100%;;
+	m) amixer sset $SCONTROL 0%;;
+	+ | -) amixer sset $SCONTROL "$STEP$1";;
+	*) amixer sset $SCONTROL "$1";;
+esac
+
+VOLUME="$(sb-vol-alsa)"
+NAME='volume'
+
+notify-send \
+	-a $NAME \
+	-h "string:x-canonical-private-synchronous:$NAME" \
+	$NAME "$VOLUME"

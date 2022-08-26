@@ -1,0 +1,6 @@
+#!/bin/sh
+
+wall \
+	-i 30 \
+	-m extend \
+	~/pictures/walls/zeen_chin/skeen

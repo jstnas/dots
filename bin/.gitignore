@@ -1,4 +1,4 @@
-!scripts/*
-!statusbar/*
-!walls/*
-*
+/*
+!/scripts
+!/statusbar
+!/walls
