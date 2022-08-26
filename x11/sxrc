@@ -16,7 +16,7 @@ xbanish -t 3 &
 low_battery &
 
 # wallpaper
-wall -m full -c '#efeee9' ~/pictures/walls/zeen_chin/skeen &
+wall-skeen &
 
 # start window manager
 exec dwm

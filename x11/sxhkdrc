@@ -18,3 +18,7 @@ shift + XF86AudioLowerVolume
 	vol m
 XF86AudioMute
 	mute
+Print
+	scrot
+shift + Print
+	scrot r
