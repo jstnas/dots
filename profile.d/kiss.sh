@@ -2,8 +2,8 @@
 
 # manually create XDG_RUNTIME_DIR if it hasn't been set
 if [ -z "$XDG_RUNTIME_DIR" ]; then
-	export XDG_RUNTIME_DIR=/tmp/$(id -u)
-	mkdir -m 0700 -p $XDG_RUNTIME_DIR
+	export XDG_RUNTIME_DIR="/tmp/$(id -u)"
+	mkdir -m 0700 -p "$XDG_RUNTIME_DIR"
 fi
 
 # kiss variables

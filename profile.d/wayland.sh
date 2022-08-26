@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export TERMINAL=$(command -v foot)
-export DMENU=$(command -v dmenu-wl)
+export TERMINAL='foot'
+export DMENU='dmenu-wl'
 
 export CLUTTER_BACKEND=wayland
 export MOZ_ENABLE_WAYLAND=1
