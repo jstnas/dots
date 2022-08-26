@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. ./deploy/base
+
+heading "graphical"
+
+dot "$PWD/zathura"				"$XDG_CONFIG_HOME/zathura"
