@@ -9,3 +9,9 @@ require('lspconfig').pyright.setup{
 require('lspconfig').sumneko_lua.setup{
 	capabilities = capabilities
 } -- lua
+require('lspconfig').bashls.setup{
+	capabilities = capabilities
+} -- bash
+require('lspconfig').gdscript.setup{
+	capabilities = capabilities
+} -- godot

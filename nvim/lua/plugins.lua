@@ -19,4 +19,6 @@ require 'paq' {
 	-- themes
 	'morhetz/gruvbox';
 	--'dracula/vim';
+	-- godot
+	'habamax/vim-godot';
 }
