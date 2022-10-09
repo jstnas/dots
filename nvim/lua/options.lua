@@ -1,5 +1,4 @@
 local set = vim.opt
-	
 
 -- misc
 set.clipboard = 'unnamedplus'
@@ -41,6 +40,7 @@ set.incsearch = true -- show matches as you enter the pattern
 -- spelling
 set.spell = false -- disable spelling by default
 set.spelllang = {'en_gb', 'en_us'}
+set.spellcapcheck = '' -- disable capital letter errors
 -- visuals
 set.termguicolors = true -- enables RGB colors
 set.pumblend = 10 -- makes popup menu transparent
