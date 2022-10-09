@@ -1,0 +1,42 @@
+# vim: tw=0
+https://github.blog/feed/ dev
+https://100r.co/links/rss.xml
+https://archlinux.org/feeds/news/
+https://blog.duolingo.com/rss/
+http://fitgirl-repacks.site/feed/
+https://github.com/glfw/glfw/releases.atom
+https://github.com/htop-dev/htop/releases.atom
+https://github.com/Ralim/IronOS/releases.atom
+https://lineageos.org/feed.xml
+https://matrix.org/blog/feed
+https://github.com/MusicPlayerDaemon/MPD/releases.atom
+https://n-o-d-e.net/rss/rss.xml
+https://nyaa.si/?page=rss "~Nyaa"
+https://projectzomboid.com/blog/feed/
+https://yarmo.eu/blog/atom.xml
+# gamedev
+https://blog.aseprite.org/feed.xml gamedev "~Aseprite"
+https://godotengine.org/rss.xml gamedev
+https://www.lexaloffle.com/bbs/feed.php?uid=1 gamedev "~Pico 8"
+https://github.com/raysan5/raylib/releases.atom gamedev "~RayLib"
+# linux
+https://distrowatch.com/news/dwd.xml
+https://kisslinux.org/rss/post.rss
+https://kisslinux.org/rss/tidbits.rss
+https://suckless.org/atom.xml "~suckless"
+https://xkcd.com/rss.xml "~xkcd"
+# kernel
+https://www.kernel.org/feeds/kdist.xml
+https://lkml.org/rss.php
+# twitter
+https://nitter.net/cyangmou/media/rss twitter
+https://nitter.net/Kekeflipnote/media/rss twitter
+# youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA youtube "~Veratasium"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCM2RhfMLoLqG24e_DYgTQeA youtube "~John Lin"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCOuddH5GyBXp-_tv_ASdp_A youtube "~Nick Robinson"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS1TedAX9-5yRl9Tx5E2qmg youtube "~voxelbee"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjVn35Ubo5c2wagQ6bgVT1Q youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCm325cMiw9B15xl22_gr6Dw youtube "~Beau Miles"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ youtube "~Sebastian Lague"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw youtube "~GMTK"

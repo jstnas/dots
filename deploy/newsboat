@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. ./deploy/base
+
+heading "newsboat"
+
+dot "$PWD/newsboat"		"$XDG_CONFIG_HOME/newsboat"

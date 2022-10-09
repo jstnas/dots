@@ -51,6 +51,10 @@
 * cursor -
 [posy's cursor](http://www.michieldb.nl/other/cursors/),
 [xbanish](https://github.com/jcs/xbanish) to hide it on x11
+* colour temperature -
+[sct](https://flak.tedunangst.com/post/sct-set-color-temperature)
+* rss -
+[newsboat](https://newsboat.org/)
 
 ## Fonts
 
