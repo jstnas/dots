@@ -2,11 +2,12 @@
 
 . ./deploy/arch
 . ./deploy/bin
+. ./deploy/fontconfig
 . ./deploy/global
+. ./deploy/graphical
 . ./deploy/linux
 . ./deploy/lynx
 . ./deploy/mpd
 . ./deploy/mpv
-. ./deploy/graphical
+. ./deploy/newsboat
 . ./deploy/x11
-. ./deploy/fontconfig

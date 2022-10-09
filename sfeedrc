@@ -1,13 +1,20 @@
 sfeedpath="$HOME/.local/share/sfeed/feeds"
 
+URL_TW="https://nitter.glass.domain/"
+URL_YT="https://www.youtube.com/feeds/videos.xml?channel_id="
+
 feeds() {
+	# gamedev
+	feed "gd-aseprite" "https://blog.aseprite.org/feed.xml"
+	feed "gd-godot" "https://godotengine.org/rss.xml"
+	feed "gd-pico8" "https://www.lexaloffle.com/bbs/feed.php?uid=1"
+	feed "gd-raylib" "https://github.com/raysan5/raylib/releases.atom"
+	# misc
 	feed "100r" "https://100r.co/links/rss.xml"
 	feed "archlinux" "https://archlinux.org/feeds/news/"
-	feed "aseprite" "https://blog.aseprite.org/feed.xml"
 	feed "duolingo" "https://blog.duolingo.com/rss/"
 	feed "fit-girl" "http://fitgirl-repacks.site/feed/"
 	feed "glfw" "https://github.com/glfw/glfw/releases.atom"
-	feed "godot" "https://godotengine.org/rss.xml"
 	feed "htop" "https://github.com/htop-dev/htop/releases.atom"
 	feed "iron-os" "https://github.com/Ralim/IronOS/releases.atom"
 	feed "kernel" "https://www.kernel.org/feeds/kdist.xml"
@@ -18,20 +25,20 @@ feeds() {
 	feed "mpd" "https://github.com/MusicPlayerDaemon/MPD/releases.atom"
 	feed "n-o-d-e" "https://n-o-d-e.net/rss/rss.xml"
 	feed "nyaa" "https://nyaa.si/?page=rss"
-	feed "pico8" "https://www.lexaloffle.com/bbs/feed.php?uid=1"
 	feed "project-zomboid" "https://projectzomboid.com/blog/feed/"
-	feed "raylib" "https://github.com/raysan5/raylib/releases.atom"
 	feed "suckless" "https://suckless.org/atom.xml"
-	feed "tw-cyangmou" "https://nitter.net/cyangmou/media/rss"
-	feed "tw-keke" "https://nitter.net/Kekeflipnote/media/rss"
-	feed "xkcd" "https://xkcd.com/rss.xml"
 	feed "yarmo" "https://yarmo.eu/blog/atom.xml"
-	feed "yt-beau-miles" "https://www.youtube.com/feeds/videos.xml?channel_id=UCm325cMiw9B15xl22_gr6Dw"
-	feed "yt-douglas" "https://www.youtube.com/feeds/videos.xml?channel_id=UCjVn35Ubo5c2wagQ6bgVT1Q"
-	feed "yt-gmtk" "https://www.youtube.com/feeds/videos.xml?channel_id=UCqJ-Xo29CKyLTjn6z2XwYAw"
-	feed "yt-john-lin" "https://www.youtube.com/feeds/videos.xml?channel_id=UCM2RhfMLoLqG24e_DYgTQeA"
-	feed "yt-sebastian-lague" "https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ"
-	feed "yt-veratasium" "https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA"
-	feed "yt-voxelbee" "https://www.youtube.com/feeds/videos.xml?channel_id=UCS1TedAX9-5yRl9Tx5E2qmg"
+	feed "xkcd" "https://xkcd.com/rss.xml"
+	# twitter
+	feed "tw-cyangmou"	"${URL_TW}cyangmou/media/rss"
+	feed "tw-keke"		"${URL_TW}Kekeflipnote/media/rss"
+	# youtube
+	feed "yt-beau-miles"		"${URL_YT}UCm325cMiw9B15xl22_gr6Dw"
+	feed "yt-douglas"			"${URL_YT}UCjVn35Ubo5c2wagQ6bgVT1Q"
+	feed "yt-gmtk"				"${URL_YT}UCqJ-Xo29CKyLTjn6z2XwYAw"
+	feed "yt-john-lin"			"${URL_YT}UCM2RhfMLoLqG24e_DYgTQeA"
+	feed "yt-sebastian-lague"	"${URL_YT}UCmtyQOKKmrMVaKuRXz02jbQ"
+	feed "yt-veratasium"		"${URL_YT}UCHnyfMqiRRG1u-2MsSQLbXA"
+	feed "yt-voxelbee"			"${URL_YT}UCS1TedAX9-5yRl9Tx5E2qmg"
 }
 # vim:ft=sh:tw=0

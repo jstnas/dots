@@ -66,7 +66,7 @@
 
 ## Wallpapers
 
-* [Zeen Chin](https://nitter.net/zeen_chin/media)
+* [Zeen Chin](https://weibo.com/u/5961164149)
 * [Acky Bright](https://nitter.net/aki001208/media)
 * [A.Shipwright](https://nitter.net/shipwrighta/media)
 * [屁屁弹](https://nitter.net/pp_bullet/media)

@@ -40,8 +40,10 @@ export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # source extra scripts
-for dotscript in "$XDG_CONFIG_HOME"/profile.d/*; do
-	. "$dotscript"
+for profile in "$XDG_CONFIG_HOME"/profile.d/*.sh; do
+	if [ -r "$profile" ]; then
+		. "$profile"
+	fi
 done
 
 # vim:ft=sh

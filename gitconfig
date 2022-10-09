@@ -2,7 +2,7 @@
 [user]
 	email = jstn_as@protonmail.com
 	name = Justinas Grigas
-	signingkey = 5348ABDC4917CC4B
+	signingkey = 6C719A49CDE4A766
 [credential]
 	helper = store
 [diff]
