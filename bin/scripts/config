@@ -6,6 +6,7 @@ dots $XDG_CONFIG_HOME
 mpd $XDG_CONFIG_HOME/mpd/mpd.conf
 nvim $XDG_CONFIG_HOME/nvim/init.vim
 picom $XDG_CONFIG_HOME/picom/picom.conf
+newsboat_urls $XDG_CONFIG_HOME/newsboat/urls
 "
 
 FILE=$(printf "%s" "$CONFIGS" |
@@ -16,4 +17,5 @@ if [ -z "$FILE" ]; then
 	exit 2
 fi
 
-$TERMINAL -e "$EDITOR" "$FILE"
+$TERMINAL -e "$EDITOR" "$FILE" &
+exit 0

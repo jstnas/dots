@@ -1,7 +1,7 @@
 #!/bin/sh
 
 USAGE="\
-Usage: $0: [-c COLOR] [-e EXTENSION] -h [-i INTERVAL] [-m MODE] WALL_DIR
+Usage: wall: [-c COLOR] [-e EXTENSION] -h [-i INTERVAL] [-m MODE] WALL_DIR
 
 Options:
 	-c COLOR solid background color

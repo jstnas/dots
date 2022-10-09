@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# http://www.shelldorado.com/scripts/cmds/rand.txt
+# https://redhat-list.redhat.narkive.com/SgF1Xkvk/how-to-generate-a-random-number-using-a-posix-shell
+# usage: random "END"
+MAX=$(( 1 << 62 - 1 ))
+END=${1:-$MAX}
+# shellcheck disable=SC2016
+HEX=$(head -c 8 /dev/urandom | # get random data
+	od -t x1 | # turn it into hex
+	sed -n '$q;p' | # remove last line
+	cut -d ' ' -f 2- | # remove offsets
+	tr -d ' ' | # combine into a single line
+	tail -c 16) # remove 1st hex character to prevent overflow
+DIGIT=$(( 0x$HEX % END ))
+echo $DIGIT

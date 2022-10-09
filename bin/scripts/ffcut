@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Usage: ffcut "INPUT_FILE" "START_TIMESTAMP" "END_TIMESTAMP" "OUTPUT_FILE"
+
+cut() {
+	ffmpeg \
+		-y \
+		-ignore_unknown \
+		-i "$1" \
+		-an \
+		-sn \
+		-dn \
+		-ss "$2" \
+		-to "$3" \
+		"$4"
+}
+
+cut "$1" "$2" "$3" "$4"
+exit 0
+TMP_IMG="/tmp/ffcut-"
+# remove any existing images
+rm $TMP_IMG*.png
+# cut a section of a video
+#cut "$1" "$2" "$3" "$TMP_IMG%d.png"
+# convert to gif
+gifski \
+	--output "$4" \
+	$TMP_IMG*.png
+# remove unnecessary images
+rm $TMP_IMG*.png
