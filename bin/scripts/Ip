@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ip a s "$1" |
+	sed -nE 's/.*inet (.*)\/24.*/\1/p'
