@@ -15,6 +15,9 @@ set.guicursor = {
 	'n-v-c:block',
 	'i-ci-ve:ver25',
 }
+set.mouse = 'a'
+set.undofile = true
+set.updatetime = 250
 -- show matching bracket
 set.showmatch = true -- show matching bracket
 set.matchtime = 5 -- for how long in tenths of a second
@@ -26,6 +29,7 @@ set.softtabstop = 0 -- length of tab character while editing
 -- line width
 set.textwidth = 80 -- max width of the line
 set.colorcolumn = '+1' -- columns to highlight
+set.breakindent = true
 -- whitespace
 set.list = true -- show whitespace characters
 set.listchars = {tab = '| ', trail = '.', nbsp = '+'} -- configure whitespace characters
@@ -55,3 +59,4 @@ vim.g.netrw_altv = 1 -- right splitting
 vim.g.lightline = {colorscheme = 'gruvbox'}
 vim.g.limelight_conceal_ctermfg = 15
 vim.g.gruvbox_italic = 1
+require('telescope').setup()

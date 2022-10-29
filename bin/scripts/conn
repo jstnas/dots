@@ -5,11 +5,13 @@ SSID=mistilteinn
 PAUSE=0.5
 
 # check if already connected
-CONN=$(iwctl station $DEVICE show | sed -nE 's/.*network +(\w*).*/\1/p')
+CONN=$(iwctl station $DEVICE show |
+	sed -nE 's/.*network +(\w*).*/\1/p')
 if [ $SSID = "$CONN" ]; then
 	printf "already connected to %s\n" "$CONN"
 	exit 0
 fi
+# scan and connect to network
 printf "connecting to %s\n" $SSID
 iwctl station $DEVICE scan
 sleep $PAUSE

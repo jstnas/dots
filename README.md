@@ -79,8 +79,10 @@
 ## Scrots
 
 ![cerasus](scrots/cerasus.png)
+![strelitzia](scrots/20221030-strelitzia.png)
 
 ## References
 
 * [unixporn](https://www.reddit.com/r/unixporn/)
 * [xero's dotfiles](https://github.com/xero/dotfiles)
+* [horseinthesky's dotfiles](https://github.com/horseinthesky/dotfiles)

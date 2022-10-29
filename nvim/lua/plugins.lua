@@ -1,5 +1,6 @@
 require 'paq' {
 	'savq/paq-nvim'; -- package manager
+	'lewis6991/gitsigns.nvim';
 	-- zen: goyo.vim
 	'junegunn/goyo.vim';
 	'junegunn/limelight.vim';
@@ -21,4 +22,9 @@ require 'paq' {
 	--'dracula/vim';
 	-- godot
 	'habamax/vim-godot';
+	-- telescope
+	'nvim-lua/plenary.nvim';
+	'nvim-telescope/telescope.nvim';
+	'nvim-telescope/telescope-fzf-native.nvim';
+	'nvim-treesitter/nvim-treesitter';
 }

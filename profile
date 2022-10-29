@@ -38,6 +38,17 @@ export PASSWORD_STORE_CHARACTER_SET='A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}
 export PF_INFO='ascii title os host kernel uptime pkgs memory palette'
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# fzf
+export FZF_DEFAULT_OPTS="\
+--border=none \
+--color=16,preview-bg:0,fg+:15,hl:6,hl+:14,border:0,marker:3 \
+--cycle \
+--preview='vim {}' \
+--preview-window=border-none \
+--margin=0,1,0,0 \
+--scroll-off=8 \
+--tabstop=4 \
+"
 
 # source extra scripts
 for profile in "$XDG_CONFIG_HOME"/profile.d/*.sh; do

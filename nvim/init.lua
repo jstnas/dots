@@ -4,6 +4,8 @@ require('keymaps')
 require('lsp')
 require('autocomplete')
 require('commands')
+require('plugs.gitsigns')
+--require('splash')
 
 vim.cmd [[
 " automatically toggle limelight with goyo

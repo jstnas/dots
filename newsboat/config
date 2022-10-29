@@ -12,3 +12,9 @@ bind-key H hard-quit
 bind-key j down
 bind-key k up
 bind-key l open
+# colours
+color title white black bold
+color listfocus white black
+color listfocus_unread white black bold
+color info white black
+color hint-key white black bold
