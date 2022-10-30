@@ -23,7 +23,7 @@
 * editor -
 [neovim](https://neovim.io)
 * statusbar -
-[dwmblocks](https://github.com/torrinfail/dwmblocks) on x11,
+[dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async) on x11,
 [i3blocks](https://github.com/vivien/i3blocks) on wl
 * clipboard -
 [xclip](https://github.com/astrand/xclip) on x11,
