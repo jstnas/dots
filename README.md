@@ -61,7 +61,7 @@
 * [Gohufont](https://font.gohu.org)
 * [Pragmata Pro](https://fsd.it/shop/fonts/pragmatapro/)
 * [JetBrains Mono](https://www.jetbrains.com/lp/mono/) as a free alternative
-* [siji](https://github.com/stark/siji)
+* [siji-ng](https://github.com/mxkrsv/siji-ng)
 * [stix](https://www.stixfonts.org)
 
 ## Wallpapers

@@ -1,6 +1,8 @@
 #!/bin/sh
 
-IP=$(ip a s "$1" |
-	sed -nE 's/\s+inet\s+(.*)\/.*/\1/p')
+set -e
 
-printf "%s\n" "$IP"
+ICON="\ue02d"
+IP=$(Ip "$1")
+
+printf "$ICON%s\n" "$IP"

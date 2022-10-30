@@ -1,15 +1,27 @@
 #!/bin/sh
 
+set -e
+
 BAT=0
 DIR=/sys/class/power_supply/BAT$BAT
 STATUS=$(cat $DIR/status)
 CAPACITY=$(cat $DIR/capacity)
 
 case "$STATUS" in
-	Charging) ICON='+' ;;
-	Discharging) ICON='-' ;;
-	Full | 'Not charging') ICON='=' ;;
-	*) ICON='?' ;;
+	Charging)
+		ICON="\ue201" ;;
+	Discharging)
+		if [ "$CAPACITY" -ge 50 ]; then
+			ICON="\ue1ff"
+		elif [ "$CAPACITY" -ge 25 ]; then
+			ICON="\ue1fe"
+		else
+			ICON="\ue1fd"
+		fi ;;
+	Full | 'Not charging')
+		ICON="\ue1ff" ;;
+	*)
+		ICON='?' ;;
 esac
 
-printf "%d%c\n" "$CAPACITY" "$ICON"
+printf "$ICON%d\n" "$CAPACITY"

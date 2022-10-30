@@ -1,6 +1,9 @@
 #!/bin/sh
 
+set -e
+
+ICON="\ue022"
 CPU=$(cut -d ' ' -f 1 /proc/loadavg |
 	awk '{print $0 * 100}')
 
-printf "%d\n" "$CPU"
+printf "$ICON%d\n" "$CPU"

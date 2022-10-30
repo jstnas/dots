@@ -1,5 +1,8 @@
 #!/bin/sh
 
+set -e
+
+ICON="\ue015"
 DATE=$(date +'%a %b %Z %T %d/%m/%Y')
 
-printf "%s\n" "$DATE"
+printf "$ICON%s\n" "$DATE"

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+STATION='wlan0'
+STATUS="$(iwctl station $STATION show)"
+STATE=$(printf "%s\n" "$STATUS" |
+	sed -nE 's/.*State\s+(\w+).*/\1/p')
+
+# don't continue if disconnected
+if [ "$STATE" = disconnected ]; then
+	printf "\ue217"
+	exit
+fi
+
+RSSI=$(printf "%s\n" "$STATUS" |
+	sed -nE 's/.*AverageRSSI\s+-(\w+).*/\1/p')
+
+# change icon based on rssi
+if [ "$RSSI" -le 25 ]; then
+	ICON="\ue21a"
+elif [ "$RSSI" -le 50 ]; then
+	ICON="\ue219"
+else
+	ICON="\ue218"
+fi
+
+NETWORK=$(printf "%s\n" "$STATUS" |
+	sed -nE 's/.*Connected network\s+(\w+).*/\1/p')
+
+printf "$ICON%s\n" "$NETWORK"
