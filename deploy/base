@@ -1,45 +1,45 @@
 #!/bin/sh
 
+set -e
+
+# setup colours
+tc='\033['
+rst="${tc}0m"
+lnk="${tc}33m" # link colour
+sym="${tc}36m" # symlinked colour
+occ="${tc}31m" # occupied colour
+cre="${tc}32m" # created colour
+hdg="${tc}1;37m" # heading colour
+
 # make symlinks work on windows
 export MSYS='winsymlinks:nativestrict'
 export CYGWIN="$MSYS"
 
-# if config dir is unset, use the default one
+# make sure XDG_CONFIG_HOME is exported
 if [ -z "$XDG_CONFIG_HOME" ]; then
-	printf "config path is unset, using default!\n"
 	export XDG_CONFIG_HOME="$HOME/.config"
+	printf "exported config home to %s\n" "$XDG_CONFIG_HOME"
 fi
 
 dot() {
 	# usage: dot "from" "to"
-	# setup colours
-	tc='\033['
-	rst="${tc}0m"
-	lnk="${tc}33m" # link colour
-	sym="${tc}36m" # symlinked colour
-	occ="${tc}31m" # occupied colour
-	cre="${tc}32m" # created colour
 	# skip if dot deployed
-	if [ -h $2 ]; then
-		printf "${sym}%s$rst" "symlinked "
+	if [ -h "$2" ]; then
+		printf "$sym%s$rst" "symlinked "
 	# skip if dot occupied
-	elif [ -e $2 ]; then
-		printf "${occ}%s$rst" "occupied  "
+	elif [ -e "$2" ]; then
+		printf "$occ%s$rst" "occupied  "
 	# otherwise create it
 	else
-		dir="$(dirname $2)"
-		mkdir -p $dir
-		ln -sT $1 $2
+		dir="$(dirname "$2")"
+		mkdir -p "$dir"
+		ln -sT "$1" "$2"
 		printf "${cre}%s$rst" "created   "
 	fi
-	printf " $lnk%s$rst -> $lnk%s$rst\n" $1 $2
+	printf " $lnk%s$rst -> $lnk%s$rst\n" "$1" "$2"
 }
 
 heading() {
 	# usage: heading "heading"
-	# setup colours
-	tc='\033['
-	rst="${tc}0m"
-	hdg="${tc}35m" # link colour
-	printf "${hdg}%s$rst\n" "$1"
+	printf "$hdg%s$rst\n" "$1"
 }

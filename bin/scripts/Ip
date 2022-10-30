@@ -2,5 +2,5 @@
 
 set -e
 
-ip a s "$1" |
+ip a s "${1:-$IFNAME}" |
 	sed -nE 's/.*inet (.*)\/24.*/\1/p'

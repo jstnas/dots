@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 # http://www.shelldorado.com/scripts/cmds/rand.txt
 # https://redhat-list.redhat.narkive.com/SgF1Xkvk/how-to-generate-a-random-number-using-a-posix-shell
 # usage: random "END"
@@ -13,4 +15,4 @@ HEX=$(head -c 8 /dev/urandom | # get random data
 	tr -d ' ' | # combine into a single line
 	tail -c 16) # remove 1st hex character to prevent overflow
 DIGIT=$(( 0x$HEX % END ))
-echo $DIGIT
+printf "%s\n" $DIGIT

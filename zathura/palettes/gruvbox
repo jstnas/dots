@@ -1,0 +1,34 @@
+set default-bg				rgba(40,40,40,0.9)
+# backgrounds
+set completion-bg			"#282828" # cmd
+set completion-highlight-bg "#282828"
+set index-active-fg			"#282828"
+set index-bg				"#282828"
+set inputbar-bg				"#282828"
+set render-loading-bg		"#282828"
+set statusbar-bg			"#282828"
+# foregrounds
+set completion-fg			"#a89984" # cmd
+set completion-highlight-fg "#a89984"
+set index-active-bg			"#a89984"
+set index-fg				"#a89984"
+set inputbar-fg				"#a89984"
+set recolor-darkcolor		"#a89984"
+set render-loading-fg		"#a89984"
+set statusbar-fg			"#a89984"
+# highlighting
+set highlight-color			"#d79921"
+set highlight-fg			"#8ec07c"
+set highlight-active-color	"#fabd2f"
+# notifications
+set notification-bg			"#282828"
+set notification-fg			"#a89984"
+set notification-error-bg	"#cc241d"
+set notification-error-fg	"#a89984"
+set notification-warning-bg	"#d79921"
+set notification-warning-fg	"#a89984"
+# unkown
+set default-fg				"#ff00ff"
+set completion-group-bg		"#ff00ff"
+set completion-group-fg		"#ff00ff"
+# vim: ft=conf

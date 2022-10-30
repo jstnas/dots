@@ -11,3 +11,5 @@
 . ./deploy/mpv
 . ./deploy/newsboat
 . ./deploy/x11
+
+dot "$PWD/profile.d/strelitzia-artix.sh" "$XDG_CONFIG_HOME/profile.d/strelitzia-artix.sh"
