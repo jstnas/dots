@@ -1,21 +1,36 @@
 #!/bin/sh
 
-STEP=10%
-TIMEOUT=1000
+set -e
 
-pactl set-sink-mute @DEFAULT_SINK@ false
+SIGNAL=1
+STEP=10%
+
+set_volume() {
+	pactl set-sink-mute @DEFAULT_SINK@ false
+	pactl set-sink-volume @DEFAULT_SINK@ "$1"
+}
+
 case $1 in
-	M) pactl set-sink-volume @DEFAULT_SINK@ 100%;;
-	m) pactl set-sink-volume @DEFAULT_SINK@ 0%;;
-	+ | -) pactl set-sink-volume @DEFAULT_SINK@ "$1$STEP";;
-	*) pactl set-sink-volume @DEFAULT_SINK@ "$1";;
+	M) # max
+		set_volume '100%' ;;
+	m) # mute
+		pactl set-sink-mute @DEFAULT_SINK@ true ;;
+	u) # unmute
+		pactl set-sink-mute @DEFAULT_SINK@ false ;;
+	t) # toggle mute
+		pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
+	+ | -)
+		set_volume "$1$STEP" ;;
+	*)
+		set_volume "$1" ;;
 esac
+
+pkill -RTMIN+$SIGNAL dwmblocks
 
 VOLUME="$(sb-vol-pulse)"
 NAME='volume'
 
 notify-send \
 	-a $NAME \
-	-t $TIMEOUT \
 	-h "string:x-canonical-private-synchronous:$NAME" \
 	$NAME "$VOLUME"

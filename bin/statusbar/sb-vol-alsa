@@ -1,8 +1,21 @@
 #!/bin/sh
 
+set -e
+
 SCONTROL='Master'
 
-VOL=$(amixer sget $SCONTROL |
+STATUS=$(amixer get $SCONTROL)
+MUTE=$(printf "%s\n" "$STATUS" |
+	sed -nE 's/.*\[(\w+)\].*/\1/p')
+VOL=$(printf "%s\n" "$STATUS" |
 	sed -nE 's/.*\[([0-9]+)\%.*/\1/p')
+# set icon
+if [ "$MUTE" = 'off' ]; then
+	ICON="\ue202"
+elif [ "$VOL" -ge 80 ]; then
+	ICON="\ue203"
+else
+	ICON="\ue204"
+fi
 
-printf "%d\n" "$VOL"
+printf "$ICON%d\n" "$VOL"

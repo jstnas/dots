@@ -5,21 +5,25 @@
 		<family>sans</family>
 		<prefer><family>PragmataPro Liga</family></prefer>
 		<prefer><family>JetBrains Mono NL</family></prefer>
+		<prefer><family>Siji</family></prefer>
 	</alias>
 	<alias>
 		<family>sans-serif</family>
 		<prefer><family>PragmataPro Liga</family></prefer>
 		<prefer><family>JetBrains Mono NL</family></prefer>
+		<prefer><family>Siji</family></prefer>
 	</alias>
 	<alias>
 		<family>serif</family>
 		<prefer><family>PragmataPro Liga</family></prefer>
 		<prefer><family>JetBrains Mono NL</family></prefer>
+		<prefer><family>Siji</family></prefer>
 	</alias>
 	<alias>
 		<family>monospace</family>
 		<prefer><family>PragmataPro Mono Liga</family></prefer>
 		<prefer><family>JetBrains Mono NL</family></prefer>
+		<prefer><family>Siji</family></prefer>
 	</alias>
 </fontconfig>
 <!-- vim: set ft=xml: -->

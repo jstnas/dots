@@ -1,15 +1,32 @@
 #!/bin/sh
 
+set -e
+
+SIGNAL=1
 STEP=10%
 SCONTROL='Master'
 
-amixer sset $SCONTROL unmute
+set_volume() {
+	amixer set $SCONTROL unmute
+	amixer set $SCONTROL "$1"
+}
+
 case $1 in
-	M) amixer sset $SCONTROL 100%;;
-	m) amixer sset $SCONTROL 0%;;
-	+ | -) amixer sset $SCONTROL "$STEP$1";;
-	*) amixer sset $SCONTROL "$1";;
+	M) # max
+		set_volume '100%' ;;
+	m) # mute
+		amixer set $SCONTROL mute ;;
+	u) # unmiute
+		amixer set $SCONTROL unmute ;;
+	t) # toggle mute
+		amixer set $SCONTROL toggle ;;
+	+ | -)
+		set_volume "$STEP$1" ;;
+	*)
+		set_volume "$1" ;;
 esac
+
+pkill -RTMIN+$SIGNAL dwmblocks
 
 VOLUME="$(sb-vol-alsa)"
 NAME='volume'

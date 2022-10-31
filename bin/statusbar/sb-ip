@@ -2,7 +2,7 @@
 
 set -e
 
-ICON="\ue02d"
+ICON="\ue149"
 IP=$(Ip "$1")
 
 printf "$ICON%s\n" "$IP"
