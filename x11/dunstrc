@@ -26,10 +26,10 @@
 	gap_size = 8
 	separator_color = frame
 	sort = yes
-	timeout = 10
+	timeout = 5
 
 	# text
-	font = Gohu GohuFont 8
+	font = "Gohu GohuFont 8"
 	line_height = 0
 	markup = full
 	format = "<b>%s</b>\n%b"
@@ -48,7 +48,7 @@
 	icon_position = left
 	min_icon_size = 16
 	max_icon_size = 32
-	icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+	icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
 	# history
 	sticky_history = yes

@@ -1,3 +1,4 @@
-! sxiv
-Sxiv.background: #282828
-Sxiv.foreground: #a89984
+*background: #282828
+*foreground: #a89984
+! xfd
+Xfd*boxColor: #a89984

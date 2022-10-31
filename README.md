@@ -10,12 +10,13 @@
 [kisslinux](https://kisslinux.org/) on cerasus,
 [artix](https://archlinux.org) on strelitzia
 * wm -
-[dwm](https://dwm.suckless.org/) +
+[patched](https://git.sr.ht/~jstnas/dwm) [dwm](https://dwm.suckless.org/) +
 [picom](https://github.com/yshui/picom) +
+[sxhkd](https://github.com/baskerville/sxhkd) +
 [sx](https://github.com/Earnestly/sx) on x11,
 [sway](https://swaywm.org/) on wl
 * term -
-[st](https://st.suckless.org/) on x11,
+[patched](https://git.sr.ht/~jstnas/st) [st](https://st.suckless.org/) on x11,
 [foot](https://codeberg.org/dnkl/foot) on wl
 * shell -
 [fish](https://fishshell.com) +
@@ -25,6 +26,9 @@
 * statusbar -
 [dwmblocks-async](https://github.com/UtkarshVerma/dwmblocks-async) on x11,
 [i3blocks](https://github.com/vivien/i3blocks) on wl
+* dynamic menu -
+[patched](https://git.sr.ht/~jstnas/dmenu)
+[dmenu](https://tools.suckless.org/dmenu/) on x11
 * clipboard -
 [xclip](https://github.com/astrand/xclip) on x11,
 [wl-clipboard](https://github.com/bugaevc/wl-clipboard) on wl
