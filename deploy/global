@@ -4,5 +4,5 @@
 
 heading "global"
 
-dot "$PWD/gitconfig"	"$XDG_CONFIG_HOME/git/config"
-dot "$PWD/ssh"			"$HOME/.ssh"
+dot "$PWD/git"	"$XDG_CONFIG_HOME/git"
+dot "$PWD/ssh"	"$HOME/.ssh"
